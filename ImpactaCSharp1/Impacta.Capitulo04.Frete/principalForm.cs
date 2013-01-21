@@ -117,6 +117,7 @@ namespace Impacta.Capitulo04.Frete
         {
             var fretes = File.ReadAllLines("C:\\Fretes.txt");
             clienteTextBox.AutoCompleteCustomSource.AddRange(fretes.Select(x => x.Split(';')[0]).ToArray());
+            clienteRepositorioBindingSource.DataSource = new Infra.Repositorios.SistemaDeArquivos.ClienteRepositorio().Selecionar();
         }
     }
 }
