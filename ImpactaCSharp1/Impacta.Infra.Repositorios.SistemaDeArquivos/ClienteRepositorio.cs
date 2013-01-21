@@ -39,7 +39,8 @@ namespace Impacta.Infra.Repositorios.SistemaDeArquivos
         public List<Cliente> Selecionar()
         {
             var retorno = new List<Cliente>();
-            var propriedades = new String[5];
+            //var propriedades = new string[6]; // 6 é o total de elementos (de 0 a 5).
+            string[] propriedades = new string[7];
             var sr = new StreamReader(ConfigurationManager.AppSettings["caminhoArquivoClientes"]);
 
             while (!sr.EndOfStream)
@@ -47,12 +48,13 @@ namespace Impacta.Infra.Repositorios.SistemaDeArquivos
                 propriedades = sr.ReadLine().Split(';');
 
                 var cliente = new Cliente();
-                cliente.Nome = propriedades[0];
-                cliente.DataNascimento = Convert.ToDateTime(propriedades[1]);
-                cliente.Endereco = propriedades[2];
-                cliente.Cpf = propriedades[3];
-                cliente.Email = propriedades[4];
-                cliente.Renda = Convert.ToDecimal(propriedades[5]);
+                cliente.Id = new Guid(propriedades[0]);
+                cliente.Nome = propriedades[1];
+                cliente.DataNascimento = Convert.ToDateTime(propriedades[2]);
+                cliente.Endereco = propriedades[3];
+                cliente.Cpf = propriedades[4];
+                cliente.Email = propriedades[5];
+                cliente.Renda = Convert.ToDecimal(propriedades[6]);
 
                 retorno.Add(cliente);
             }

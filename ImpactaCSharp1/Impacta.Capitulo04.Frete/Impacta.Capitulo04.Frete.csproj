@@ -114,6 +114,8 @@
     <None Include="ImpactaCSharp1DataSet.xss">
       <DependentUpon>ImpactaCSharp1DataSet.xsd</DependentUpon>
     </None>
+    <None Include="Properties\DataSources\Impacta.Dominio.Cliente.datasource" />
+    <None Include="Properties\DataSources\Impacta.Infra.Repositorios.SistemaDeArquivos.ClienteRepositorio.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -125,9 +127,17 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Impacta.Dominio\Impacta.Dominio.csproj">
+      <Project>{07592283-A1AC-4CDA-985C-1027BEFBDD7A}</Project>
+      <Name>Impacta.Dominio</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Impacta.Infra.Apoio\Impacta.Infra.Apoio.csproj">
       <Project>{FD6F45C4-9958-4EDE-A068-BE52DBDC1DB8}</Project>
       <Name>Impacta.Infra.Apoio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Impacta.Infra.Repositorios.SistemaDeArquivos\Impacta.Infra.Repositorios.SistemaDeArquivos.csproj">
+      <Project>{B07AAC5D-8A83-4D05-B2BC-86385A36BB9F}</Project>
+      <Name>Impacta.Infra.Repositorios.SistemaDeArquivos</Name>
     </ProjectReference>
     <ProjectReference Include="..\Impacta.Infra.Repositorios.SqlServer\Impacta.Infra.Repositorios.SqlServer.csproj">
       <Project>{009EBBEF-FB64-4B05-812D-903534E3E3DB}</Project>

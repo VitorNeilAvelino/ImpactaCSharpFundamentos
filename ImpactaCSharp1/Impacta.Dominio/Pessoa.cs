@@ -11,6 +11,8 @@ namespace Impacta.Dominio
             Documentos = new List<Documento>();
         }
 
+        public Guid Id { get; set; }
+
         // private - membros com este modificador só são acessados pela própria classe
         // protected - acesso permitido apenas para classes derivadas (que herdam desta)
         private string _nome;

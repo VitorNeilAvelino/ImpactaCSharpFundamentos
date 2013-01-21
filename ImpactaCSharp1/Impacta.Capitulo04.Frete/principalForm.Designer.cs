@@ -48,9 +48,12 @@
             this.cidadeTableAdapter = new Impacta.Capitulo04.Frete.ImpactaCSharp1DataSetTableAdapters.CidadeTableAdapter();
             this.label7 = new System.Windows.Forms.Label();
             this.cidadeComboBoxEf = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.clienteRepositorioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.principalErrorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cidadeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.impactaCSharp1DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteRepositorioBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -154,7 +157,7 @@
             // 
             // gravarButton
             // 
-            this.gravarButton.Location = new System.Drawing.Point(340, 12);
+            this.gravarButton.Location = new System.Drawing.Point(513, 129);
             this.gravarButton.Name = "gravarButton";
             this.gravarButton.Size = new System.Drawing.Size(75, 23);
             this.gravarButton.TabIndex = 14;
@@ -224,12 +227,28 @@
             this.cidadeComboBoxEf.Tag = "*";
             this.cidadeComboBoxEf.ValueMember = "Id";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.DataSource = this.clienteRepositorioBindingSource;
+            this.comboBox1.DisplayMember = "Nome";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(300, 6);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 15;
+            this.comboBox1.ValueMember = "Id";
+            // 
+            // clienteRepositorioBindingSource
+            // 
+            this.clienteRepositorioBindingSource.DataSource = typeof(Impacta.Dominio.Cliente);
+            // 
             // principalForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CausesValidation = false;
             this.ClientSize = new System.Drawing.Size(600, 162);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.gravarButton);
             this.Controls.Add(this.totalLabel);
             this.Controls.Add(this.freteLabel);
@@ -252,6 +271,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.principalErrorProvider)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cidadeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.impactaCSharp1DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteRepositorioBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -278,6 +298,8 @@
         private ImpactaCSharp1DataSetTableAdapters.CidadeTableAdapter cidadeTableAdapter;
         private System.Windows.Forms.ComboBox cidadeComboBoxEf;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.BindingSource clienteRepositorioBindingSource;
     }
 }
 
