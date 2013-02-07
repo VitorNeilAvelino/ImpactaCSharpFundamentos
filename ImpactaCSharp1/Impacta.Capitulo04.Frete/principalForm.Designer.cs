@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(principalForm));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -50,10 +51,13 @@
             this.cidadeComboBoxEf = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.clienteRepositorioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fretesToolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.avisoErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.principalErrorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cidadeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.impactaCSharp1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteRepositorioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.avisoErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -118,6 +122,7 @@
             this.valorCompraTextBox.Size = new System.Drawing.Size(100, 20);
             this.valorCompraTextBox.TabIndex = 3;
             this.valorCompraTextBox.Tag = ",*";
+            this.valorCompraTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.valorCompraTextBox_KeyPress);
             // 
             // ufComboBox
             // 
@@ -242,6 +247,17 @@
             // 
             this.clienteRepositorioBindingSource.DataSource = typeof(Impacta.Dominio.Cliente);
             // 
+            // fretesToolTip
+            // 
+            this.fretesToolTip.IsBalloon = true;
+            this.fretesToolTip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.fretesToolTip.ToolTipTitle = "Validação";
+            // 
+            // avisoErrorProvider
+            // 
+            this.avisoErrorProvider.ContainerControl = this;
+            this.avisoErrorProvider.Icon = ((System.Drawing.Icon)(resources.GetObject("avisoErrorProvider.Icon")));
+            // 
             // principalForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -272,6 +288,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.cidadeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.impactaCSharp1DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteRepositorioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.avisoErrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -300,6 +317,8 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.BindingSource clienteRepositorioBindingSource;
+        private System.Windows.Forms.ToolTip fretesToolTip;
+        private System.Windows.Forms.ErrorProvider avisoErrorProvider;
     }
 }
 

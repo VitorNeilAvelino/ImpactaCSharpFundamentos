@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Laboratórios", "Laboratórios", "{58F5243B-3BDB-437B-AEE3-E80C83790294}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Laboratorios", "Laboratorios", "{58F5243B-3BDB-437B-AEE3-E80C83790294}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testes", "Testes", "{B52D37B3-6D4B-4F5A-9FF2-56BEC4CC6421}"
 EndProject

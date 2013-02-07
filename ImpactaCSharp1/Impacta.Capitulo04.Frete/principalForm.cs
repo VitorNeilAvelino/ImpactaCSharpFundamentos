@@ -119,5 +119,25 @@ namespace Impacta.Capitulo04.Frete
             clienteTextBox.AutoCompleteCustomSource.AddRange(fretes.Select(x => x.Split(';')[0]).ToArray());
             clienteRepositorioBindingSource.DataSource = new Infra.Repositorios.SistemaDeArquivos.ClienteRepositorio().Selecionar();
         }
+
+        private void valorCompraTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Decimal)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void valorCompraTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            avisoErrorProvider.SetError(valorCompraTextBox, string.Empty);
+
+            if (e.KeyChar == '.')
+            {
+                e.Handled = true;
+                //fretesToolTip.SetToolTip(valorCompraTextBox, "Use vírgula para separar os decimais.");
+                avisoErrorProvider.SetError(valorCompraTextBox, "Use vírgula para separar os decimais.");
+            }
+        }
     }
 }
