@@ -18,7 +18,7 @@ namespace Impacta.Infra.Apoio
                 EnableSsl = true,
                 DeliveryMethod = SmtpDeliveryMethod.Network,
                 UseDefaultCredentials = false,
-                Credentials = new NetworkCredential("avelino.vitor@gmail.com", "duqeu2", "")
+                Credentials = new NetworkCredential("avelino.vitor@gmail.com", "senha", "")
             };
 
             try
