@@ -50,8 +50,8 @@ namespace Impacta.Infra.Repositorios.SistemaDeArquivos
                 var cliente = new Cliente();
                 cliente.Id = new Guid(propriedades[0]);
                 cliente.Nome = propriedades[1];
-                cliente.DataNascimento = Convert.ToDateTime(propriedades[2]);
-                cliente.Endereco = propriedades[3];
+                cliente.Endereco = propriedades[2];
+                cliente.DataNascimento = Convert.ToDateTime(propriedades[3]);
                 cliente.Cpf = propriedades[4];
                 cliente.Email = propriedades[5];
                 cliente.Renda = Convert.ToDecimal(propriedades[6]);
