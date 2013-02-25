@@ -30,33 +30,44 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PrincipalForm));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.listagemClientesToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.clientesToolStripSplitButton = new System.Windows.Forms.ToolStripSplitButton();
+            this.novoClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStrip1
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.listagemClientesToolStripButton});
+            this.clientesToolStripSplitButton});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(893, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(909, 25);
             this.toolStrip1.TabIndex = 1;
+            this.toolStrip1.Text = "toolStrip1";
             // 
-            // listagemClientesToolStripButton
+            // clientesToolStripSplitButton
             // 
-            this.listagemClientesToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("listagemClientesToolStripButton.Image")));
-            this.listagemClientesToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.listagemClientesToolStripButton.Name = "listagemClientesToolStripButton";
-            this.listagemClientesToolStripButton.Size = new System.Drawing.Size(69, 22);
-            this.listagemClientesToolStripButton.Text = "&Clientes";
-            this.listagemClientesToolStripButton.Click += new System.EventHandler(this.listagemClientesToolStripButton_Click);
+            this.clientesToolStripSplitButton.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.novoClienteToolStripMenuItem});
+            this.clientesToolStripSplitButton.Image = ((System.Drawing.Image)(resources.GetObject("clientesToolStripSplitButton.Image")));
+            this.clientesToolStripSplitButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.clientesToolStripSplitButton.Name = "clientesToolStripSplitButton";
+            this.clientesToolStripSplitButton.Size = new System.Drawing.Size(81, 22);
+            this.clientesToolStripSplitButton.Text = "&Clientes";
+            this.clientesToolStripSplitButton.ButtonClick += new System.EventHandler(this.clientesToolStripSplitButton_ButtonClick);
+            // 
+            // novoClienteToolStripMenuItem
+            // 
+            this.novoClienteToolStripMenuItem.Name = "novoClienteToolStripMenuItem";
+            this.novoClienteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.novoClienteToolStripMenuItem.Text = "&Novo";
+            this.novoClienteToolStripMenuItem.Click += new System.EventHandler(this.novoClienteToolStripMenuItem_Click);
             // 
             // PrincipalForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(893, 500);
+            this.ClientSize = new System.Drawing.Size(909, 487);
             this.Controls.Add(this.toolStrip1);
             this.IsMdiContainer = true;
             this.Name = "PrincipalForm";
@@ -72,6 +83,7 @@
         #endregion
 
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton listagemClientesToolStripButton;
+        private System.Windows.Forms.ToolStripSplitButton clientesToolStripSplitButton;
+        private System.Windows.Forms.ToolStripMenuItem novoClienteToolStripMenuItem;
     }
 }

@@ -5,9 +5,11 @@ using Impacta.Dominio;
 
 namespace CSharp1.Capitulo06.Clientes
 {
-    public partial class ListagemClientesForm : Form
+    public partial class ListagemClientesForm : BaseForm
     {
+        //1. Criação do evento
         public delegate void SelecionarClienteEventHandler(Cliente cliente);
+        //public event EventHandler SelecionarCliente;
         public event SelecionarClienteEventHandler SelecionarCliente;
 
         public ListagemClientesForm()
@@ -17,14 +19,15 @@ namespace CSharp1.Capitulo06.Clientes
 
         private void ListagemClientesForm_Load(object sender, EventArgs e)
         {
-            clientesDataGridView.DataSource = new ClienteRepositorio().Selecionar();
+            clienteBindingSource.DataSource = new ClienteRepositorio().Selecionar();
         }
 
         private void clientesDataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             var cliente = clientesDataGridView.Rows[e.RowIndex].DataBoundItem as Cliente;
+
+            //2. Chamar o Evento
             SelecionarCliente(cliente);
-            Close();
         }
     }
 }

@@ -8,96 +8,80 @@ using System.Configuration;
 
 namespace CSharp1.Capitulo06.Clientes
 {
-    public partial class ClientesForm : BaseForm, IFormularioComErrorProvider
+    public partial class ClientesForm : BaseForm
     {
-        private ListagemClientesForm _listagemClientesForm = new ListagemClientesForm();
-
+        private string _caminho = ConfigurationManager.AppSettings["caminhoArquivoClientes"];
+        
         public ClientesForm()
         {
             InitializeComponent();
-            _listagemClientesForm.SelecionarCliente += new ListagemClientesForm.SelecionarClienteEventHandler(_listagemClientesForm_SelecionarCliente);
         }
 
-        void _listagemClientesForm_SelecionarCliente(Cliente cliente)
+        public void PreencherControles(Cliente cliente)
         {
             nomeTextBox.Text = cliente.Nome;
             enderecoTextBox.Text = cliente.Endereco;
-            nascimentoMaskedTextBox.Text = cliente.DataNascimento.ToShortDateString();
-            cpfMaskedTextBox.Text = cliente.Cpf;
+            nascimentoMaskedTextBox.Text = cliente.DataNascimento.ToString("dd/MM/yyyy");
+            cpfMaskedTextBox.Text = cliente.Documentos[0].Numero;
             emailTextBox.Text = cliente.Email;
             rendaTextBox.Text = cliente.Renda.ToString();
         }
 
         private void gravarButton_Click(object sender, EventArgs e)
         {
-            if (!Formulario.ValidarCamposObrigatorios(this, clientesErrorProvider) || !Formulario.ValidarTipoDosDados(this))
+            if (!Formulario.ValidarCamposObrigatorios(this, clientesErrorProvider) ||
+                !Formulario.ValidarTipoDosDados(this, clientesErrorProvider))
             {
                 return;
             }
 
+            //wmp.URL = 
+
             var cliente = new Cliente();
+            //var pessoa = new Pessoa();
+            
             cliente.Nome = nomeTextBox.Text;
             cliente.Endereco = enderecoTextBox.Text;
-            //cliente.DataNascimento = nascimentoDateTimePicker.Value.Date;
             cliente.DataNascimento = Convert.ToDateTime(nascimentoMaskedTextBox.Text);
+
+            //cliente.Documentos = cpfMaskedTextBox.Text;
+            var cpf = new Documento();
+            cpf.Numero = cpfMaskedTextBox.Text;
+            cpf.TipoDocumento = TipoDocumento.Cpf;
+
+            //cliente.Documentos = new List<Documento>();
+            cliente.Documentos.Add(cpf);
+
             cliente.Email = emailTextBox.Text;
             cliente.Renda = Convert.ToDecimal(rendaTextBox.Text);
-
-            var documento = new Documento();
-            documento.Numero = cpfMaskedTextBox.Text;
-            documento.TipoDocumento = TipoDocumento.Cpf;
-
-            cliente.Documentos.Add(documento);
 
             try
             {
                 cliente.Validar();
                 new ClienteRepositorio().Gravar(cliente);
-                //ClienteRepositorio.Teste();
-                MessageBox.Show("Gravação realizada com sucesso.");
+                MessageBox.Show("Cliente cadastrado com sucesso!");
                 Formulario.Limpar(this);
-                nomeTextBox.Focus();
+            }
+            catch (DirectoryNotFoundException)
+            {
+                MessageBox.Show(string.Format("O caminho {0} não foi encontrado. Sua gravação não foi realizada.",
+                    _caminho));
+            }
+            catch (UnauthorizedAccessException)
+            {
+                MessageBox.Show(string.Format("Desmarque a opção de Read-Only do arquivo {0}. Sua gravação não foi realizada.",
+                    _caminho));
             }
             catch (RegraNegocioException ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            catch (DirectoryNotFoundException)
-            {
-                MessageBox.Show(string.Format("Caminho {0} não encontrado. A gravação não foi realizada.", ConfigurationManager.AppSettings["caminhoArquivoClientes"]));
-            }
             catch (Exception ex)
             {
-#if !DEBUG
-                MessageBox.Show(@"Houve um erro no processamento e o registro não foi gravado. 
-                                    A equipe de suporte já foi avisada e em breve providenciaremos uma solução.");
+                MessageBox.Show("Ooops! Houve um erro no aplicativo e a gravação não foi realizada." +
+                                          "A equipe de suporte já foi comunicada e em breve teremos uma solução");
                 Logar.PorEmail(ex);
-#else
-                throw;
-#endif
             }
-        }
-
-        private void limparButton_Click(object sender, EventArgs e)
-        {
-            Formulario.Limpar(this);
-        }
-
-        private void ClientesForm_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            // Habilitar KeyPreview
-            if (e.KeyChar == Convert.ToChar(Keys.Enter))
-                this.SelectNextControl(this.ActiveControl, true, true, true, true);
-        }
-
-        public ErrorProvider ProvedorDeErro
-        {
-            get { return clientesErrorProvider; }
-        }
-
-        private void listarClientesToolStripButton_Click(object sender, EventArgs e)
-        {
-            _listagemClientesForm.ShowDialog();
         }
     }
 }

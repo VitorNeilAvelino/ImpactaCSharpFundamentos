@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("CSharp1.Capitulo06.Clientes")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Microsoft")]
+[assembly: AssemblyCompany("Grupo Educacional Impacta Tecnologia")]
 [assembly: AssemblyProduct("CSharp1.Capitulo06.Clientes")]
-[assembly: AssemblyCopyright("Copyright © Microsoft 2011")]
+[assembly: AssemblyCopyright("Copyright © Grupo Educacional Impacta Tecnologia 2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("7984b037-9fd6-44ef-9ed0-3d6938cf4988")]
+[assembly: Guid("46d4fba5-22ec-43ae-9510-da1d16ecec6e")]
 
 // Version information for an assembly consists of the following four values:
 //

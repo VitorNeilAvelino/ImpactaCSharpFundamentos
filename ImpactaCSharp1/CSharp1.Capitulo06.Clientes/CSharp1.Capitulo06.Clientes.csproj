@@ -13,10 +13,10 @@
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
-    <SccProjectName>SAK</SccProjectName>
-    <SccLocalPath>SAK</SccLocalPath>
-    <SccAuxPath>SAK</SccAuxPath>
-    <SccProvider>SAK</SccProvider>
+    <SccProjectName>%24/ImpactaCSharp1/ImpactaCSharp1/CSharp1.Capitulo06.Clientes</SccProjectName>
+    <SccLocalPath>.</SccLocalPath>
+    <SccAuxPath>https://tfs.codeplex.com/tfs/tfs24</SccAuxPath>
+    <SccProvider>{4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}</SccProvider>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -37,12 +37,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject>CSharp1.Capitulo06.Clientes.Program</StartupObject>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Configuration" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -102,9 +99,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="app.config">
+    <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Properties\DataSources\Impacta.Dominio.Cliente.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -117,16 +115,20 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Impacta.Dominio\Impacta.Dominio.csproj">
-      <Project>{07592283-A1AC-4CDA-985C-1027BEFBDD7A}</Project>
+      <Project>{6B972B39-397D-40C4-98C6-B451FEF8F7DC}</Project>
       <Name>Impacta.Dominio</Name>
     </ProjectReference>
     <ProjectReference Include="..\Impacta.Infra.Apoio\Impacta.Infra.Apoio.csproj">
-      <Project>{FD6F45C4-9958-4EDE-A068-BE52DBDC1DB8}</Project>
+      <Project>{F4EEF462-B05C-4CFF-B895-968263381CA8}</Project>
       <Name>Impacta.Infra.Apoio</Name>
     </ProjectReference>
     <ProjectReference Include="..\Impacta.Infra.Repositorios.SistemaDeArquivos\Impacta.Infra.Repositorios.SistemaDeArquivos.csproj">
-      <Project>{B07AAC5D-8A83-4D05-B2BC-86385A36BB9F}</Project>
+      <Project>{B37F9F26-2716-4B97-AF27-8A6D0A87308E}</Project>
       <Name>Impacta.Infra.Repositorios.SistemaDeArquivos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Impacta.Visualizacao.Controles\Impacta.Visualizacao.Controles.csproj">
+      <Project>{2F4C67B5-F4C7-4F44-9585-BB0DCE00A70B}</Project>
+      <Name>Impacta.Visualizacao.Controles</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
