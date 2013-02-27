@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
 
 namespace Impacta.Infra.Apoio
 {
@@ -18,6 +19,18 @@ namespace Impacta.Infra.Apoio
             caixaDeTextoDeMascara.TextMaskFormat = textMaskFormatOriginal;
             
             return retorno;
+        }
+
+        public static DateTime DataPadrao(this string data)
+        {
+            try
+            {
+                return Convert.ToDateTime(data);
+            }
+            catch (Exception)
+            {
+                return DateTime.MinValue;
+            }
         }
     }
 }
