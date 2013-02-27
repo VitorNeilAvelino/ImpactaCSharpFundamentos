@@ -21,13 +21,18 @@ namespace Impacta.Infra.Apoio
             return retorno;
         }
 
-        public static DateTime DataPadrao(this string data)
+        /// <summary>
+        /// Tenta converter uma possível data do formato string para DateTime
+        /// </summary>
+        /// <param name="possivelData"></param>
+        /// <returns>Se não for possível converter, retorna o valor mínimo do tipo DateTime</returns>
+        public static DateTime ExtrairData(this string possivelData)
         {
             try
             {
-                return Convert.ToDateTime(data);
+                return Convert.ToDateTime(possivelData);
             }
-            catch (Exception)
+            catch
             {
                 return DateTime.MinValue;
             }
