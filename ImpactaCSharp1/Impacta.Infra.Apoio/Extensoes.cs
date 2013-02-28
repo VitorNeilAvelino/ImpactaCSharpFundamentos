@@ -26,7 +26,7 @@ namespace Impacta.Infra.Apoio
         /// </summary>
         /// <param name="possivelData"></param>
         /// <returns>Se não for possível converter, retorna o valor mínimo do tipo DateTime</returns>
-        public static DateTime ExtrairData(this string possivelData)
+        public static DateTime ConverterParaDateTime(this string possivelData)
         {
             try
             {
