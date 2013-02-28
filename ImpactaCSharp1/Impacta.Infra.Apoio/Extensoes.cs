@@ -34,7 +34,7 @@ namespace Impacta.Infra.Apoio
             }
             catch
             {
-                return DateTime.MinValue;
+                return new DateTime(1900, 1, 1);
             }
         }
     }

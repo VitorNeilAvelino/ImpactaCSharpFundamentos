@@ -7,13 +7,19 @@ namespace Impacta.Infra.Apoio.Testes
     public class ExtensoesTest
     {
         [TestMethod]
-        public void ConverterParaDateTimeTest()
+        public void ConverterParaDateTimeDataInvalida()
         {
-            string possivelData = "00/00/0000";
-            DateTime esperado = DateTime.MinValue;
-            DateTime retornado;
-            retornado = possivelData.ConverterParaDateTime();
-            Assert.AreEqual(esperado, retornado);
+            const string possivelData = "00/00/0000";
+            var esperado = new DateTime(1900, 1, 1);
+            Assert.AreEqual(esperado, possivelData.ConverterParaDateTime());
+        }
+
+        [TestMethod]
+        public void ConverterParaDateTimeDataValida()
+        {
+            const string possivelData = "28/02/2013";
+            var esperado = new DateTime(2013, 2, 28);
+            Assert.AreEqual(esperado, possivelData.ConverterParaDateTime());
         }
     }
 }
