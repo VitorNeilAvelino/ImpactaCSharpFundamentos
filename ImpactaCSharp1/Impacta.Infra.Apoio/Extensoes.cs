@@ -25,7 +25,7 @@ namespace Impacta.Infra.Apoio
         /// Tenta converter uma possível data do formato string para DateTime
         /// </summary>
         /// <param name="possivelData"></param>
-        /// <returns>Se não for possível converter, retorna o valor mínimo do tipo DateTime</returns>
+        /// <returns>Se não for possível converter, retorna uma data determinada.</returns>
         public static DateTime ConverterParaDateTime(this string possivelData)
         {
             try
