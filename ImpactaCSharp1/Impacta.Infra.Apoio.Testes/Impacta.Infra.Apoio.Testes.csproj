@@ -66,6 +66,7 @@
     <Compile Include="ExcelRepositorioTest.cs" />
     <Compile Include="ExceptionTeste.cs" />
     <Compile Include="ExtensoesTest.cs" />
+    <Compile Include="FormularioTest.cs" />
     <Compile Include="ImagensTest.cs" />
     <Compile Include="LogTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
