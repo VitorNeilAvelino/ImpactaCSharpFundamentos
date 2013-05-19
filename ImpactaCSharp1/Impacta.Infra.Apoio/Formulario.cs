@@ -63,6 +63,13 @@ namespace Impacta.Infra.Apoio
                             throw new FormatException("CPF");
                         }
                     }
+                    else if (controle.Tag.ToString().ToUpper().Contains("TEXTOSEMNUMEROS"))
+                    {
+                        if (Regex.IsMatch(controle.Text, @"[0-9]"))
+                        {
+                            throw new FormatException("TEXTOSEMNUMEROS");
+                        }
+                    }
                 }
                 catch
                 {
