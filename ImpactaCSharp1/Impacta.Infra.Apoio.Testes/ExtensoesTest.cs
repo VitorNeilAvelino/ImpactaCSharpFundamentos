@@ -26,10 +26,10 @@ namespace Impacta.Infra.Apoio.Testes
         [TestMethod]
         public void ToStringTest()
         {
-            object objeto = "12345678900";
+            const string textoAConverter = "12345678900";
             const string parametro = "CPF";
             const string expected = "123.456.789-00";
-            var actual = objeto.ToString(parametro);
+            var actual = textoAConverter.ToString(parametro);
             Assert.AreEqual(expected, actual);
         }
 

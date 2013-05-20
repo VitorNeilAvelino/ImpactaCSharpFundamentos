@@ -83,6 +83,7 @@
     <Compile Include="Endereco.cs" />
     <Compile Include="Familia.cs" />
     <Compile Include="Fornecedor.cs" />
+    <Compile Include="Frete.cs" />
     <Compile Include="IClienteRepositorio.cs" />
     <Compile Include="IProduto.cs" />
     <Compile Include="Pessoa.cs" />
