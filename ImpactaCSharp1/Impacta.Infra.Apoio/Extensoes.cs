@@ -39,7 +39,7 @@ namespace Impacta.Infra.Apoio
             }
         }
 
-        public static string ToString(this object objeto, string parametro)
+        public static string ParaString(this object objeto, string parametro)
         {
             var texto = objeto.ToString();
 
