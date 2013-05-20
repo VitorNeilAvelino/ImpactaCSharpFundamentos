@@ -30,22 +30,15 @@ namespace Impacta.Infra.Repositorios.SistemaDeArquivos
             }
         }
 
-        //public static void Teste()
-        //{
-
-        //}
-
-
         public List<Cliente> Selecionar()
         {
             var retorno = new List<Cliente>();
-            //var propriedades = new string[6]; // 6 é o total de elementos (de 0 a 5).
-            string[] propriedades = new string[7];
-            var sr = new StreamReader(ConfigurationManager.AppSettings["caminhoArquivoClientes"]);
+            var propriedades = new string[7];// 7 é o total de elementos (de 0 a 6).
+            var arquivoTexto = new StreamReader(ConfigurationManager.AppSettings["caminhoArquivoClientes"]);
 
-            while (!sr.EndOfStream)
+            while (!arquivoTexto.EndOfStream)
             {
-                propriedades = sr.ReadLine().Split(';');
+                propriedades = arquivoTexto.ReadLine().Split(';');
 
                 var cliente = new Cliente();
                 cliente.Id = new Guid(propriedades[0]);
