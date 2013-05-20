@@ -27,9 +27,27 @@ namespace Impacta.Infra.Apoio.Testes
         public void ToStringTest()
         {
             const string textoAConverter = "12345678900";
-            const string parametro = "CPF";
+            //const string parametro = "CPF";
             const string expected = "123.456.789-00";
-            var actual = textoAConverter.ToString(parametro);
+            var actual = textoAConverter.ParaString("CPF");
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ToStringP1Test()
+        {
+            const decimal meuDecimal = 0.2M;
+            const string expected = "20,0%";
+            var actual = meuDecimal.ToString("P1");
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void LongToStringTest()
+        {
+            const long longAConverter = 12345678900;
+            const string expected = "123.456.789-00";
+            var actual = longAConverter.ParaString("CPF");
             Assert.AreEqual(expected, actual);
         }
 
