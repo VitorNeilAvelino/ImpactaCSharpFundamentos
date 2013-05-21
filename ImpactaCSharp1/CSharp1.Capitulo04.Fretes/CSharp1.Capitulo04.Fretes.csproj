@@ -11,7 +11,8 @@
     <RootNamespace>CSharp1.Capitulo04.Fretes</RootNamespace>
     <AssemblyName>CSharp1.Capitulo04.Fretes</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
     <SccProjectName>SAK</SccProjectName>
     <SccLocalPath>SAK</SccLocalPath>
@@ -69,7 +70,9 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="app.config" />
     <None Include="Controles.cd" />
     <None Include="Properties\DataSources\Impacta.Dominio.Cliente.datasource" />
     <None Include="Properties\Settings.settings">

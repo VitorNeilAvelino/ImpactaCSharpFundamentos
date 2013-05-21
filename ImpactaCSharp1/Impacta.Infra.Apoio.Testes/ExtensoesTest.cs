@@ -67,5 +67,26 @@ namespace Impacta.Infra.Apoio.Testes
             var actual = texto.SemAcento();
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        public void SemCaracteresEspeciaisTest()
+        {
+            const string texto = "Pêssego pássaro canção e um Í maiúsculo: 1 + 1";
+            const string expected = "Pessego passaro cancao e um I maiusculo: 1 + 1";
+            var actual = texto.SemAcento();
+            Assert.AreEqual(expected, actual);
+        }
+
+        /// <summary>
+        ///A test for RemoverAcento
+        ///</summary>
+        [TestMethod()]
+        public void RemoverAcentoTest()
+        {
+            const string texto = "Pêssego pássaro canção e um Í maiúsculo: 1 + 1";
+            const string expected = "Pessego passaro cancao e um I maiusculo: 1 + 1";
+            var actual = texto.RemoverAcento();
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
