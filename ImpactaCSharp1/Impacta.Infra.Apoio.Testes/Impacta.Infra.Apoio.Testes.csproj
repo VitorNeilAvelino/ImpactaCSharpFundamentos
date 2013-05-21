@@ -51,6 +51,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Windows.Presentation" />
     <Reference Include="System.Xml" />
@@ -66,7 +67,6 @@
     <Compile Include="ExcelRepositorioTest.cs" />
     <Compile Include="ExceptionTeste.cs" />
     <Compile Include="ExtensoesTest.cs" />
-    <Compile Include="FormularioTest.cs" />
     <Compile Include="ImagensTest.cs" />
     <Compile Include="LogTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

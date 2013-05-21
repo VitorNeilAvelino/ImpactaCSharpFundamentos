@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Text;
 using System.Text.RegularExpressions;
+using System.Web;
 using System.Windows.Forms;
 
 namespace Impacta.Infra.Apoio
@@ -53,6 +55,16 @@ namespace Impacta.Infra.Apoio
             }
 
             return texto;
+        }
+
+        /// <summary>
+        /// System.Web.HttpUtility
+        /// 28597 - Grego
+        /// http://msdn.microsoft.com/en-us/library/system.text.encoding.aspx<param 
+        /// </summary>
+        public static string SemAcento(this string texto)
+        {
+            return HttpUtility.UrlEncode(texto, Encoding.GetEncoding(28597)).Replace("+", " ");
         }
     }
 }

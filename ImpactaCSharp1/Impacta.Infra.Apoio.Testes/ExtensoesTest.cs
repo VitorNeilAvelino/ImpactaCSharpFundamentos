@@ -58,5 +58,14 @@ namespace Impacta.Infra.Apoio.Testes
             Assert.IsFalse(typeof(object).IsPrimitive);
             Assert.IsFalse(objeto.GetType().IsValueType);
         }
+
+        [TestMethod]
+        public void SemAcentoTest()
+        {
+            const string texto = "Pêssego pássaro canção e um Í maiúsculo";
+            const string expected = "Pessego passaro cancao e um I maiusculo";
+            var actual = texto.SemAcento();
+            Assert.AreEqual(expected, actual);
+        }
     }
 }

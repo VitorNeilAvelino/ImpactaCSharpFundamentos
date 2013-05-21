@@ -11,7 +11,8 @@
     <RootNamespace>CSharp1.Capitulo06.Clientes</RootNamespace>
     <AssemblyName>CSharp1.Capitulo06.Clientes</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
     <SccProjectName>%24/ImpactaCSharp1/ImpactaCSharp1/CSharp1.Capitulo06.Clientes</SccProjectName>
     <SccLocalPath>.</SccLocalPath>
@@ -119,16 +120,12 @@
       <Name>Impacta.Dominio</Name>
     </ProjectReference>
     <ProjectReference Include="..\Impacta.Infra.Apoio\Impacta.Infra.Apoio.csproj">
-      <Project>{F4EEF462-B05C-4CFF-B895-968263381CA8}</Project>
+      <Project>{FD6F45C4-9958-4EDE-A068-BE52DBDC1DB8}</Project>
       <Name>Impacta.Infra.Apoio</Name>
     </ProjectReference>
     <ProjectReference Include="..\Impacta.Infra.Repositorios.SistemaDeArquivos\Impacta.Infra.Repositorios.SistemaDeArquivos.csproj">
       <Project>{B37F9F26-2716-4B97-AF27-8A6D0A87308E}</Project>
       <Name>Impacta.Infra.Repositorios.SistemaDeArquivos</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Impacta.Visualizacao.Controles\Impacta.Visualizacao.Controles.csproj">
-      <Project>{2F4C67B5-F4C7-4F44-9585-BB0DCE00A70B}</Project>
-      <Name>Impacta.Visualizacao.Controles</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
