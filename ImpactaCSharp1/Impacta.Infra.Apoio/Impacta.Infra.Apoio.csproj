@@ -87,6 +87,7 @@
     <Compile Include="Logar.cs" />
     <Compile Include="Processos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Transformar.cs" />
     <Compile Include="Validar.cs" />
   </ItemGroup>
   <ItemGroup>

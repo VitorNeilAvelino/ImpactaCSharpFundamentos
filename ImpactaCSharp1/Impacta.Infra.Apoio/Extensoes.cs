@@ -66,5 +66,10 @@ namespace Impacta.Infra.Apoio
         {
             return HttpUtility.UrlEncode(texto, Encoding.GetEncoding(28597)).Replace("+", " ");
         }
+
+        public static string RemoverAcento(this string texto)
+        {
+            return Transformar.RemoverAcentuacao(texto);
+        }
     }
 }
