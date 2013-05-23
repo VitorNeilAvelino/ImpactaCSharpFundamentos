@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="d2a54e80-5f1c-49e8-944f-fa5e3eddb9c5" name="vavelino@WEC823 2013-03-18 14:14:25" runUser="SHCNET\vavelino" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local Test Run" id="a1b13695-aa10-44a2-b14f-b5e46c2b5d46">
+    <Description>This is a default test run configuration for a local test run.</Description>
+    <Deployment runDeploymentRoot="vavelino_WEC823 2013-03-18 14_14_25">
+      <DeploymentItem filename="C:\_Projetos\ImpactaCSharp1\Impacta.Dominio\bin\Debug\Impacta.Dominio.dll" />
+      <DeploymentItem filename="C:\_Projetos\ImpactaCSharp1\Impacta.Infra.Repositorios.SqlServer\bin\Debug\Impacta.Infra.Repositorios.SqlServer.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2013-03-18T14:14:25.2051105-03:00" queuing="2013-03-18T14:14:25.3455108-03:00" start="2013-03-18T14:14:25.3611108-03:00" finish="2013-03-18T14:14:25.5327111-03:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="1" executed="1" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="ConexaoTest" storage="c:\_projetos\impactacsharp1\impacta.infra.repositorios.sqlserver.testes\bin\debug\impacta.infra.repositorios.sqlserver.testes.dll" id="c7e25257-09f7-324e-c2c4-392e6bfd22ff">
+      <Execution id="0f55e6a4-e202-4ab1-9d18-280ff8c87092" />
+      <TestMethod codeBase="C:/_Projetos/ImpactaCSharp1/Impacta.Infra.Repositorios.SqlServer.Testes/bin/Debug/Impacta.Infra.Repositorios.SqlServer.Testes.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Impacta.Infra.Repositorios.SqlServer.Testes.BaseRepositorioTest, Impacta.Infra.Repositorios.SqlServer.Testes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ConexaoTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="c7e25257-09f7-324e-c2c4-392e6bfd22ff" executionId="0f55e6a4-e202-4ab1-9d18-280ff8c87092" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="0f55e6a4-e202-4ab1-9d18-280ff8c87092" testId="c7e25257-09f7-324e-c2c4-392e6bfd22ff" testName="ConexaoTest" computerName="WEC823" duration="00:00:00.0254179" startTime="2013-03-18T14:14:25.3611108-03:00" endTime="2013-03-18T14:14:25.5171111-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0f55e6a4-e202-4ab1-9d18-280ff8c87092">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method Impacta.Infra.Repositorios.SqlServer.Testes.BaseRepositorioTest.ConexaoTest threw exception: 
+System.Data.OleDb.OleDbException: Especificação de autorização inválida
+Atributo de cadeia de caracteres de conexão inválido</Message>
+          <StackTrace>    at System.Data.OleDb.OleDbConnectionInternal..ctor(OleDbConnectionString constr, OleDbConnection connection)
+   at System.Data.OleDb.OleDbConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.CreateNonPooledConnection(DbConnection owningConnection, DbConnectionPoolGroup poolGroup)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.OleDb.OleDbConnection.Open()
+   at Impacta.Infra.Repositorios.SqlServer.Testes.BaseRepositorioTest.ConexaoTest() in C:\_Projetos\ImpactaCSharp1\Impacta.Infra.Repositorios.SqlServer.Testes\BaseRepositorioTest.cs:line 12
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

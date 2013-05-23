@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="e9ad20d7-f01f-41b9-82c5-21e57d7b6860" name="vavelino@WEC823 2013-03-18 18:58:47" runUser="SHCNET\vavelino" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local Test Run" id="a1b13695-aa10-44a2-b14f-b5e46c2b5d46">
+    <Description>This is a default test run configuration for a local test run.</Description>
+    <Deployment runDeploymentRoot="vavelino_WEC823 2013-03-18 18_58_47">
+      <DeploymentItem filename="C:\_Projetos\ImpactaCSharp1\Impacta.Dominio\bin\Debug\Impacta.Dominio.dll" />
+      <DeploymentItem filename="C:\_Projetos\ImpactaCSharp1\Impacta.Infra.Repositorios.SqlServer\bin\Debug\Impacta.Infra.Repositorios.SqlServer.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2013-03-18T18:58:47.7441225-03:00" queuing="2013-03-18T18:58:48.3131551-03:00" start="2013-03-18T18:58:48.3431568-03:00" finish="2013-03-18T18:58:49.0151952-03:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="2" executed="2" passed="1" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="ExecutarProcedureTest" storage="c:\_projetos\impactacsharp1\impacta.infra.repositorios.sqlserver.testes\bin\debug\impacta.infra.repositorios.sqlserver.testes.dll" id="da732584-e34b-9b64-f7b2-c437ee0ee7b1">
+      <Execution id="218067a9-b019-4126-a7c8-7a48e9b245fe" />
+      <TestMethod codeBase="C:/_Projetos/ImpactaCSharp1/Impacta.Infra.Repositorios.SqlServer.Testes/bin/Debug/Impacta.Infra.Repositorios.SqlServer.Testes.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Impacta.Infra.Repositorios.SqlServer.Testes.BaseRepositorioTest, Impacta.Infra.Repositorios.SqlServer.Testes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ExecutarProcedureTest" />
+    </UnitTest>
+    <UnitTest name="ConexaoTest" storage="c:\_projetos\impactacsharp1\impacta.infra.repositorios.sqlserver.testes\bin\debug\impacta.infra.repositorios.sqlserver.testes.dll" id="c7e25257-09f7-324e-c2c4-392e6bfd22ff">
+      <Execution id="59cd9f2f-5362-428f-8601-f6b3dd57274b" />
+      <TestMethod codeBase="C:/_Projetos/ImpactaCSharp1/Impacta.Infra.Repositorios.SqlServer.Testes/bin/Debug/Impacta.Infra.Repositorios.SqlServer.Testes.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Impacta.Infra.Repositorios.SqlServer.Testes.BaseRepositorioTest, Impacta.Infra.Repositorios.SqlServer.Testes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ConexaoTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="c7e25257-09f7-324e-c2c4-392e6bfd22ff" executionId="59cd9f2f-5362-428f-8601-f6b3dd57274b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="da732584-e34b-9b64-f7b2-c437ee0ee7b1" executionId="218067a9-b019-4126-a7c8-7a48e9b245fe" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="59cd9f2f-5362-428f-8601-f6b3dd57274b" testId="c7e25257-09f7-324e-c2c4-392e6bfd22ff" testName="ConexaoTest" computerName="WEC823" duration="00:00:00.0331782" startTime="2013-03-18T18:58:48.3461570-03:00" endTime="2013-03-18T18:58:48.5291674-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="59cd9f2f-5362-428f-8601-f6b3dd57274b">
+    </UnitTestResult>
+    <UnitTestResult executionId="218067a9-b019-4126-a7c8-7a48e9b245fe" testId="da732584-e34b-9b64-f7b2-c437ee0ee7b1" testName="ExecutarProcedureTest" computerName="WEC823" duration="00:00:00.0253726" startTime="2013-03-18T18:58:48.5311675-03:00" endTime="2013-03-18T18:58:48.5581691-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="218067a9-b019-4126-a7c8-7a48e9b245fe">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method Impacta.Infra.Repositorios.SqlServer.Testes.BaseRepositorioTest.ExecutarProcedureTest threw exception: 
+System.Data.Odbc.OdbcException: ERROR [42S02] [Microsoft][ODBC SQL Server Driver][SQL Server]Invalid object name 'tbUnidade'.</Message>
+          <StackTrace>    at System.Data.Odbc.OdbcConnection.HandleError(OdbcHandle hrHandle, RetCode retcode)
+   at System.Data.Odbc.OdbcCommand.ExecuteReaderObject(CommandBehavior behavior, String method, Boolean needReader, Object[] methodArguments, SQL_API odbcApiMethod)
+   at System.Data.Odbc.OdbcCommand.ExecuteReaderObject(CommandBehavior behavior, String method, Boolean needReader)
+   at System.Data.Odbc.OdbcCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Odbc.OdbcCommand.ExecuteReader()
+   at Impacta.Infra.Repositorios.SqlServer.OdbcRepositorio.ExecutarProcedure() in C:\_Projetos\ImpactaCSharp1\Impacta.Infra.Repositorios.SqlServer\OdbcRepositorio.cs:line 20
+   at Impacta.Infra.Repositorios.SqlServer.Testes.BaseRepositorioTest.ExecutarProcedureTest() in C:\_Projetos\ImpactaCSharp1\Impacta.Infra.Repositorios.SqlServer.Testes\BaseRepositorioTest.cs:line 18
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>
