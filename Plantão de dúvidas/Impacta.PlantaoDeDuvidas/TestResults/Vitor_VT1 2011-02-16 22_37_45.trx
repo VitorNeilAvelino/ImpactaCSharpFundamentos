@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="212e5b18-3802-4ba6-b269-c95f0dd12c8c" name="Vitor@VT1 2011-02-16 22:37:45" runUser="VT1\Vitor" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2006">
+  <TestRunConfiguration name="Local Test Run" id="4a065802-3c0e-472e-8d3f-0acca923fec1">
+    <Description>This is a default test run configuration for a local test run.</Description>
+    <Deployment runDeploymentRoot="C:\Users\Vitor\Documents\Aulas\CSharp\Impacta\Plantão de dúvidas\Impacta.Testes\TestResults\Vitor_VT1 2011-02-16 22_37_45">
+      <DeploymentItem filename="C:\Users\Vitor\Documents\Aulas\CSharp\Impacta\Plantão de dúvidas\Impacta.Testes\ReferencedAssemblies\XmlSampleGenerator.dll" />
+    </Deployment>
+    <TestTypeSpecific />
+  </TestRunConfiguration>
+  <ResultSummary outcome="Failed">
+    <Counters total="1" executed="1" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <Times creation="2011-02-16T22:37:45.4320240-02:00" queuing="2011-02-16T22:37:51.7852896-02:00" start="2011-02-16T22:37:52.9490016-02:00" finish="2011-02-16T22:37:55.8261792-02:00" />
+  <TestDefinitions>
+    <UnitTest name="TestMethod1" storage="c:\users\vitor\documents\aulas\csharp\impacta\plantão de dúvidas\impacta.testes\impacta.testes\bin\debug\impacta.testes.dll" id="930ee84c-0045-3838-d896-768583e34689">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="914b0697-0b31-4bd1-8b18-a211dc1ba3a5" />
+      <TestMethod codeBase="C:\Users\Vitor\Documents\Aulas\CSharp\Impacta\Plantão de dúvidas\Impacta.Testes\Impacta.Testes\bin\Debug\Impacta.Testes.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Impacta.Testes.XmlTeste, Impacta.Testes" name="TestMethod1" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="930ee84c-0045-3838-d896-768583e34689" executionId="914b0697-0b31-4bd1-8b18-a211dc1ba3a5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="914b0697-0b31-4bd1-8b18-a211dc1ba3a5" testId="930ee84c-0045-3838-d896-768583e34689" testName="TestMethod1" computerName="VT1" duration="00:00:00.2718608" startTime="2011-02-16T22:37:53.0924592-02:00" endTime="2011-02-16T22:37:55.6034688-02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method Impacta.Testes.XmlTeste.TestMethod1 threw exception:  System.IO.FileNotFoundException: Não foi possível localizar o arquivo 'C:\Users\Vitor\Documents\Aulas\CSharp\Impacta\Plantão de dúvidas\Impacta.Testes\TestResults\Vitor_VT1 2011-02-16 22_37_45\Out\po.xsd'..</Message>
+          <StackTrace>    em System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   em System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy)
+   em System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   em System.Xml.XmlDownloadManager.GetStream(Uri uri, ICredentials credentials)
+   em System.Xml.XmlUrlResolver.GetEntity(Uri absoluteUri, String role, Type ofObjectToReturn)
+   em System.Xml.XmlTextReaderImpl.OpenUrlDelegate(Object xmlResolver)
+   em System.Threading.CompressedStack.runTryCode(Object userData)
+   em System.Runtime.CompilerServices.RuntimeHelpers.ExecuteCodeWithGuaranteedCleanup(TryCode code, CleanupCode backoutCode, Object userData)
+   em System.Threading.CompressedStack.Run(CompressedStack compressedStack, ContextCallback callback, Object state)
+   em System.Xml.XmlTextReaderImpl.OpenUrl()
+   em System.Xml.XmlTextReaderImpl.Read()
+   em System.Xml.XmlTextReader.Read()
+   em System.Xml.Schema.Parser.StartParsing(XmlReader reader, String targetNamespace)
+   em System.Xml.Schema.Parser.Parse(XmlReader reader, String targetNamespace)
+   em System.Xml.Schema.XmlSchema.Read(XmlReader reader, ValidationEventHandler validationEventHandler)
+   em Microsoft.Xml.XMLGen.XmlSampleGenerator..ctor(String url, XmlQualifiedName rootElem) na c:\Users\Vitor\Desktop\XmlSampleGenerator.cs:linha 83
+   em Impacta.Testes.XmlTeste.TestMethod1() na C:\Users\Vitor\Documents\Aulas\CSharp\Impacta\Plantão de dúvidas\Impacta.Testes\Impacta.Testes\XmlTeste.cs:linha 27
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

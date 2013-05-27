@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="Impacta.Testes">
+</Property><Property Name="Solution File" Value="C:\Users\Vitor\Documents\Aulas\CSharp\Impacta\Plantão de dúvidas\Impacta.Testes\Impacta.Testes.sln">
+</Property><Property Name="Date" Value="domingo, 23 de outubro de 2011">
+</Property><Property Name="Time" Value="22:04">
+</Property></Properties><Event ErrorLevel="0" Project="Impacta.Testes" Source="Impacta.Testes\Impacta.Testes.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Impacta.Testes" Source="Impacta.Testes\Impacta.Testes.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="Impacta.Testes.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="Impacta.Testes.sln" Description="Converted">
+</Event><Event ErrorLevel="3" Project="" Source="Impacta.Testes.vsmdi" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="Impacta.Testes.vsmdi" Description="The file was converted to the current format.">
+</Event><Event ErrorLevel="3" Project="" Source="Impacta.Testes1.vsmdi" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="Impacta.Testes1.vsmdi" Description="The file was converted to the current format.">
+</Event><Event ErrorLevel="3" Project="" Source="LocalTestRun.testrunconfig" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="LocalTestRun.testrunconfig" Description="The file was converted to the current format.">
+</Event><Event ErrorLevel="0" Project="Impacta.Testes" Source="Impacta.Testes\Impacta.Testes.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>
