@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Produtos>
+  <Produto Tipo="Acabado">
+    Produto acabado 1
+  </Produto>
+  <Produto Tipo="Acabado">
+    Produto acabado 2
+  </Produto>
+  <Produto Tipo="Fabricado">
+    Produto fabricado 1
+  </Produto>
+</Produtos>
