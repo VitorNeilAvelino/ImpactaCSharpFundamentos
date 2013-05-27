@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="636dfa33-82d3-41a8-a6b0-8bec0514af99" name="Vitor@VT1 2011-02-16 22:38:01" runUser="VT1\Vitor" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2006">
+  <TestRunConfiguration name="Local Test Run" id="4a065802-3c0e-472e-8d3f-0acca923fec1">
+    <Description>This is a default test run configuration for a local test run.</Description>
+    <Deployment runDeploymentRoot="C:\Users\Vitor\Documents\Aulas\CSharp\Impacta\Plantão de dúvidas\Impacta.Testes\TestResults\Vitor_VT1 2011-02-16 22_38_01">
+      <DeploymentItem filename="C:\Users\Vitor\Documents\Aulas\CSharp\Impacta\Plantão de dúvidas\Impacta.Testes\ReferencedAssemblies\XmlSampleGenerator.dll" />
+    </Deployment>
+    <TestTypeSpecific />
+  </TestRunConfiguration>
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <Times creation="2011-02-16T22:38:01.8253152-02:00" queuing="2011-02-16T22:38:03.7534656-02:00" start="2011-02-16T22:38:04.4797824-02:00" finish="2011-02-16T22:38:07.5244944-02:00" />
+  <TestDefinitions>
+    <UnitTest name="TestMethod1" storage="c:\users\vitor\documents\aulas\csharp\impacta\plantão de dúvidas\impacta.testes\impacta.testes\bin\debug\impacta.testes.dll" id="930ee84c-0045-3838-d896-768583e34689">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="3e0eb173-0f44-4923-848a-ef8e39da0a27" />
+      <TestMethod codeBase="C:\Users\Vitor\Documents\Aulas\CSharp\Impacta\Plantão de dúvidas\Impacta.Testes\Impacta.Testes\bin\Debug\Impacta.Testes.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Impacta.Testes.XmlTeste, Impacta.Testes" name="TestMethod1" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="930ee84c-0045-3838-d896-768583e34689" executionId="3e0eb173-0f44-4923-848a-ef8e39da0a27" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="3e0eb173-0f44-4923-848a-ef8e39da0a27" testId="930ee84c-0045-3838-d896-768583e34689" testName="TestMethod1" computerName="VT1" duration="00:00:00.3723529" startTime="2011-02-16T22:38:04.8710304-02:00" endTime="2011-02-16T22:38:07.2867360-02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

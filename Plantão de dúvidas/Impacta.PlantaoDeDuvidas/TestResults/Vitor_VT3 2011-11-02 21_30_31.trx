@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="b0281d73-bb8d-4e33-88f5-0b281234e998" name="Vitor@VT3 2011-11-02 21:30:31" runUser="VT3\Vitor" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local Test Run" id="4a065802-3c0e-472e-8d3f-0acca923fec1">
+    <Description>This is a default test run configuration for a local test run.</Description>
+    <Deployment runDeploymentRoot="Vitor_VT3 2011-11-02 21_30_31">
+      <DeploymentItem filename="C:\Users\Vitor\Documents\Aulas\CSharp\Impacta\Plantão de dúvidas\Impacta.PlantaoDeDuvidas\ReferencedAssemblies\XmlSampleGenerator.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2011-11-02T21:30:31.5246000-02:00" queuing="2011-11-02T21:30:31.6586000-02:00" start="2011-11-02T21:30:31.6706000-02:00" finish="2011-11-02T21:30:31.9806000-02:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="RetornarUltimoArquivoDaPastaPorOrdemAlfabetica" storage="c:\users\vitor\documents\aulas\csharp\impacta\plantão de dúvidas\impacta.plantaodeduvidas\impacta.testes\bin\debug\impacta.testes.dll" id="283faa02-bd26-52d2-f877-392040865da4">
+      <Execution id="50ea7151-e54b-40e8-8603-178c85f70316" />
+      <TestMethod codeBase="C:/Users/Vitor/Documents/Aulas/CSharp/Impacta/Plantão de dúvidas/Impacta.PlantaoDeDuvidas/Impacta.Testes/bin/Debug/Impacta.Testes.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Impacta.Dominio.Teste.LinqTeste, Impacta.Testes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="RetornarUltimoArquivoDaPastaPorOrdemAlfabetica" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="283faa02-bd26-52d2-f877-392040865da4" executionId="50ea7151-e54b-40e8-8603-178c85f70316" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="50ea7151-e54b-40e8-8603-178c85f70316" testId="283faa02-bd26-52d2-f877-392040865da4" testName="RetornarUltimoArquivoDaPastaPorOrdemAlfabetica" computerName="VT3" duration="00:00:00.0165904" startTime="2011-11-02T21:30:31.6756000-02:00" endTime="2011-11-02T21:30:31.9626000-02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="50ea7151-e54b-40e8-8603-178c85f70316">
+    </UnitTestResult>
+  </Results>
+</TestRun>
