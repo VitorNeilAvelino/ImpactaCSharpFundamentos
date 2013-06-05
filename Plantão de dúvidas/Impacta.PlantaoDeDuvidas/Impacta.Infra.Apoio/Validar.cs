@@ -18,7 +18,7 @@ namespace Impacta.Infra.Apoio
             xml.Validate(xsdSchema, (o, e) =>
             {
                 if (e.Exception != null)
-                    throw new XmlException(string.Format("Erro na validação do XML de entrada: {0}", e.Message), e.Exception);
+                    throw new XmlException(string.Format("Erro na validação do XML: {0}", e.Message), e.Exception);
             });
         }
     }
