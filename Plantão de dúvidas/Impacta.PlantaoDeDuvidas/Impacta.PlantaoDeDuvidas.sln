@@ -16,9 +16,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Impacta.Controles", "Impact
 EndProject
 Project("{C8D11400-126E-41CD-887F-60BD40844F9E}") = "ImpactaCSharp1.Database", "ImpactaCSharp1.Database\ImpactaCSharp1.Database.dbproj", "{67CBC824-A49E-4E9B-A947-360F3DFE65C3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Impacta.Infra.Apoio", "Impacta.Infra.Apoio\Impacta.Infra.Apoio.csproj", "{7C69611C-F3BB-417D-95B7-03C52BC0D0E6}"
+EndProject
 Global
 	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 5
+		SccNumberOfProjects = 6
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs24
 		SccLocalPath0 = .
@@ -34,6 +36,9 @@ Global
 		SccProjectUniqueName4 = ImpactaCSharp1.Database\\ImpactaCSharp1.Database.dbproj
 		SccProjectName4 = ImpactaCSharp1.Database
 		SccLocalPath4 = ImpactaCSharp1.Database
+		SccProjectUniqueName5 = Impacta.Infra.Apoio\\Impacta.Infra.Apoio.csproj
+		SccProjectName5 = Impacta.Infra.Apoio
+		SccLocalPath5 = Impacta.Infra.Apoio
 	EndGlobalSection
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = Impacta.Testes1.vsmdi
@@ -90,6 +95,16 @@ Global
 		{67CBC824-A49E-4E9B-A947-360F3DFE65C3}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{67CBC824-A49E-4E9B-A947-360F3DFE65C3}.Release|Mixed Platforms.Deploy.0 = Release|Any CPU
 		{67CBC824-A49E-4E9B-A947-360F3DFE65C3}.Release|x86.ActiveCfg = Release|Any CPU
+		{7C69611C-F3BB-417D-95B7-03C52BC0D0E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C69611C-F3BB-417D-95B7-03C52BC0D0E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C69611C-F3BB-417D-95B7-03C52BC0D0E6}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{7C69611C-F3BB-417D-95B7-03C52BC0D0E6}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{7C69611C-F3BB-417D-95B7-03C52BC0D0E6}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7C69611C-F3BB-417D-95B7-03C52BC0D0E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C69611C-F3BB-417D-95B7-03C52BC0D0E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C69611C-F3BB-417D-95B7-03C52BC0D0E6}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{7C69611C-F3BB-417D-95B7-03C52BC0D0E6}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{7C69611C-F3BB-417D-95B7-03C52BC0D0E6}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
