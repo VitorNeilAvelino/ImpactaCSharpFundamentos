@@ -1,6 +1,6 @@
 ﻿using System.Xml;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Microsoft.Xml.XMLGen;
+//using Microsoft.Xml.XMLGen;
 
 namespace Impacta.Testes
 {
@@ -19,8 +19,8 @@ namespace Impacta.Testes
 
             string enderecoXsd = @"C:\po.xsd";
 
-            XmlSampleGenerator generator = new XmlSampleGenerator(enderecoXsd, qname);
-            generator.WriteXml(textWriter);
+            //XmlSampleGenerator generator = new XmlSampleGenerator(enderecoXsd, qname);
+            //generator.WriteXml(textWriter);
         }
     }
 }
