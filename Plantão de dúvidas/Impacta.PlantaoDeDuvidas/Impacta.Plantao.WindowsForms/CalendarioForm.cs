@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
+using System.Globalization;
 using System.Windows.Forms;
 
 namespace Impacta.Plantao.WindowsForms
@@ -23,28 +20,52 @@ namespace Impacta.Plantao.WindowsForms
 
         private void PopularCalendario(int numeroMes, int ano)
         {
-            //var diasDoMes = DateTime.DaysInMonth(ano, numeroMes);
+            calendarioTableLayoutPanel.SuspendLayout();
 
-            var dia = new DateTime(ano, numeroMes, 1);
-            var label = new Label { Text = "1", Font = new Font("Microsoft Sans Serif", 11F, FontStyle.Regular, GraphicsUnit.Point, 0) };
+            calendarioTableLayoutPanel.Controls.Clear();
+            PopularCabecalhoCalendario();
 
-            calendarioTableLayoutPanel.Controls.Add(label, (int)dia.DayOfWeek, 1);
+            var diasDoMes = new List<DateTime>();
+            for (var dia = 1; dia <= DateTime.DaysInMonth(ano, numeroMes); dia++)
+            {
+                diasDoMes.Add(new DateTime(ano, numeroMes, dia));
+            }
 
-            //for (var i = 0; i <= calendarioTableLayoutPanel.RowCount - 1; i++)
-            //{
-            //    for (var j = 0; j <= calendarioTableLayoutPanel.ColumnCount - 1; j++)
-            //    {
-            //        for (var k = 0; k < DateTime.DaysInMonth(ano, numeroMes); k++)
-            //        {
-            //            var dia = new DateTime(ano, numeroMes, k);
+            var linhaDoCalendario = 1;
+            foreach (var dia in diasDoMes)
+            {
+                var diaLabel = new Label { Text = dia.Day.ToString(), Font = new Font("Microsoft Sans Serif", 11F, FontStyle.Regular, GraphicsUnit.Point, 0) };
 
-            //            if (dia.DayOfWeek == calendarioTableLayoutPanel.row)
-            //            {
+                calendarioTableLayoutPanel.Controls.Add(diaLabel, (int)dia.DayOfWeek, linhaDoCalendario);
 
-            //            }
-            //        }
-            //    }
-            //}
+                if (dia.DayOfWeek == DayOfWeek.Saturday) linhaDoCalendario++;
+            }
+
+            calendarioTableLayoutPanel.ResumeLayout();
+        }
+
+        private void PopularCabecalhoCalendario()
+        {
+            var lingua = new CultureInfo("pt-BR"); 
+            var formatoDeData = lingua.DateTimeFormat; 
+
+            for (var numeroDiaDaSemana = 0; numeroDiaDaSemana < 7; numeroDiaDaSemana++)
+            {
+                var nomeDiaDaSemana = formatoDeData.GetDayName((DayOfWeek)numeroDiaDaSemana);
+
+                var diaDaSemanaLabel = new Label
+                {
+                    Text =  nomeDiaDaSemana,
+                    Font = new Font("Microsoft Sans Serif", 11F, FontStyle.Regular, GraphicsUnit.Point, 0)
+                };
+
+                calendarioTableLayoutPanel.Controls.Add(diaDaSemanaLabel, numeroDiaDaSemana, 0);
+            }
+        }
+
+        private void calendarioMonthCalendar_DateChanged(object sender, DateRangeEventArgs e)
+        {
+            PopularCalendario(e.Start.Month, e.Start.Year);
         }
     }
 }
