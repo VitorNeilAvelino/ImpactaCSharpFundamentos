@@ -22,9 +22,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Impacta.Infra.Apoio", "Impa
 EndProject
 Project("{C8D11400-126E-41CD-887F-60BD40844F9E}") = "ImpactaCSharp1.Database.Wizard", "ImpactaCSharp1.Database.Wizard\ImpactaCSharp1.Database.Wizard.dbproj", "{8FC21BB1-1EA6-46F2-BC4E-566CBE545A72}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Impacta.Plantao.WindowsForms.Setup", "Impacta.Plantao.WindowsForms.Setup\Impacta.Plantao.WindowsForms.Setup.vdproj", "{FDB25119-646C-452E-B83F-68EFE6F5D312}"
+EndProject
 Global
 	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 8
+		SccNumberOfProjects = 9
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs24
 		SccLocalPath0 = .
@@ -49,6 +51,9 @@ Global
 		SccProjectUniqueName7 = ImpactaCSharp1.Database.Wizard\\ImpactaCSharp1.Database.Wizard.dbproj
 		SccProjectName7 = ImpactaCSharp1.Database.Wizard
 		SccLocalPath7 = ImpactaCSharp1.Database.Wizard
+		SccProjectUniqueName8 = Impacta.Plantao.WindowsForms.Setup\\Impacta.Plantao.WindowsForms.Setup.vdproj
+		SccProjectName8 = Impacta.Plantao.WindowsForms.Setup
+		SccLocalPath8 = Impacta.Plantao.WindowsForms.Setup
 	EndGlobalSection
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = Impacta.Testes1.vsmdi
@@ -139,6 +144,12 @@ Global
 		{8FC21BB1-1EA6-46F2-BC4E-566CBE545A72}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{8FC21BB1-1EA6-46F2-BC4E-566CBE545A72}.Release|Mixed Platforms.Deploy.0 = Release|Any CPU
 		{8FC21BB1-1EA6-46F2-BC4E-566CBE545A72}.Release|x86.ActiveCfg = Release|Any CPU
+		{FDB25119-646C-452E-B83F-68EFE6F5D312}.Debug|Any CPU.ActiveCfg = Debug
+		{FDB25119-646C-452E-B83F-68EFE6F5D312}.Debug|Mixed Platforms.ActiveCfg = Debug
+		{FDB25119-646C-452E-B83F-68EFE6F5D312}.Debug|x86.ActiveCfg = Debug
+		{FDB25119-646C-452E-B83F-68EFE6F5D312}.Release|Any CPU.ActiveCfg = Release
+		{FDB25119-646C-452E-B83F-68EFE6F5D312}.Release|Mixed Platforms.ActiveCfg = Release
+		{FDB25119-646C-452E-B83F-68EFE6F5D312}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
