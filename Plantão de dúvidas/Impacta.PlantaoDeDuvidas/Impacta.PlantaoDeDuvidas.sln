@@ -24,9 +24,11 @@ Project("{C8D11400-126E-41CD-887F-60BD40844F9E}") = "ImpactaCSharp1.Database.Wiz
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Impacta.Plantao.WindowsForms.Setup", "Impacta.Plantao.WindowsForms.Setup\Impacta.Plantao.WindowsForms.Setup.vdproj", "{FDB25119-646C-452E-B83F-68EFE6F5D312}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Impacta.Infra.Apoio.Setup", "Impacta.Infra.Apoio.Setup\Impacta.Infra.Apoio.Setup.csproj", "{EBEE2783-88F0-4745-B63C-411DC75A28FC}"
+EndProject
 Global
 	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 9
+		SccNumberOfProjects = 10
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs24
 		SccLocalPath0 = .
@@ -54,6 +56,9 @@ Global
 		SccProjectUniqueName8 = Impacta.Plantao.WindowsForms.Setup\\Impacta.Plantao.WindowsForms.Setup.vdproj
 		SccProjectName8 = Impacta.Plantao.WindowsForms.Setup
 		SccLocalPath8 = Impacta.Plantao.WindowsForms.Setup
+		SccProjectUniqueName9 = Impacta.Infra.Apoio.Setup\\Impacta.Infra.Apoio.Setup.csproj
+		SccProjectName9 = Impacta.Infra.Apoio.Setup
+		SccLocalPath9 = Impacta.Infra.Apoio.Setup
 	EndGlobalSection
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = Impacta.Testes1.vsmdi
@@ -150,6 +155,16 @@ Global
 		{FDB25119-646C-452E-B83F-68EFE6F5D312}.Release|Any CPU.ActiveCfg = Release
 		{FDB25119-646C-452E-B83F-68EFE6F5D312}.Release|Mixed Platforms.ActiveCfg = Release
 		{FDB25119-646C-452E-B83F-68EFE6F5D312}.Release|x86.ActiveCfg = Release
+		{EBEE2783-88F0-4745-B63C-411DC75A28FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBEE2783-88F0-4745-B63C-411DC75A28FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBEE2783-88F0-4745-B63C-411DC75A28FC}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{EBEE2783-88F0-4745-B63C-411DC75A28FC}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{EBEE2783-88F0-4745-B63C-411DC75A28FC}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EBEE2783-88F0-4745-B63C-411DC75A28FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBEE2783-88F0-4745-B63C-411DC75A28FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBEE2783-88F0-4745-B63C-411DC75A28FC}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{EBEE2783-88F0-4745-B63C-411DC75A28FC}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{EBEE2783-88F0-4745-B63C-411DC75A28FC}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
