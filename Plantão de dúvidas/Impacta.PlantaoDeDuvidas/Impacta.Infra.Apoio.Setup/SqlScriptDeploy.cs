@@ -3,6 +3,7 @@ using System.Configuration;
 using System.IO;
 using System.Reflection;
 using System.Data.SqlClient;
+using Impacta.Infra.Apoio.Setup.Properties;
 
 namespace Impacta.Infra.Apoio.Setup
 {
@@ -16,19 +17,20 @@ namespace Impacta.Infra.Apoio.Setup
             InitializeComponent();
         }
 
-        //private static string GetSql(string name)
-        //{
-        //    var asm = Assembly.GetExecutingAssembly();
-        //    var stm = asm.GetManifestResourceStream(asm.GetName().Name + "." + name);
-        //    var reader = new StreamReader(stm);
-        //    return reader.ReadToEnd();
-        //}
+        private static string GetSql()
+        {
+            var asm = Assembly.GetExecutingAssembly();
+            var stm = asm.GetManifestResourceStream(asm.GetName().Name + "." + "ScriptCriacaoBanco.sql");
+            var reader = new StreamReader(stm);
+            return reader.ReadToEnd();
+        }
 
         private void DeployDatabase()
         {
-            string sql = string.Empty;
+            var sql = GetSql();
             var command = new SqlCommand(sql, _sqlConnection);
-            _sqlConnection.ConnectionString = ConfigurationManager.ConnectionStrings["masterConnectionString"].ConnectionString;
+            //_sqlConnection.ConnectionString = ConfigurationManager.ConnectionStrings["masterConnectionString"].ConnectionString;
+            _sqlConnection.ConnectionString = Settings.Default.masterConnectionString;
             command.Connection.Open();
             //command.Connection.ChangeDatabase(dbName);
 
