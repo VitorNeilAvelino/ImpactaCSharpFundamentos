@@ -60,11 +60,14 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Management" />
     <Reference Include="System.XML" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="XmlSampleGenerator, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -80,6 +83,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="SqlScriptDeployTest.cs" />
     <Compile Include="ValidarTest.cs" />
     <Compile Include="XmlTeste.cs" />
   </ItemGroup>
@@ -131,6 +135,10 @@
     <None Include="Resources\K0331.xml" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Impacta.Infra.Apoio.Setup\Impacta.Infra.Apoio.Setup.csproj">
+      <Project>{EBEE2783-88F0-4745-B63C-411DC75A28FC}</Project>
+      <Name>Impacta.Infra.Apoio.Setup</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Impacta.Infra.Apoio\Impacta.Infra.Apoio.csproj">
       <Project>{7C69611C-F3BB-417D-95B7-03C52BC0D0E6}</Project>
       <Name>Impacta.Infra.Apoio</Name>
