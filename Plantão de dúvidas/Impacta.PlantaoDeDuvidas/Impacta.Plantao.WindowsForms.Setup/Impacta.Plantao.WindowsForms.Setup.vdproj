@@ -4,9 +4,9 @@
 "ProjectType" = "8:{978C614F-708E-4E1A-B201-565925725DBA}"
 "IsWebType" = "8:FALSE"
 "ProjectName" = "8:Impacta.Plantao.WindowsForms.Setup"
-"LanguageId" = "3:1033"
+"LanguageId" = "3:1046"
 "CodePage" = "3:1252"
-"UILanguageId" = "3:1033"
+"UILanguageId" = "3:1046"
 "SccProjectName" = "8:SAK"
 "SccLocalPath" = "8:SAK"
 "SccAuxPath" = "8:SAK"
@@ -22,6 +22,12 @@
         "Entry"
         {
         "MsmKey" = "8:_638B50E8C5744A7AB227D4A64F43C067"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_97B27783A56E4F51A95A7616C4E7F8C7"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -119,7 +125,7 @@
     {
         "CustomAction"
         {
-            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_E65EB13E7C6C493FBD7B47BBFF8C5EAB"
+            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_2DA5C7E841504D2CAA098098A8B6D647"
             {
             "Name" = "8:Rodar o script do banco de dados"
             "Condition" = "8:"
@@ -131,7 +137,7 @@
             "Sequence" = "3:1"
             "Identifier" = "8:_D5E9CE50_D182_4690_84A4_1DBF9804F88B"
             "InstallerClass" = "11:TRUE"
-            "CustomActionData" = "8:"
+            "CustomActionData" = "8:/targetdir=\"[TARGETDIR]\\\""
             }
         }
         "DefaultFeature"
@@ -156,6 +162,26 @@
         }
         "File"
         {
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_97B27783A56E4F51A95A7616C4E7F8C7"
+            {
+            "SourcePath" = "8:..\\ImpactaCSharp1.Database.Wizard\\sql\\debug\\ImpactaCSharp1.Database.Wizard.sql"
+            "TargetName" = "8:ImpactaCSharp1.Database.Wizard.sql"
+            "Tag" = "8:"
+            "Folder" = "8:_2C418F7D2D9841B2927C7889D163092E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
         }
         "FileType"
         {
@@ -205,28 +231,28 @@
         }
         "MsiBootstrapper"
         {
-        "LangId" = "3:1033"
+        "LangId" = "3:1046"
         "RequiresElevation" = "11:FALSE"
         }
         "Product"
         {
         "Name" = "8:Microsoft Visual Studio"
-        "ProductName" = "8:Impacta.Plantao.WindowsForms.Setup"
+        "ProductName" = "8:ImpactaSetup"
         "ProductCode" = "8:{62FA49AE-ACBD-49EF-9F1F-EF3BC6D2C022}"
-        "PackageCode" = "8:{89C3EB31-0634-40E4-80A4-67ECF7B929C5}"
+        "PackageCode" = "8:{2899544B-0350-401E-B424-01F5E3DB25F8}"
         "UpgradeCode" = "8:{C5E70291-A66F-4BD8-803E-B423C58336C2}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
-        "RemovePreviousVersions" = "11:FALSE"
+        "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
-        "InstallAllUsers" = "11:FALSE"
+        "InstallAllUsers" = "11:TRUE"
         "ProductVersion" = "8:1.0.0"
-        "Manufacturer" = "8:Default Company Name"
+        "Manufacturer" = "8:VitorAvelino"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
         "Title" = "8:Impacta.Plantao.WindowsForms.Setup"
         "Subject" = "8:"
-        "ARPCONTACT" = "8:Default Company Name"
+        "ARPCONTACT" = "8:Vítor Avelino"
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
         "ARPURLINFOABOUT" = "8:"
