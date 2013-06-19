@@ -35,7 +35,7 @@ namespace Impacta.Infra.Apoio.Setup
             {
                 //sqlCmd.StartInfo.FileName = @"C:\Program Files\Microsoft SQL Server\110\Tools\Binn\SqlCmd.exe";
                 sqlCmd.StartInfo.FileName = @"SqlCmd.exe";
-                sqlCmd.StartInfo.Arguments = String.Format(@"-S .\sqlexpress -i ""{0}""", script.FullName);
+                sqlCmd.StartInfo.Arguments = String.Format(@"-S localhost\sqlexpress -i ""{0}""", script.FullName);
                 sqlCmd.StartInfo.UseShellExecute = false;
                 sqlCmd.StartInfo.CreateNoWindow = true;
 
