@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Windows.Forms;
 
 namespace Impacta.Plantao.WindowsForms
@@ -15,7 +13,7 @@ namespace Impacta.Plantao.WindowsForms
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CalendarioForm());
+            Application.Run(new DataGridViewForm());
         }
     }
 }

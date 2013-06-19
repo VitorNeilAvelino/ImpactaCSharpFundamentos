@@ -26,9 +26,11 @@ Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Impacta.Plantao.WindowsForm
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Impacta.Infra.Apoio.Setup", "Impacta.Infra.Apoio.Setup\Impacta.Infra.Apoio.Setup.csproj", "{EBEE2783-88F0-4745-B63C-411DC75A28FC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Impacta.Dominio", "..\..\Roteiro\ImpactaCSharp1\Impacta.Dominio\Impacta.Dominio.csproj", "{07592283-A1AC-4CDA-985C-1027BEFBDD7A}"
+EndProject
 Global
 	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 10
+		SccNumberOfProjects = 11
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs24
 		SccLocalPath0 = .
@@ -59,6 +61,9 @@ Global
 		SccProjectUniqueName9 = Impacta.Infra.Apoio.Setup\\Impacta.Infra.Apoio.Setup.csproj
 		SccProjectName9 = Impacta.Infra.Apoio.Setup
 		SccLocalPath9 = Impacta.Infra.Apoio.Setup
+		SccProjectUniqueName10 = ..\\..\\Roteiro\\ImpactaCSharp1\\Impacta.Dominio\\Impacta.Dominio.csproj
+		SccProjectName10 = ../../Roteiro/ImpactaCSharp1/Impacta.Dominio
+		SccLocalPath10 = ..\\..\\Roteiro\\ImpactaCSharp1\\Impacta.Dominio
 	EndGlobalSection
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = Impacta.Testes1.vsmdi
@@ -140,7 +145,6 @@ Global
 		{8FC21BB1-1EA6-46F2-BC4E-566CBE545A72}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{8FC21BB1-1EA6-46F2-BC4E-566CBE545A72}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
 		{8FC21BB1-1EA6-46F2-BC4E-566CBE545A72}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{8FC21BB1-1EA6-46F2-BC4E-566CBE545A72}.Debug|Mixed Platforms.Deploy.0 = Debug|Any CPU
 		{8FC21BB1-1EA6-46F2-BC4E-566CBE545A72}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{8FC21BB1-1EA6-46F2-BC4E-566CBE545A72}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8FC21BB1-1EA6-46F2-BC4E-566CBE545A72}.Release|Any CPU.Build.0 = Release|Any CPU
@@ -165,6 +169,16 @@ Global
 		{EBEE2783-88F0-4745-B63C-411DC75A28FC}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{EBEE2783-88F0-4745-B63C-411DC75A28FC}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{EBEE2783-88F0-4745-B63C-411DC75A28FC}.Release|x86.ActiveCfg = Release|Any CPU
+		{07592283-A1AC-4CDA-985C-1027BEFBDD7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07592283-A1AC-4CDA-985C-1027BEFBDD7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07592283-A1AC-4CDA-985C-1027BEFBDD7A}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{07592283-A1AC-4CDA-985C-1027BEFBDD7A}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{07592283-A1AC-4CDA-985C-1027BEFBDD7A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{07592283-A1AC-4CDA-985C-1027BEFBDD7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07592283-A1AC-4CDA-985C-1027BEFBDD7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07592283-A1AC-4CDA-985C-1027BEFBDD7A}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{07592283-A1AC-4CDA-985C-1027BEFBDD7A}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{07592283-A1AC-4CDA-985C-1027BEFBDD7A}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

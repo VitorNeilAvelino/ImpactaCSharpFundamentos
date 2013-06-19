@@ -14,7 +14,8 @@ namespace Impacta.Dominio
         {
             get
             {
-                return Documentos.Where(x => x.TipoDocumento == TipoDocumento.Cpf).First().Numero;
+                var cpf = Documentos.FirstOrDefault(x => x.TipoDocumento == TipoDocumento.Cpf);
+                return cpf != null ? cpf.Numero : null;
             }
             set
             {
@@ -24,6 +25,8 @@ namespace Impacta.Dominio
                 Documentos.Add(documento);
             }
         }
+
+        public bool Preferencial { get; set; }
 
         public override void Validar()
         {
