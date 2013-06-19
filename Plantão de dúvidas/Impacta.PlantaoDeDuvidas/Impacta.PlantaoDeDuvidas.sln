@@ -155,6 +155,7 @@ Global
 		{8FC21BB1-1EA6-46F2-BC4E-566CBE545A72}.Release|x86.ActiveCfg = Release|Any CPU
 		{FDB25119-646C-452E-B83F-68EFE6F5D312}.Debug|Any CPU.ActiveCfg = Debug
 		{FDB25119-646C-452E-B83F-68EFE6F5D312}.Debug|Mixed Platforms.ActiveCfg = Debug
+		{FDB25119-646C-452E-B83F-68EFE6F5D312}.Debug|Mixed Platforms.Build.0 = Debug
 		{FDB25119-646C-452E-B83F-68EFE6F5D312}.Debug|x86.ActiveCfg = Debug
 		{FDB25119-646C-452E-B83F-68EFE6F5D312}.Release|Any CPU.ActiveCfg = Release
 		{FDB25119-646C-452E-B83F-68EFE6F5D312}.Release|Mixed Platforms.ActiveCfg = Release
