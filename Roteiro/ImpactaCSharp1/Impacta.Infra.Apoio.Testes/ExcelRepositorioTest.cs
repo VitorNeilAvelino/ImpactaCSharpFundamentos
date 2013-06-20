@@ -1,18 +1,19 @@
-﻿using Impacta.Infra.Repositorios.MsOffice;
+﻿using System.Collections.Generic;
+using Impacta.Infra.Repositorios.MsOffice;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
 namespace Impacta.Infra.Apoio.Testes
 {
-    [TestClass()]
+    [TestClass]
     public class ExcelRepositorioTest
     {
-        [TestMethod()]
+        [TestMethod]
         public void InserirTest()
         {
-            string caminho = @"C:\CadastroDeClientes.xls";
-            string registro = "VÍTOR;25/12/1970 00:00:00;R. Tal;12845662858;vitor@gmail.com;123;" + DateTime.Now.ToLongTimeString();
-            ExcelRepositorio.Salvar(caminho, registro);
+            const string caminho = @"C:\CadastroDeClientes.xls";
+            var registro = "VÍTOR;25/12/1970 00:00:00;R. Tal;12845662858;vitor@gmail.com;123;" + DateTime.Now.ToLongTimeString();
+            ExcelRepositorio.Salvar(caminho, new List<string> { registro });
         }
     }
 }
