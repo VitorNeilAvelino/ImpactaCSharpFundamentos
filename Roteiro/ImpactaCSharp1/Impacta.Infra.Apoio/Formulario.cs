@@ -91,7 +91,7 @@ namespace Impacta.Infra.Apoio
         {
             foreach (Control controle in formulario.Controls)
             {
-                if (controle is TextBox)
+                if (controle is TextBox || controle is MaskedTextBox)
                 {
                     controle.Text = string.Empty;
                 }
