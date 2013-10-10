@@ -71,5 +71,15 @@ namespace Impacta.Infra.Apoio
         {
             return Transformar.RemoverAcentuacao(texto);
         }
+
+        public static int ParaInteiro(this object valor)
+        {
+            return Convert.ToInt32(valor);
+        }
+
+        public static DateTime ParaData(this object valor)
+        {
+            return Convert.ToDateTime(valor);
+        }
     }
 }
