@@ -92,6 +92,7 @@
     <Compile Include="RegraNegocioException.cs" />
     <Compile Include="Servico.cs" />
     <Compile Include="SituacaoAluno.cs" />
+    <Compile Include="SituacaoFinanceira.cs" />
     <Compile Include="TipoDocumento.cs" />
     <Compile Include="Mercadoria.cs" />
   </ItemGroup>
