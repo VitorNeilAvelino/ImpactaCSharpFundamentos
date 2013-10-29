@@ -81,5 +81,10 @@ namespace Impacta.Infra.Apoio
         {
             return Convert.ToDateTime(valor);
         }
+
+        public static Decimal ParaDecimal(this string valor)
+        {
+            return Convert.ToDecimal(valor);
+        }
     }
 }
