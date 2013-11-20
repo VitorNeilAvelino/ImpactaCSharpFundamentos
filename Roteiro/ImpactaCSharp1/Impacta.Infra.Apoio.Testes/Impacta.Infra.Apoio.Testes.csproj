@@ -70,6 +70,7 @@
     <Compile Include="ImagensTest.cs" />
     <Compile Include="LogTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TransformarTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Impacta.Infra.Apoio\Impacta.Infra.Apoio.csproj">
