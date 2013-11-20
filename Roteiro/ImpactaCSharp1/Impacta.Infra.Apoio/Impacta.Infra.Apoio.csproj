@@ -78,6 +78,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Chuck.cs" />
     <Compile Include="Converter.cs" />
     <Compile Include="Desktop.cs" />
     <Compile Include="Extensoes.cs" />
