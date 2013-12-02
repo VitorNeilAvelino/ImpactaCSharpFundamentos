@@ -76,6 +76,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EDeployTest.cs" />
     <Compile Include="IntervaloDatasTest.cs" />
     <Compile Include="LinqTeste.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -99,6 +100,7 @@
     <None Include="Resources\K033.xsd">
       <SubType>Designer</SubType>
     </None>
+    <Shadow Include="Test References\Impacta.Infra.Apoio.accessor" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0">

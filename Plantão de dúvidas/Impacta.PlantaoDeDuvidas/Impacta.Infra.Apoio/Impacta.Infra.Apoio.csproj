@@ -44,6 +44,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Arvore.cs" />
+    <Compile Include="Comparar.cs" />
+    <Compile Include="EDeploy.cs" />
     <Compile Include="Validar.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
