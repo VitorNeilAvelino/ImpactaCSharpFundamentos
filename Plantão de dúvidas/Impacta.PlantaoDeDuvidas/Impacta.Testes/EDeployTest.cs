@@ -1,4 +1,5 @@
-﻿using Impacta.Infra.Apoio;
+﻿using System.Linq;
+using Impacta.Infra.Apoio;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
@@ -19,10 +20,9 @@ namespace Impacta.Testes
         [TestMethod()]
         public void SomaDeQuadradosTest()
         {
-            int[] lista = { 1, 2, 3, 4, 5 }; // TODO: Initialize to an appropriate value
-            int expected = 55; // TODO: Initialize to an appropriate value
-            int actual;
-            actual = EDeploy.SomaDeQuadrados(lista);
+            int[] lista = { 1, 2, 3, 4, 5 };
+            const int expected = 55;
+            var actual = EDeploy.SomaDeQuadrados(lista);
             Assert.AreEqual(expected, actual);
         }
 
@@ -81,7 +81,7 @@ namespace Impacta.Testes
         {
             var noh1 = ConstruirArvore();
             int nohProcurado = 4;
-            int[] esperado = {1, 4};
+            int[] esperado = { 1, 4 };
 
             var eDeploy = new EDeploy();
             eDeploy.CaminhoArvore(ref noh1, nohProcurado);
@@ -120,6 +120,72 @@ namespace Impacta.Testes
             noh5.Filhos = new Arvore[] { null, null };
             noh9.Filhos = new Arvore[] { null, null };
             return noh1;
+        }
+
+        [TestMethod]
+        public void TestarConversaoDeVetorEmLista()
+        {
+            int[] vetor = { 1, 2, 3, 4, 5 };
+            vetor = vetor.RemoveAt(0);
+            foreach (var i in vetor)
+            {
+                Console.WriteLine(i);
+            }
+        }
+
+        [TestMethod]
+        public void SomaDeQuadradosCombinerTest()
+        {
+            var target = new EDeploy();
+            int[] lista = { 1, 2, 3, 4, 5 };
+            const int expected = 55;
+            var actual = target.SomaDeQuadradosDelegate(lista);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void SomarValorLetrasTest()
+        {
+            const string palavra = "sky";
+            const int expected = 55;
+            var actual = EDeploy.SomarValorLetras(palavra);
+            Assert.AreEqual(expected, actual);
+        }
+
+        /// <summary>
+        ///A test for PalavraTriangulo
+        ///</summary>
+        [TestMethod()]
+        public void PalavraTrianguloSkyTest()
+        {
+            var target = new EDeploy();
+            const string palavra = "SKY";
+            const int expected = 10;
+            var actual = target.PalavraTriangulo(palavra);
+            Assert.AreEqual(expected, actual);
+        }
+
+        /// <summary>
+        ///A test for PalavraTriangulo
+        ///</summary>
+        [TestMethod()]
+        public void PalavraTrianguloVitorTest()
+        {
+            var target = new EDeploy();
+            const string palavra = "Vitor";
+            const int expected = -1;
+            var actual = target.PalavraTriangulo(palavra);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod()]
+        public void PalavraTrianguloJjjjjjfTest()
+        {
+            var target = new EDeploy();
+            const string palavra = "Jjjjjjf";
+            const int expected = 11;
+            var actual = target.PalavraTriangulo(palavra);
+            Assert.AreEqual(expected, actual);
         }
     }
 }

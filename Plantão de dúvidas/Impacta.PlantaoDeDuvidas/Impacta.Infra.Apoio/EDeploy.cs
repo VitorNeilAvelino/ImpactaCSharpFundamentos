@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace Impacta.Infra.Apoio
 {
@@ -9,6 +8,8 @@ namespace Impacta.Infra.Apoio
     {
         public List<int> _caminhoNohs = new List<int>();
         public bool _nohEncontrado;
+
+        public delegate int Combiner(int primeiro, int valorAcumulado);
 
         public static void BuzzBizz()
         {
@@ -82,6 +83,42 @@ namespace Impacta.Infra.Apoio
                     arvore = null;
                 }
             }
+        }
+
+        public int SomaDeQuadradosDelegate(int[] lista)
+        {
+            Combiner combiner = (primeiro, acumulado) => (primeiro * primeiro) + acumulado;
+
+            return Acumular(combiner, 0, lista);
+        }
+
+        private static int Acumular(Combiner combiner, int valorNulo, int[] lista)
+        {
+            if (lista.Length == 0) return valorNulo;
+
+            var primeiro = lista[0];
+            lista = lista.RemoveAt(0);
+
+            return combiner(primeiro, Acumular(combiner, valorNulo, lista));
+        }
+
+        public int PalavraTriangulo(string palavra)
+        {
+            var dobroSomaPalavra = SomarValorLetras(palavra) * 2;
+            var raiz = Convert.ToInt32(Math.Sqrt(dobroSomaPalavra));
+            var n2MaisN = raiz * raiz + raiz;
+
+            return n2MaisN == dobroSomaPalavra ? raiz : -1;
+        }
+
+        public static int SomarValorLetras(string palavra)
+        {
+            if (string.IsNullOrEmpty(palavra))
+            {
+                throw new ArgumentNullException("palavra");
+            }
+
+            return palavra.ToUpper().Sum(letra => Convert.ToInt32(letra) - 64);
         }
     }
 }
