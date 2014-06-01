@@ -86,5 +86,10 @@ namespace Impacta.Infra.Apoio
         {
             return Convert.ToDecimal(valor);
         }
+
+        public static T ParaTipo<T>(this object valor)
+        {
+            return (T)Convert.ChangeType(valor, typeof(T));
+        }
     }
 }
