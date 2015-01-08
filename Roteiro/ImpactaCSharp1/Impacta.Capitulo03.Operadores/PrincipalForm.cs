@@ -1,10 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 namespace Impacta.Capitulo03.Operadores
@@ -21,7 +15,6 @@ namespace Impacta.Capitulo03.Operadores
             int a=2, b=6, c=10, d = 13;
 
             resultadoListBox.Items.Add("a = " + a);
-
         }
 
         private void ternariosToolStripMenuItem_Click(object sender, EventArgs e)
