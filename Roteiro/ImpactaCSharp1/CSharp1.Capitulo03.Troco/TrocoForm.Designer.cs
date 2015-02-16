@@ -43,7 +43,7 @@
             this.valorPagoTextBox = new System.Windows.Forms.TextBox();
             this.valorTrocoTextBox = new System.Windows.Forms.TextBox();
             this.moedasListView = new System.Windows.Forms.ListView();
-            this.modedasImageList = new System.Windows.Forms.ImageList(this.components);
+            this.moedasImageList = new System.Windows.Forms.ImageList(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.calcularButton = new System.Windows.Forms.Button();
@@ -113,23 +113,23 @@
             listViewItem4,
             listViewItem5,
             listViewItem6});
-            this.moedasListView.LargeImageList = this.modedasImageList;
+            this.moedasListView.LargeImageList = this.moedasImageList;
             this.moedasListView.Location = new System.Drawing.Point(6, 19);
             this.moedasListView.Name = "moedasListView";
             this.moedasListView.Size = new System.Drawing.Size(725, 491);
             this.moedasListView.TabIndex = 2;
             this.moedasListView.UseCompatibleStateImageBehavior = false;
             // 
-            // modedasImageList
+            // moedasImageList
             // 
-            this.modedasImageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("modedasImageList.ImageStream")));
-            this.modedasImageList.TransparentColor = System.Drawing.Color.Transparent;
-            this.modedasImageList.Images.SetKeyName(0, "1.png");
-            this.modedasImageList.Images.SetKeyName(1, "5.png");
-            this.modedasImageList.Images.SetKeyName(2, "10.png");
-            this.modedasImageList.Images.SetKeyName(3, "25.png");
-            this.modedasImageList.Images.SetKeyName(4, "50.png");
-            this.modedasImageList.Images.SetKeyName(5, "100.png");
+            this.moedasImageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("moedasImageList.ImageStream")));
+            this.moedasImageList.TransparentColor = System.Drawing.Color.Transparent;
+            this.moedasImageList.Images.SetKeyName(0, "1.png");
+            this.moedasImageList.Images.SetKeyName(1, "5.png");
+            this.moedasImageList.Images.SetKeyName(2, "10.png");
+            this.moedasImageList.Images.SetKeyName(3, "25.png");
+            this.moedasImageList.Images.SetKeyName(4, "50.png");
+            this.moedasImageList.Images.SetKeyName(5, "100.png");
             // 
             // groupBox1
             // 
@@ -195,7 +195,7 @@
         private System.Windows.Forms.TextBox valorPagoTextBox;
         private System.Windows.Forms.TextBox valorTrocoTextBox;
         private System.Windows.Forms.ListView moedasListView;
-        private System.Windows.Forms.ImageList modedasImageList;
+        private System.Windows.Forms.ImageList moedasImageList;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button calcularButton;
