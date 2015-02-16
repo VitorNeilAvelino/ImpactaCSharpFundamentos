@@ -38,13 +38,13 @@
             this.totalLabel = new System.Windows.Forms.Label();
             this.ufComboBox = new System.Windows.Forms.ComboBox();
             this.valorTextBox = new System.Windows.Forms.TextBox();
-            this.clienteComboBox = new System.Windows.Forms.ComboBox();
+            this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gravarButton = new System.Windows.Forms.Button();
             this.limparButton = new System.Windows.Forms.Button();
             this.fretesErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.fretesErrorProvider)).BeginInit();
+            this.nomeClienteTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fretesErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -114,6 +114,7 @@
             // 
             // ufComboBox
             // 
+            this.ufComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ufComboBox.FormattingEnabled = true;
             this.ufComboBox.Items.AddRange(new object[] {
             "SP",
@@ -135,18 +136,9 @@
             this.valorTextBox.TabIndex = 3;
             this.valorTextBox.Tag = "*DECIMAL";
             // 
-            // clienteComboBox
+            // clienteBindingSource
             // 
-            this.clienteComboBox.DataSource = this.clienteBindingSource;
-            this.clienteComboBox.DisplayMember = "Nome";
-            this.clienteComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.clienteComboBox.FormattingEnabled = true;
-            this.clienteComboBox.Location = new System.Drawing.Point(63, 6);
-            this.clienteComboBox.Name = "clienteComboBox";
-            this.clienteComboBox.Size = new System.Drawing.Size(249, 21);
-            this.clienteComboBox.TabIndex = 1;
-            this.clienteComboBox.Tag = "*";
-            this.clienteComboBox.ValueMember = "Id";
+            this.clienteBindingSource.DataSource = typeof(Impacta.Dominio.Cliente);
             // 
             // gravarButton
             // 
@@ -166,25 +158,32 @@
             this.limparButton.TabIndex = 11;
             this.limparButton.Text = "&Limpar";
             this.limparButton.UseVisualStyleBackColor = true;
+            this.limparButton.Click += new System.EventHandler(this.limparButton_Click);
             // 
             // fretesErrorProvider
             // 
             this.fretesErrorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.fretesErrorProvider.ContainerControl = this;
             // 
-            // clienteBindingSource
+            // nomeClienteTextBox
             // 
-            this.clienteBindingSource.DataSource = typeof(Impacta.Dominio.Cliente);
+            this.nomeClienteTextBox.Location = new System.Drawing.Point(63, 6);
+            this.nomeClienteTextBox.Name = "nomeClienteTextBox";
+            this.nomeClienteTextBox.Size = new System.Drawing.Size(266, 20);
+            this.nomeClienteTextBox.TabIndex = 1;
+            this.nomeClienteTextBox.Tag = "*DECIMAL";
             // 
             // FretesForm
             // 
+            this.AcceptButton = this.gravarButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.limparButton;
             this.ClientSize = new System.Drawing.Size(341, 192);
             this.Controls.Add(this.limparButton);
             this.Controls.Add(this.gravarButton);
+            this.Controls.Add(this.nomeClienteTextBox);
             this.Controls.Add(this.valorTextBox);
-            this.Controls.Add(this.clienteComboBox);
             this.Controls.Add(this.ufComboBox);
             this.Controls.Add(this.totalLabel);
             this.Controls.Add(this.freteLabel);
@@ -196,8 +195,8 @@
             this.Name = "FretesForm";
             this.Text = "Fretes";
             this.Load += new System.EventHandler(this.FretesForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.fretesErrorProvider)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fretesErrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -214,11 +213,11 @@
         private System.Windows.Forms.Label totalLabel;
         private System.Windows.Forms.ComboBox ufComboBox;
         private System.Windows.Forms.TextBox valorTextBox;
-        private System.Windows.Forms.ComboBox clienteComboBox;
         private System.Windows.Forms.Button gravarButton;
         private System.Windows.Forms.Button limparButton;
         private System.Windows.Forms.ErrorProvider fretesErrorProvider;
         private System.Windows.Forms.BindingSource clienteBindingSource;
+        private System.Windows.Forms.TextBox nomeClienteTextBox;
     }
 }
 

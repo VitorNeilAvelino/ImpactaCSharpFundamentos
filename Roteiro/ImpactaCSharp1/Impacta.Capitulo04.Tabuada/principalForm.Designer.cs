@@ -35,6 +35,7 @@
             // tabuadaTextBox
             // 
             this.tabuadaTextBox.Location = new System.Drawing.Point(12, 12);
+            this.tabuadaTextBox.MaxLength = 2;
             this.tabuadaTextBox.Name = "tabuadaTextBox";
             this.tabuadaTextBox.Size = new System.Drawing.Size(268, 20);
             this.tabuadaTextBox.TabIndex = 0;

@@ -20,15 +20,16 @@ namespace CSharp1.Capitulo03.Troco
 
             var valorCompra = Convert.ToDecimal(valorCompraTextBox.Text);
             var valorPago = Convert.ToDecimal(valorPagoTextBox.Text);
-
+            
             var troco = valorPago - valorCompra;
             var resto = troco;
 
             // Arredonda:
             //var moedas1 = Convert.ToInt32(resto / 1);
 
+            // Cast - moldar, ajustar.
             var moedas1 = (int)(resto / 1m);
-            resto %= 1;
+            resto %= 1m;
             var moedas050 = (int)(resto / 0.5m);
             resto %= 0.5m;
             var moedas025 = (int)(resto / 0.25m);
@@ -50,15 +51,16 @@ namespace CSharp1.Capitulo03.Troco
             moedasListView.Items[4].Text = moedas005.ToString();
             moedasListView.Items[5].Text = moedas001.ToString();
 
-            foreach (ListViewItem moeda in moedasListView.Items)
-            {
-                if (moeda.Text == "0")
-                {
-                    moeda.Remove();
-                }
-            }
+            //foreach (ListViewItem moeda in moedasListView.Items)
+            //{
+            //    if (moeda.Text == "0")
+            //    {
+            //        moeda.Remove();
+            //    }
+            //}
         }
 
+        // Só usar se for omitir os zeros.
         private void DefinirMoedasListView()
         {
             moedasListView.Items.Clear();
