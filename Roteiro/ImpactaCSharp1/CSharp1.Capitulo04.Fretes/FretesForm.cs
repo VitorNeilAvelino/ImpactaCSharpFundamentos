@@ -20,7 +20,6 @@ namespace CSharp1.Capitulo04.Fretes
             {
                 Calcular();
                 
-                // ToDo: implementar cathes
                 try
                 {
                     Gravar();
@@ -28,9 +27,23 @@ namespace CSharp1.Capitulo04.Fretes
                     MessageBox.Show("Gravação realizada com sucesso!");
                     LimparFormulario();
                 }
+                catch (DirectoryNotFoundException)
+                {
+                    MessageBox.Show("O caminho do arquivo de fretes não foi encontrado. A gravação não foi realizada.");
+                }
+                catch (UnauthorizedAccessException)
+                {
+                    MessageBox.Show("O arquivo Fretes.txt não tem permissão de gravação.");
+                    //File.SetAttributes("C:\\Fretes.txt", FileAttributes.Normal);
+                }
                 catch
                 {
-                    
+                    MessageBox.Show("Ooops! Houve um erro e a gravação não foi realizada. O suporte já foi comunicado.");
+                    //ToDo: Logar - log4net
+                }
+                finally
+                {
+                    // Opcional - se presente, é executado sempre, independente de sucesso, erro ou qualquer return.
                 }
             }
         }
@@ -38,9 +51,9 @@ namespace CSharp1.Capitulo04.Fretes
         private void Gravar()
         {
             //var diretorioDeExecucao = Application.StartupPath;
-            var meusDocumentos = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            //var meusDocumentos = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             //var caminho = Path.Combine(meusDocumentos, "Fretes.txt");
-            var caminho = "c:\\Fretes.txt";
+            var caminho = "C:\\Fretes.txt";
             var registro = string.Format("{0};{1};{2};{3};{4}",
                 nomeClienteTextBox.Text.Trim(),
                 ufComboBox.Text,
