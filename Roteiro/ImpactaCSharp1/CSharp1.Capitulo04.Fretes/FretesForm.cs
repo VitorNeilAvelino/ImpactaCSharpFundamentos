@@ -9,6 +9,7 @@ namespace CSharp1.Capitulo04.Fretes
 {
     public partial class FretesForm : Form
     {
+        private static readonly log4net.ILog _log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         public FretesForm()
         {
             InitializeComponent();
@@ -36,10 +37,10 @@ namespace CSharp1.Capitulo04.Fretes
                     MessageBox.Show("O arquivo Fretes.txt não tem permissão de gravação.");
                     //File.SetAttributes("C:\\Fretes.txt", FileAttributes.Normal);
                 }
-                catch
+                catch(Exception excecao)
                 {
                     MessageBox.Show("Ooops! Houve um erro e a gravação não foi realizada. O suporte já foi comunicado.");
-                    //ToDo: Logar - log4net
+                    //_log.Error(excecao);
                 }
                 finally
                 {
