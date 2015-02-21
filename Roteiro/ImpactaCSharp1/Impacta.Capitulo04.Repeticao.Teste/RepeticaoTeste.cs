@@ -3,9 +3,6 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Impacta.Capitulo04.Repeticao.Teste
 {
-    /// <summary>
-    /// Classe de testes para estrutura de repetição
-    /// </summary>
     [TestClass]
     public class RepeticaoTeste
     {
