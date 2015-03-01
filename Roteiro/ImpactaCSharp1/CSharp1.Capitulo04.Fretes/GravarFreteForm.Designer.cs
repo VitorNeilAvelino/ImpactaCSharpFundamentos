@@ -1,6 +1,6 @@
 ﻿namespace CSharp1.Capitulo04.Fretes
 {
-    partial class FretesForm
+    partial class GravarFreteForm
     {
         /// <summary>
         /// Required designer variable.

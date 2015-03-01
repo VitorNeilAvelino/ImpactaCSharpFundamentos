@@ -43,6 +43,7 @@
       <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -54,16 +55,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FretesForm.cs">
+    <Compile Include="ListagemFretesForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FretesForm.Designer.cs">
-      <DependentUpon>FretesForm.cs</DependentUpon>
+    <Compile Include="ListagemFretesForm.Designer.cs">
+      <DependentUpon>ListagemFretesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GravarFreteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GravarFreteForm.Designer.cs">
+      <DependentUpon>GravarFreteForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FretesForm.resx">
-      <DependentUpon>FretesForm.cs</DependentUpon>
+    <EmbeddedResource Include="GravarFreteForm.resx">
+      <DependentUpon>GravarFreteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListagemFretesForm.resx">
+      <DependentUpon>ListagemFretesForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
