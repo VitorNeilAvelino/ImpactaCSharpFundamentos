@@ -32,8 +32,9 @@
             this.operadoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aritmeticosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ternariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.resultadoListBox = new System.Windows.Forms.ListBox();
             this.precedenciaAssociatividadeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.resultadoListBox = new System.Windows.Forms.ListBox();
+            this.incrementaisDecrementaisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,7 +53,8 @@
             this.operadoresToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aritmeticosToolStripMenuItem,
             this.ternariosToolStripMenuItem,
-            this.precedenciaAssociatividadeToolStripMenuItem});
+            this.precedenciaAssociatividadeToolStripMenuItem,
+            this.incrementaisDecrementaisToolStripMenuItem});
             this.operadoresToolStripMenuItem.Name = "operadoresToolStripMenuItem";
             this.operadoresToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
             this.operadoresToolStripMenuItem.Text = "Operadores";
@@ -71,6 +73,13 @@
             this.ternariosToolStripMenuItem.Text = "Ternários";
             this.ternariosToolStripMenuItem.Click += new System.EventHandler(this.ternariosToolStripMenuItem_Click);
             // 
+            // precedenciaAssociatividadeToolStripMenuItem
+            // 
+            this.precedenciaAssociatividadeToolStripMenuItem.Name = "precedenciaAssociatividadeToolStripMenuItem";
+            this.precedenciaAssociatividadeToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
+            this.precedenciaAssociatividadeToolStripMenuItem.Text = "&Precedência/Associatividade";
+            this.precedenciaAssociatividadeToolStripMenuItem.Click += new System.EventHandler(this.precedenciaAssociatividadeToolStripMenuItem_Click);
+            // 
             // resultadoListBox
             // 
             this.resultadoListBox.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -80,12 +89,12 @@
             this.resultadoListBox.Size = new System.Drawing.Size(366, 293);
             this.resultadoListBox.TabIndex = 1;
             // 
-            // precedenciaAssociatividadeToolStripMenuItem
+            // incrementaisDecrementaisToolStripMenuItem
             // 
-            this.precedenciaAssociatividadeToolStripMenuItem.Name = "precedenciaAssociatividadeToolStripMenuItem";
-            this.precedenciaAssociatividadeToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
-            this.precedenciaAssociatividadeToolStripMenuItem.Text = "&Precedência/Associatividade";
-            this.precedenciaAssociatividadeToolStripMenuItem.Click += new System.EventHandler(this.precedenciaAssociatividadeToolStripMenuItem_Click);
+            this.incrementaisDecrementaisToolStripMenuItem.Name = "incrementaisDecrementaisToolStripMenuItem";
+            this.incrementaisDecrementaisToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
+            this.incrementaisDecrementaisToolStripMenuItem.Text = "Incrementais/Decrementais";
+            this.incrementaisDecrementaisToolStripMenuItem.Click += new System.EventHandler(this.incrementaisDecrementaisToolStripMenuItem_Click);
             // 
             // PrincipalForm
             // 
@@ -112,6 +121,7 @@
         private System.Windows.Forms.ListBox resultadoListBox;
         private System.Windows.Forms.ToolStripMenuItem ternariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem precedenciaAssociatividadeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem incrementaisDecrementaisToolStripMenuItem;
     }
 }
 
