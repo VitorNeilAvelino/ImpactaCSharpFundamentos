@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Linq;
+using Microsoft.VisualBasic.Devices;
 
 namespace CSharp1.Capitulo08.Vetores
 {
@@ -24,7 +25,7 @@ namespace CSharp1.Capitulo08.Vetores
                 Console.WriteLine(numeroDecimal);
             }
 
-            Console.WriteLine("Tamanho do vetor: {0}", decimais.Length);            
+            Console.WriteLine("Tamanho do vetor: {0}", decimais.Length);
         }
 
         [TestMethod]
@@ -32,6 +33,7 @@ namespace CSharp1.Capitulo08.Vetores
         {
             var decimais = new decimal[] { 0.5m, 0.9m, 1.59m };
 
+            //ref: aula 12
             Array.Resize(ref decimais, 5);
 
             decimais[4] = 4.4m;
@@ -75,6 +77,19 @@ namespace CSharp1.Capitulo08.Vetores
                 }
                 Console.WriteLine();
             }
+        }
+
+        [TestMethod]
+        public void TamanhoMaximoTeste()
+        {
+            var memoriaDisponivel = new ComputerInfo().AvailablePhysicalMemory * 0.5m;
+
+            var doisBilhoes = int.MaxValue;
+            var umBilhao = 1000000000;
+
+            var vetor3 = new byte[Convert.ToInt32(memoriaDisponivel)];
+            //var vetor1 = new bool[umBilhao];
+            //var vetor2 = new bool[doisBilhoes];
         }
     }
 }

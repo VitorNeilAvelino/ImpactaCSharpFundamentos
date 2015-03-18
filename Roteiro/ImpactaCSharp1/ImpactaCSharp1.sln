@@ -86,11 +86,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Impacta.Infra.Repositorios.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp1.Capitulo03.Troco", "CSharp1.Capitulo03.Troco\CSharp1.Capitulo03.Troco.csproj", "{DB61641F-BBE1-40C4-9C62-4AD6C25665C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp1.Capitulo08.Vetores", "CSharp1.Capitulo08.Vetores\CSharp1.Capitulo08.Vetores.csproj", "{F3B89E34-E281-4F9F-BEB2-C628D6577B17}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp1.Capitulo08.Vetores.Testes", "CSharp1.Capitulo08.Vetores\CSharp1.Capitulo08.Vetores.Testes.csproj", "{F3B89E34-E281-4F9F-BEB2-C628D6577B17}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp1.Capitulo09.Colecoes.Testes", "CSharp1.Capitulo09.Colecoes.Testes\CSharp1.Capitulo09.Colecoes.Testes.csproj", "{1F101D47-27D5-439B-887F-BA5AEC97994E}"
 EndProject
 Global
 	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 36
+		SccNumberOfProjects = 37
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs24
 		SccLocalPath0 = .
@@ -216,10 +218,14 @@ Global
 		SccProjectTopLevelParentUniqueName34 = ImpactaCSharp1.sln
 		SccProjectName34 = Impacta.Capitulo04.Tabuada
 		SccLocalPath34 = Impacta.Capitulo04.Tabuada
-		SccProjectUniqueName35 = CSharp1.Capitulo08.Vetores\\CSharp1.Capitulo08.Vetores.csproj
+		SccProjectUniqueName35 = CSharp1.Capitulo08.Vetores\\CSharp1.Capitulo08.Vetores.Testes.csproj
 		SccProjectTopLevelParentUniqueName35 = ImpactaCSharp1.sln
 		SccProjectName35 = CSharp1.Capitulo08.Vetores
 		SccLocalPath35 = CSharp1.Capitulo08.Vetores
+		SccProjectUniqueName36 = CSharp1.Capitulo09.Colecoes.Testes\\CSharp1.Capitulo09.Colecoes.Testes.csproj
+		SccProjectTopLevelParentUniqueName36 = ImpactaCSharp1.sln
+		SccProjectName36 = CSharp1.Capitulo09.Colecoes.Testes
+		SccLocalPath36 = CSharp1.Capitulo09.Colecoes.Testes
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -580,6 +586,16 @@ Global
 		{F3B89E34-E281-4F9F-BEB2-C628D6577B17}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{F3B89E34-E281-4F9F-BEB2-C628D6577B17}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{F3B89E34-E281-4F9F-BEB2-C628D6577B17}.Release|x86.ActiveCfg = Release|Any CPU
+		{1F101D47-27D5-439B-887F-BA5AEC97994E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F101D47-27D5-439B-887F-BA5AEC97994E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F101D47-27D5-439B-887F-BA5AEC97994E}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{1F101D47-27D5-439B-887F-BA5AEC97994E}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{1F101D47-27D5-439B-887F-BA5AEC97994E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1F101D47-27D5-439B-887F-BA5AEC97994E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F101D47-27D5-439B-887F-BA5AEC97994E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F101D47-27D5-439B-887F-BA5AEC97994E}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{1F101D47-27D5-439B-887F-BA5AEC97994E}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{1F101D47-27D5-439B-887F-BA5AEC97994E}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -606,6 +622,7 @@ Global
 		{6547D32C-F95A-4C13-9941-EF28AE05F3D9} = {B52D37B3-6D4B-4F5A-9FF2-56BEC4CC6421}
 		{DB61641F-BBE1-40C4-9C62-4AD6C25665C2} = {58F5243B-3BDB-437B-AEE3-E80C83790294}
 		{F3B89E34-E281-4F9F-BEB2-C628D6577B17} = {B52D37B3-6D4B-4F5A-9FF2-56BEC4CC6421}
+		{1F101D47-27D5-439B-887F-BA5AEC97994E} = {B52D37B3-6D4B-4F5A-9FF2-56BEC4CC6421}
 	EndGlobalSection
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = ImpactaCSharp15.vsmdi

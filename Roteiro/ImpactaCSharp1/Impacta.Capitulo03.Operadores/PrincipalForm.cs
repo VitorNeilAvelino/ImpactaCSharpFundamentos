@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace Impacta.Capitulo03.Operadores
@@ -38,11 +37,8 @@ namespace Impacta.Capitulo03.Operadores
             var i = 4;
 
             resultadoListBox.Items.Add(++i + ++i); // 5 + 6
-
             resultadoListBox.Items.Add(++i + i++); // 7 + 7
-
             resultadoListBox.Items.Add(i++ + i++); // 8 + 9
-
             resultadoListBox.Items.Add(i); // 10
 
             //Debug.Print("teste");
