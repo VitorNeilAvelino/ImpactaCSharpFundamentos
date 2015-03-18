@@ -82,14 +82,18 @@ namespace CSharp1.Capitulo08.Vetores
         [TestMethod]
         public void TamanhoMaximoTeste()
         {
-            var memoriaDisponivel = new ComputerInfo().AvailablePhysicalMemory * 0.5m;
+            var vetorDeStrings = new string[0]; // bisonho, mas possível.
+            //vetorDeStrings[0] = "teste"; // erro de execução.
 
-            var doisBilhoes = int.MaxValue;
-            var umBilhao = 1000000000;
+            //var outroVetorDeStrings = new string[-1]; // build quebrado.
 
-            var vetor3 = new byte[Convert.ToInt32(memoriaDisponivel)];
-            //var vetor1 = new bool[umBilhao];
-            //var vetor2 = new bool[doisBilhoes];
+            var vetorDeBooleanos = new bool[int.MaxValue]; // OutOfMemoryException.
+
+            var memoriaDisponivel = new ComputerInfo().AvailablePhysicalMemory * 0.65m;
+            Console.WriteLine((memoriaDisponivel/1024m/1024m/1024m).ToString("n2"));
+
+            var vetorDeBytes = new byte[Math.Min(int.MaxValue, Convert.ToInt32(memoriaDisponivel))]; // comentar o vetorDeBooleanos.
+            var vetorDeInteiros = new int[Math.Min(int.MaxValue, Convert.ToInt32(memoriaDisponivel/4m))]; // comentar o vetorDeBytes.
         }
     }
 }
