@@ -1,8 +1,11 @@
 ﻿using System;
+using System.Linq;
+using System.Collections.Generic;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Web;
 using System.Windows.Forms;
+using System.ComponentModel;
 
 namespace Impacta.Infra.Apoio
 {
@@ -90,6 +93,34 @@ namespace Impacta.Infra.Apoio
         public static T ParaTipo<T>(this object valor)
         {
             return (T)Convert.ChangeType(valor, typeof(T));
+        }
+
+        public static string ObterDescricao(this Enum itemEnumerador)
+        {
+            var descricao = itemEnumerador.ToString();
+            var informacoesCampo = itemEnumerador.GetType().GetField(descricao);
+            var atributos = informacoesCampo.GetCustomAttributes(typeof(DescriptionAttribute), false) as DescriptionAttribute[];
+
+            if (atributos != null && atributos.Length > 0)
+            {
+                descricao = atributos[0].Description;
+            }
+
+            return descricao;
+        }
+
+        public static /*IEnumerable<Enum>*/ List<Enum> ParaLista(this Enum enumerador)
+        {
+            return Enum.GetValues(enumerador.GetType()).Cast<Enum>().ToList(); //.ToList(): pode ser comentado se alterar para IEnumerable.
+        }
+
+        public static List<KeyValuePair<Enum, string>> ParaListaComDescricao(this Enum enumerador)
+        {
+            var tipoEnum = enumerador.GetType();
+
+            return Enum.GetValues(tipoEnum).Cast<Enum>()
+                .Select(e => new KeyValuePair<Enum, string>(e, e.ObterDescricao()))
+                .ToList();
         }
     }
 }

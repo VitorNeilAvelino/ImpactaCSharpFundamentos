@@ -75,10 +75,13 @@
   <ItemGroup>
     <Compile Include="Aluno.cs" />
     <Compile Include="Avaliacao.cs" />
+    <Compile Include="Cambio.cs" />
     <Compile Include="Candidato.cs" />
     <Compile Include="Cliente.cs" />
+    <Compile Include="Combustivel.cs" />
     <Compile Include="ConheceuAtravesDe.cs" />
     <Compile Include="Consumo.cs" />
+    <Compile Include="Cor.cs" />
     <Compile Include="Documento.cs" />
     <Compile Include="Endereco.cs" />
     <Compile Include="Familia.cs" />
@@ -86,6 +89,8 @@
     <Compile Include="Frete.cs" />
     <Compile Include="IClienteRepositorio.cs" />
     <Compile Include="IProduto.cs" />
+    <Compile Include="Marca.cs" />
+    <Compile Include="Modelo.cs" />
     <Compile Include="Pessoa.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegistroNaoEncontradoException.cs" />
@@ -95,10 +100,12 @@
     <Compile Include="SituacaoFinanceira.cs" />
     <Compile Include="TipoDocumento.cs" />
     <Compile Include="Mercadoria.cs" />
+    <Compile Include="Veiculo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Aluno.cd" />
     <None Include="Pessoa.cd" />
+    <None Include="Veiculo.cd" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">

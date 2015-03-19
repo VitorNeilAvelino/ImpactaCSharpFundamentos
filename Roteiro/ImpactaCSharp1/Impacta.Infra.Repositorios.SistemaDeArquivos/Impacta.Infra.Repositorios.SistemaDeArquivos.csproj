@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="ArquivosRepositorio.cs" />
     <Compile Include="ClienteRepositorio.cs" />
+    <Compile Include="CorRepositorio.cs" />
     <Compile Include="FreteRepositorio.cs" />
     <Compile Include="TextoPuroRepositorio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

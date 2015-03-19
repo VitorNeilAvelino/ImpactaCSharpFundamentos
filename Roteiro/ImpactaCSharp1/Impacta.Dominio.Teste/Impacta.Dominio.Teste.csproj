@@ -77,11 +77,16 @@
     <Compile Include="AlunoTest.cs" />
     <Compile Include="SituacaoFinanceiraTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="EnumeradorTeste.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Impacta.Dominio\Impacta.Dominio.csproj">
       <Project>{07592283-A1AC-4CDA-985C-1027BEFBDD7A}</Project>
       <Name>Impacta.Dominio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Impacta.Infra.Apoio\Impacta.Infra.Apoio.csproj">
+      <Project>{fd6f45c4-9958-4ede-a068-be52dbdc1db8}</Project>
+      <Name>Impacta.Infra.Apoio</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
