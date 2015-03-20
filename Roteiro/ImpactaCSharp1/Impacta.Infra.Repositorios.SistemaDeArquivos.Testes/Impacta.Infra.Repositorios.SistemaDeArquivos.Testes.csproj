@@ -57,6 +57,8 @@
   <ItemGroup>
     <Compile Include="ClienteRepositorioTest.cs" />
     <Compile Include="CorRepositorioTests.cs" />
+    <Compile Include="MarcaRepositorioTests.cs" />
+    <Compile Include="ModeloRepositorioTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

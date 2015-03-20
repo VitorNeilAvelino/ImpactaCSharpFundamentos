@@ -99,6 +99,12 @@ namespace Impacta.Infra.Apoio
         {
             var descricao = itemEnumerador.ToString();
             var informacoesCampo = itemEnumerador.GetType().GetField(descricao);
+
+            if (informacoesCampo == null)
+            {
+                return descricao;
+            }
+            
             var atributos = informacoesCampo.GetCustomAttributes(typeof(DescriptionAttribute), false) as DescriptionAttribute[];
 
             if (atributos != null && atributos.Length > 0)
@@ -109,9 +115,9 @@ namespace Impacta.Infra.Apoio
             return descricao;
         }
 
-        public static /*IEnumerable<Enum>*/ List<Enum> ParaLista(this Enum enumerador)
+        public static IEnumerable<Enum> /*List<Enum>*/ ParaLista(this Enum enumerador)
         {
-            return Enum.GetValues(enumerador.GetType()).Cast<Enum>().ToList(); //.ToList(): pode ser comentado se alterar para IEnumerable.
+            return Enum.GetValues(enumerador.GetType()).Cast<Enum>();//.ToList(); 
         }
 
         public static List<KeyValuePair<Enum, string>> ParaListaComDescricao(this Enum enumerador)

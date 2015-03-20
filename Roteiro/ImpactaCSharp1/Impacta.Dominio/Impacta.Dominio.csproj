@@ -88,6 +88,8 @@
     <Compile Include="Fornecedor.cs" />
     <Compile Include="Frete.cs" />
     <Compile Include="IClienteRepositorio.cs" />
+    <Compile Include="IMarcaRepositorio.cs" />
+    <Compile Include="IModeloRepositorio.cs" />
     <Compile Include="IProduto.cs" />
     <Compile Include="Marca.cs" />
     <Compile Include="Modelo.cs" />

@@ -1,21 +1,19 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace Impacta.Infra.Repositorios.SistemaDeArquivos.Tests
 {
     [TestClass()]
-    public class CorRepositorioTests
+    public class MarcaRepositorioTests
     {
         [TestMethod()]
         public void SelecionarTest()
         {
-            var corRepositorio = new CorRepositorio();
+            var marcaRepositorio = new MarcaRepositorio();
+            var marcas = marcaRepositorio.Selecionar();
 
-            var cores = corRepositorio.Selecionar();
-
-            foreach (var cor in cores)
+            foreach (var marca in marcas)
             {
-                Console.WriteLine("{0}-{1}", cor.Id, cor.Nome);
+                Console.WriteLine("{0}-{1}", marca.Id, marca.Nome);    
             }
         }
     }

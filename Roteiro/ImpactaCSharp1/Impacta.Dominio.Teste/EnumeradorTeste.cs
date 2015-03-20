@@ -24,6 +24,11 @@ namespace Impacta.Dominio.Teste
             {
                 Console.WriteLine(item.Value);
             }
+
+            foreach (var item in veiculo.Cambio.ParaLista())
+            {
+                Console.WriteLine(item);
+            }
         }
     }
 }
