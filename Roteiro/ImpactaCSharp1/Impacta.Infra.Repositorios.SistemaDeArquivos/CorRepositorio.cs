@@ -15,8 +15,8 @@ namespace Impacta.Infra.Repositorios.SistemaDeArquivos
             foreach (var linha in File.ReadAllLines(ConfigurationManager.AppSettings["caminhoArquivoCor"]))
             {
                 var cor = new Cor();
-                cor.Id = Convert.ToInt32(linha.Split('|')[0]);
-                cor.Nome = linha.Split('|')[1];
+                cor.Id = Convert.ToInt32(linha.Substring(0, 5));
+                cor.Nome = linha.Substring(5);
                 
                 cores.Add(cor);
             }
