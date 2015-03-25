@@ -65,21 +65,22 @@ namespace Impacta.Capitulo04.Repeticao.Teste
         }
 
         [TestMethod]
-        public void ListarDiretoriosTeste()
+        public void ExcluirDiretoriosVaziosTeste()
         {
-            ListarDiretorios(@"C:\Temp\1");
+            ExcluirDiretoriosVazios(@"C:\Temp");
         }
 
-        private void ListarDiretorios(string caminhoDiretorio)
+        private void ExcluirDiretoriosVazios(string caminhoDiretorio)
         {
             foreach (var diretorio in Directory.GetDirectories(caminhoDiretorio))
             {
-                ListarDiretorios(diretorio);
+                ExcluirDiretoriosVazios(diretorio);
                 
-                Console.WriteLine(new DirectoryInfo(diretorio).FullName);
+                //Console.WriteLine(new DirectoryInfo(diretorio).FullName);
 
                 if (Directory.GetFiles(diretorio).Length == 0 && Directory.GetDirectories(diretorio).Length == 0)
                 {
+                    Console.WriteLine(new DirectoryInfo(diretorio).FullName);
                     //Directory.Delete(directory, false);
                     Directory.Delete(diretorio);
                 }
