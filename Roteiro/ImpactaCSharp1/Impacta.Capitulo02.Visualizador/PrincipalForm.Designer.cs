@@ -31,7 +31,7 @@
             this.principalToolStrip = new System.Windows.Forms.ToolStrip();
             this.abrirToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.imagemPictureBox = new System.Windows.Forms.PictureBox();
-            this.ofd = new System.Windows.Forms.OpenFileDialog();
+            this.imagemOpenFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.principalToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imagemPictureBox)).BeginInit();
             this.SuspendLayout();
@@ -91,7 +91,7 @@
         private System.Windows.Forms.ToolStrip principalToolStrip;
         private System.Windows.Forms.ToolStripButton abrirToolStripButton;
         private System.Windows.Forms.PictureBox imagemPictureBox;
-        private System.Windows.Forms.OpenFileDialog ofd;
+        private System.Windows.Forms.OpenFileDialog imagemOpenFileDialog;
     }
 }
 

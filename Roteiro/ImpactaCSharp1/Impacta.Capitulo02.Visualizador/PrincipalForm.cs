@@ -14,14 +14,17 @@ namespace Impacta.Capitulo02.Visualizador
         private void abrirToolStripButton_Click(object sender, EventArgs e)
         {
             // Filtra as extensões que serão visualizadas pela caixa de diálogo
-            ofd.Filter = "Arquivos de imagens|*.jpg;*.gif;*.png|Arquivos bmp|*.bmp|Arquivos jpg|*.jpg";
+            imagemOpenFileDialog.Filter = "Arquivos de imagens|*.jpg;*.bmp;*.png|Arquivos bmp|*.bmp|Arquivos jpg|*.jpg";
+
+            imagemOpenFileDialog.ShowDialog();
+            imagemPictureBox.ImageLocation = imagemOpenFileDialog.FileName;
 
             // Testa se o endereço na caixa de diálogo foi confirmado
-            if (ofd.ShowDialog() == DialogResult.OK)
-            {
-                // Atribui o endereço da caixa de diálogo na picturebox
-                imagemPictureBox.ImageLocation = ofd.FileName;
-            }
+            //if (ofd.ShowDialog() == DialogResult.OK)
+            //{
+            //    // Atribui o endereço da caixa de diálogo na picturebox
+            //    imagemPictureBox.ImageLocation = ofd.FileName;
+            //}
         }
 
         private void Redimensionar()
@@ -40,12 +43,12 @@ namespace Impacta.Capitulo02.Visualizador
 
         private void imagemPictureBox_LoadCompleted(object sender, AsyncCompletedEventArgs e)
         {
-            Redimensionar();
+            //Redimensionar();
         }
 
         private void imagemPictureBox_Resize(object sender, EventArgs e)
         {
-            Redimensionar();
+            //Redimensionar();
         }
     }
 }
