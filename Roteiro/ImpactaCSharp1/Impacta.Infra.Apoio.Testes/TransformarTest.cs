@@ -17,5 +17,16 @@ namespace Impacta.Infra.Apoio.Testes
                 Console.Write("{0} ", elemento);
             }
         }
+
+        [TestMethod]
+        public void ConversaoTeste()
+        {
+            var valor = 3.14m;
+            var valor2 = 4.5m;
+            Console.WriteLine((int)valor);
+            Console.WriteLine((int)valor2);
+            Console.WriteLine(Convert.ToInt32(valor));
+            Console.WriteLine(Convert.ToInt32(valor2));
+        }
     }
 }
