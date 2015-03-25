@@ -8,19 +8,15 @@ namespace CSharp1.Capitulo03.Troco
         public TrocoForm()
         {
             InitializeComponent();
-
-            /*            
-            this.moedasListView.LargeImageList = this.modedasImageList;            
-            */
         }
 
         private void calcularButton_Click(object sender, EventArgs e)
         {
-            DefinirMoedasListView();
+            //DefinirMoedasListView();
 
             var valorCompra = Convert.ToDecimal(valorCompraTextBox.Text);
             var valorPago = Convert.ToDecimal(valorPagoTextBox.Text);
-            
+
             var troco = valorPago - valorCompra;
             var resto = troco;
 
@@ -67,20 +63,20 @@ namespace CSharp1.Capitulo03.Troco
         {
             moedasListView.Items.Clear();
 
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("", 5);
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("", 4);
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("", 3);
-            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("", 2);
-            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem("", 1);
-            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem("", 0);
+            var listViewItem1 = new ListViewItem("", 5);
+            var listViewItem2 = new ListViewItem("", 4);
+            var listViewItem3 = new ListViewItem("", 3);
+            var listViewItem4 = new ListViewItem("", 2);
+            var listViewItem5 = new ListViewItem("", 1);
+            var listViewItem6 = new ListViewItem("", 0);
 
-            this.moedasListView.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1,
-            listViewItem2,
-            listViewItem3,
-            listViewItem4,
-            listViewItem5,
-            listViewItem6});
+            this.moedasListView.Items.AddRange(new ListViewItem[] {
+                listViewItem1,
+                listViewItem2,
+                listViewItem3,
+                listViewItem4,
+                listViewItem5,
+                listViewItem6});
         }
     }
 }
