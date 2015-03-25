@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.IO;
 
 namespace Impacta.Capitulo04.Repeticao.Teste
 {
@@ -44,6 +45,7 @@ namespace Impacta.Capitulo04.Repeticao.Teste
                 {
                     continue;
                 }
+
                 Console.WriteLine(i);
             }
         }
@@ -51,13 +53,36 @@ namespace Impacta.Capitulo04.Repeticao.Teste
         [TestMethod]
         public void TestarBreak()
         {
-            for (int i = 1; i <= 10; i++) 
+            for (int i = 1; i <= 10; i++)
             {
-                if (i > 5) 
-                { 
-                    break; 
+                if (i > 5)
+                {
+                    break;
                 }
-                Console.WriteLine(i); 
+
+                Console.WriteLine(i);
+            }
+        }
+
+        [TestMethod]
+        public void ListarDiretoriosTeste()
+        {
+            ListarDiretorios(@"C:\Temp\1");
+        }
+
+        private void ListarDiretorios(string caminhoDiretorio)
+        {
+            foreach (var diretorio in Directory.GetDirectories(caminhoDiretorio))
+            {
+                ListarDiretorios(diretorio);
+                
+                Console.WriteLine(new DirectoryInfo(diretorio).FullName);
+
+                if (Directory.GetFiles(diretorio).Length == 0 && Directory.GetDirectories(diretorio).Length == 0)
+                {
+                    //Directory.Delete(directory, false);
+                    Directory.Delete(diretorio);
+                }
             }
         }
     }
