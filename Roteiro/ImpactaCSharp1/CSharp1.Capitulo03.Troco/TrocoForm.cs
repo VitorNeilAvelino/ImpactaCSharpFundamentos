@@ -28,8 +28,10 @@ namespace CSharp1.Capitulo03.Troco
             //var moedas1 = Convert.ToInt32(resto / 1);
 
             // Cast - moldar, ajustar.
-            var moedas1 = (int)(resto / 1m);
-            resto %= 1m;
+            //var moedas1 = (int)(resto / 1m);
+            var moedas1 = (int)(resto);
+            //resto %= 1m;
+            resto = resto % 1;
             var moedas050 = (int)(resto / 0.5m);
             resto %= 0.5m;
             var moedas025 = (int)(resto / 0.25m);
