@@ -62,7 +62,7 @@
             this.imagemPictureBox.Location = new System.Drawing.Point(0, 25);
             this.imagemPictureBox.Name = "imagemPictureBox";
             this.imagemPictureBox.Size = new System.Drawing.Size(769, 443);
-            this.imagemPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imagemPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.imagemPictureBox.TabIndex = 1;
             this.imagemPictureBox.TabStop = false;
             this.imagemPictureBox.LoadCompleted += new System.ComponentModel.AsyncCompletedEventHandler(this.imagemPictureBox_LoadCompleted);

@@ -18,29 +18,34 @@ namespace CSharp1.Capitulo03.Troco
             var valorPago = Convert.ToDecimal(valorPagoTextBox.Text);
 
             var troco = valorPago - valorCompra;
-            var resto = troco;
+
+            valorTrocoTextBox.Text = troco.ToString("c");
+            //valorTrocoTextBox.Text = Convert.ToString(troco)
 
             // Arredonda:
-            //var moedas1 = Convert.ToInt32(resto / 1);
+            //var moedas1 = Convert.ToInt32(troco / 1);
 
             // Cast - moldar, ajustar.
-            //var moedas1 = (int)(resto / 1m);
-            var moedas1 = (int)(resto);
-            //resto %= 1m;
-            resto = resto % 1;
-            var moedas050 = (int)(resto / 0.5m);
-            resto %= 0.5m;
-            var moedas025 = (int)(resto / 0.25m);
-            resto %= 0.25m;
-            var moedas010 = (int)(resto / 0.1m);
-            resto %= 0.1m;
-            var moedas005 = (int)(resto / 0.05m);
-            resto %= 0.05m;
-            var moedas001 = (int)(resto / 0.01m);
-            resto %= 0.01m;
-
-            valorTrocoTextBox.Text = troco.ToString();
-            //valorTrocoTextBox.Text = Convert.ToString(troco)
+            //var moedas1 = (int)(troco / 1m);
+            //var moedas1  = Math.Truncate(troco);
+            var moedas1 = (int)(troco);
+            //troco %= 1m;
+            troco = troco % 1;
+            
+            var moedas050 = (int)(troco / 0.5m);
+            troco %= 0.5m;
+            
+            var moedas025 = (int)(troco / 0.25m);
+            troco %= 0.25m;
+            
+            var moedas010 = (int)(troco / 0.1m);
+            troco %= 0.1m;
+            
+            var moedas005 = (int)(troco / 0.05m);
+            troco %= 0.05m;
+            
+            var moedas001 = (int)(troco / 0.01m);
+            troco %= 0.01m;
 
             moedasListView.Items[0].Text = moedas1.ToString();
             moedasListView.Items[1].Text = moedas050.ToString();
