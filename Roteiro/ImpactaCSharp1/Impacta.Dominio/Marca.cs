@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel;
+
 namespace Impacta.Dominio
 {
     public class Marca
