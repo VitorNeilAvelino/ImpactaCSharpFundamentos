@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using System.Configuration;
 using System.IO;
+using System;
 
 namespace CSharp1.Capitulo04.Fretes
 {
@@ -11,23 +12,46 @@ namespace CSharp1.Capitulo04.Fretes
         {
             InitializeComponent();
 
-            MontarListBoxFretes();
+            // Preferível, pois no construtor, os controles são criados todos em um único lote. Assim, o layout dos 
+            // controles, por exemplo, é tratado de uma vez.
+            PopularListBoxFretes();
             this.ActiveControl = nomeClienteToolStripTextBox.Control;
         }
 
-        private void MontarListBoxFretes(string nomeCliente = null)
+        private void PopularListBoxFretes(string nomeCliente = null)
         {
-            var fretes = Selecionar(nomeCliente);
+            try
+            {
+                var fretes = Selecionar(nomeCliente);
 
-            var cabecalho = string.Concat("Cliente".PadRight(50),
-                "Estado".PadRight(10),
-                "Valor".PadLeft(20),
-                "Percentual".PadLeft(20),
-                "Total".PadLeft(20));
+                var cabecalho = string.Concat("Cliente".PadRight(50),
+                    "Estado".PadRight(10),
+                    "Valor".PadLeft(20),
+                    "Percentual".PadLeft(20),
+                    "Total".PadLeft(20));
 
-            fretes.Insert(0, cabecalho);
+                fretes.Insert(0, cabecalho);
 
-            fretesListBox.DataSource = fretes;
+                fretesListBox.DataSource = fretes;
+            }
+            catch (DirectoryNotFoundException)
+            {
+                MessageBox.Show("O caminho do arquivo de fretes não foi encontrado. A gravação não foi realizada.");
+            }
+            catch (UnauthorizedAccessException)
+            {
+                MessageBox.Show("O arquivo Fretes.txt não tem permissão de gravação.");
+                //File.SetAttributes("C:\\Fretes.txt", FileAttributes.Normal);
+            }
+            catch (Exception excecao)
+            {
+                MessageBox.Show("Ooops! Houve um erro e a gravação não foi realizada. O suporte já foi comunicado.");
+                //_log.Error(excecao);
+            }
+            finally
+            {
+                // Opcional - se presente, é executado sempre, independente de sucesso, erro ou qualquer return.
+            }
         }
 
         private List<string> Selecionar(string nomeCliente = null){
@@ -64,15 +88,16 @@ namespace CSharp1.Capitulo04.Fretes
 
         private void pesquisarToolStripButton_Click(object sender, System.EventArgs e)
         {
-            MontarListBoxFretes(nomeClienteToolStripTextBox.Text);
-        }
+            PopularListBoxFretes(nomeClienteToolStripTextBox.Text);
 
-        private void nomeClienteToolStripTextBox_KeyDown(object sender, KeyEventArgs e)
+            // Se usar tab para focar o botão Pesquisar, nem o bloco abaixo não tem efeito.
+            //ActiveControl = nomeClienteToolStripTextBox.Control;
+            //nomeClienteToolStripTextBox.Focus();
+        }
+                
+        private void nomeClienteToolStripTextBox_KeyUp(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
-            {
-                MontarListBoxFretes(nomeClienteToolStripTextBox.Text);
-            }
+            PopularListBoxFretes(nomeClienteToolStripTextBox.Text);            
         } 
     }
 }

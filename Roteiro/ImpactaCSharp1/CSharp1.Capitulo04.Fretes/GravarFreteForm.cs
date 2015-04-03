@@ -20,7 +20,7 @@ namespace CSharp1.Capitulo04.Fretes
             if (ValidarFormulario())
             {
                 Calcular();
-                
+
                 try
                 {
                     Gravar();
@@ -37,7 +37,7 @@ namespace CSharp1.Capitulo04.Fretes
                     MessageBox.Show("O arquivo Fretes.txt não tem permissão de gravação.");
                     //File.SetAttributes("C:\\Fretes.txt", FileAttributes.Normal);
                 }
-                catch(Exception excecao)
+                catch (Exception excecao)
                 {
                     MessageBox.Show("Ooops! Houve um erro e a gravação não foi realizada. O suporte já foi comunicado.");
                     //_log.Error(excecao);
@@ -62,10 +62,22 @@ namespace CSharp1.Capitulo04.Fretes
                 freteLabel.Text,
                 totalLabel.Text);
 
-            using (var arquivoTexto = new StreamWriter(caminho, true))
-            {
-                arquivoTexto.WriteLine(registro);
-            }
+            // Jeito feio.
+            var arquivoTexto = new StreamWriter(caminho, true);
+
+            //// Cabeçalho.
+            //if (new FileInfo(caminho).Length == 0)
+            //{
+            //    arquivoTexto.WriteLine(cabecalho);
+            //}
+            
+            arquivoTexto.WriteLine(registro);
+            arquivoTexto.Close();
+
+            //using (var arquivoTexto = new StreamWriter(caminho, true))
+            //{
+            //    arquivoTexto.WriteLine(registro);
+            //}
         }
 
         private void Calcular()

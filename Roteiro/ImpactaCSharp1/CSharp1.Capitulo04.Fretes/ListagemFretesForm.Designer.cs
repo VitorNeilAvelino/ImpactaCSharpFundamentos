@@ -33,6 +33,7 @@
             this.nomeClienteToolStripTextBox = new System.Windows.Forms.ToolStripTextBox();
             this.pesquisarToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.fretesListBox = new System.Windows.Forms.ListBox();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -41,6 +42,7 @@
             this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nomeClienteToolStripTextBox,
+            this.toolStripSeparator1,
             this.pesquisarToolStripButton});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
@@ -51,7 +53,7 @@
             // 
             this.nomeClienteToolStripTextBox.Name = "nomeClienteToolStripTextBox";
             this.nomeClienteToolStripTextBox.Size = new System.Drawing.Size(300, 25);
-            this.nomeClienteToolStripTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.nomeClienteToolStripTextBox_KeyDown);
+            this.nomeClienteToolStripTextBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.nomeClienteToolStripTextBox_KeyUp);
             // 
             // pesquisarToolStripButton
             // 
@@ -67,11 +69,17 @@
             this.fretesListBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.fretesListBox.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fretesListBox.FormattingEnabled = true;
+            this.fretesListBox.HorizontalScrollbar = true;
             this.fretesListBox.ItemHeight = 15;
             this.fretesListBox.Location = new System.Drawing.Point(0, 25);
             this.fretesListBox.Name = "fretesListBox";
             this.fretesListBox.Size = new System.Drawing.Size(782, 368);
             this.fretesListBox.TabIndex = 1;
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // ListagemFretesForm
             // 
@@ -95,5 +103,6 @@
         private System.Windows.Forms.ToolStripTextBox nomeClienteToolStripTextBox;
         private System.Windows.Forms.ToolStripButton pesquisarToolStripButton;
         private System.Windows.Forms.ListBox fretesListBox;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
     }
 }
