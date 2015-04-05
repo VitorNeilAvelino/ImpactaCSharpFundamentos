@@ -76,7 +76,9 @@
     <Compile Include="Aluno.cs" />
     <Compile Include="Avaliacao.cs" />
     <Compile Include="Cambio.cs" />
+    <Compile Include="Caminhao.cs" />
     <Compile Include="Candidato.cs" />
+    <Compile Include="Carroceria.cs" />
     <Compile Include="Cliente.cs" />
     <Compile Include="Combustivel.cs" />
     <Compile Include="ConheceuAtravesDe.cs" />
@@ -94,8 +96,11 @@
     <Compile Include="IVeiculoRepositorio.cs" />
     <Compile Include="Marca.cs" />
     <Compile Include="Modelo.cs" />
+    <Compile Include="Moto.cs" />
+    <Compile Include="Passeio.cs" />
     <Compile Include="Pessoa.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuantidadeEixos.cs" />
     <Compile Include="RegistroNaoEncontradoException.cs" />
     <Compile Include="RegraNegocioException.cs" />
     <Compile Include="Servico.cs" />

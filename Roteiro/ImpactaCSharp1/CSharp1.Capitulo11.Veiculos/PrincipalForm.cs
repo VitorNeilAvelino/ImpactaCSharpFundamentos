@@ -7,8 +7,10 @@ namespace CSharp1.Capitulo11.Veiculos
     public partial class PrincipalForm : Form
     {
         #region Formulários filhos
+        
         VeiculoForm _veiculoForm;
         ClienteForm _clienteForm;
+        
         #endregion
 
         public PrincipalForm()
