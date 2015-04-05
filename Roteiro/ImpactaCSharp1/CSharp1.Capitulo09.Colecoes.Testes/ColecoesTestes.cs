@@ -56,6 +56,7 @@ namespace CSharp1.Capitulo09.Colecoes.Testes
         {
             var lista = new List<int>(/*10 - para testar capacidade*/);
 
+            // Depurar para enxergar o vetor _items.
             var vetorInterno = typeof(List<int>).GetField("_items", BindingFlags.NonPublic | BindingFlags.Instance);
             Console.WriteLine((vetorInterno.GetValue(lista) as int[]).Length);
 

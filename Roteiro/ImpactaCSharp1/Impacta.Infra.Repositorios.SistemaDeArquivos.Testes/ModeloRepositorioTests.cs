@@ -11,7 +11,7 @@ namespace Impacta.Infra.Repositorios.SistemaDeArquivos.Tests
         {
             var modeloRepositorio = new ModeloRepositorio();
 
-            var modelos = modeloRepositorio.Selecionar(1);
+            var modelos = modeloRepositorio.SelecionarPorMarca(1);
 
             foreach (var modelo in modelos)
             {

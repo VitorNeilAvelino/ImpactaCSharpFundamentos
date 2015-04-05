@@ -8,7 +8,7 @@ namespace Impacta.Infra.Repositorios.SistemaDeArquivos
 {
     public class ModeloRepositorio : IModeloRepositorio
     {
-        public List<Modelo> Selecionar(int marcaId)
+        public List<Modelo> SelecionarPorMarca(int marcaId)
         {
             var modelos = new List<Modelo>();
             var arquivoXml = XDocument.Load(ConfigurationManager.AppSettings["caminhoArquivoModelo"]);
@@ -23,7 +23,7 @@ namespace Impacta.Infra.Repositorios.SistemaDeArquivos
                 var modelo = new Modelo();
                 modelo.Id = Convert.ToInt32(noh.Element("id").Value);
                 modelo.Descricao = noh.Element("descricao").Value;
-                modelo.Marca = new MarcaRepositorio().Selecionar(marcaId)[0];
+                modelo.Marca = new MarcaRepositorio().Selecionar(marcaId);
 
                 modelos.Add(modelo);
             }
@@ -42,6 +42,11 @@ namespace Impacta.Infra.Repositorios.SistemaDeArquivos
         }
 
         public void Excluir(int modeloId)
+        {
+            throw new NotImplementedException();
+        }
+        
+        public Modelo Selecionar(int modeloId)
         {
             throw new NotImplementedException();
         }

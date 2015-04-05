@@ -5,7 +5,8 @@ namespace Impacta.Dominio
     public interface IMarcaRepositorio
     {
         void Inserir(Marca marca);
-        List<Marca> Selecionar(int? marcaId = null);
+        Marca Selecionar(int marcaId);
+        List<Marca> Selecionar();
         void Atualizar(Marca marca);
         void Excluir(int marcaId);
     }

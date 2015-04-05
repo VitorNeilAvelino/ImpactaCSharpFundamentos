@@ -87,8 +87,8 @@ namespace Impacta.Capitulo04.Frete
 
             MessageBox.Show("Gravação efetuada com sucesso.");
 
-            //Formularios.Limpar(this);
-            this.Limpar();
+            Formulario.Limpar(this);
+            //this.Limpar();
             
             freteLabel.Text = "0%";
             totalLabel.Text = "0,00";
