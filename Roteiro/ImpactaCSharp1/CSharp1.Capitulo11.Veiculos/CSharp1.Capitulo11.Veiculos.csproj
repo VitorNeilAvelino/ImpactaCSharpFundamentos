@@ -48,16 +48,40 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="BaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="BaseForm.Designer.cs">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClienteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClienteForm.Designer.cs">
+      <DependentUpon>ClienteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrincipalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrincipalForm.Designer.cs">
+      <DependentUpon>PrincipalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VeiculoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VeiculoForm.Designer.cs">
+      <DependentUpon>VeiculoForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="BaseForm.resx">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrincipalForm.resx">
+      <DependentUpon>PrincipalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VeiculoForm.resx">
+      <DependentUpon>VeiculoForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -67,6 +91,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -80,6 +105,23 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Impacta.Dominio\Impacta.Dominio.csproj">
+      <Project>{07592283-a1ac-4cda-985c-1027befbdd7a}</Project>
+      <Name>Impacta.Dominio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Impacta.Infra.Apoio\Impacta.Infra.Apoio.csproj">
+      <Project>{fd6f45c4-9958-4ede-a068-be52dbdc1db8}</Project>
+      <Name>Impacta.Infra.Apoio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Impacta.Infra.Repositorios.SistemaDeArquivos\Impacta.Infra.Repositorios.SistemaDeArquivos.csproj">
+      <Project>{b07aac5d-8a83-4d05-b2bc-86385a36bb9f}</Project>
+      <Name>Impacta.Infra.Repositorios.SistemaDeArquivos</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fecharIcone.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

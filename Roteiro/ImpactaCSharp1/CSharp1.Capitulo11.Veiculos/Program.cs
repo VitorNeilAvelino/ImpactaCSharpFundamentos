@@ -16,7 +16,7 @@ namespace CSharp1.Capitulo11.Veiculos
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new PrincipalForm());
         }
     }
 }

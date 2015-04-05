@@ -16,7 +16,7 @@ namespace Impacta.Infra.Apoio
                 {
                     provedorDeErro.SetError(controle, string.Empty);
 
-                    if (controle.Text.Trim() == string.Empty || controle.ObterTextoSemMascara() == string.Empty)
+                    if (controle.Text.Trim() == string.Empty /*|| controle.ObterTextoSemMascara() == string.Empty*/)
                     {
                         validacao = false;
                         provedorDeErro.SetError(controle, "Campo obrigatório.");
@@ -87,7 +87,7 @@ namespace Impacta.Infra.Apoio
             return ValidarTipoDosDados((Form)formulario, formulario.ProvedorDeErro);
         }
 
-        public static void Limpar(this Form formulario)
+        public static void Limpar(Form formulario)
         {
             foreach (Control controle in formulario.Controls)
             {
@@ -99,6 +99,22 @@ namespace Impacta.Infra.Apoio
                 {
                     ((ComboBox)controle).SelectedIndex = -1;
                 }
+            }
+        }
+
+        public static void Limpar(Control controle)
+        {
+            foreach (Control controleFor in controle.Controls)
+            {
+                if (controleFor is TextBox || controleFor is MaskedTextBox)
+                {
+                    controleFor.Text = string.Empty;
+                }
+                else if (controleFor is ComboBox)
+                {
+                    ((ComboBox)controleFor).SelectedIndex = -1;
+                }
+                Limpar(controleFor);
             }
         }
     }

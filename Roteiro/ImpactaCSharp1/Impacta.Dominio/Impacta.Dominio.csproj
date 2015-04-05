@@ -91,6 +91,7 @@
     <Compile Include="IMarcaRepositorio.cs" />
     <Compile Include="IModeloRepositorio.cs" />
     <Compile Include="IProduto.cs" />
+    <Compile Include="IVeiculoRepositorio.cs" />
     <Compile Include="Marca.cs" />
     <Compile Include="Modelo.cs" />
     <Compile Include="Pessoa.cs" />

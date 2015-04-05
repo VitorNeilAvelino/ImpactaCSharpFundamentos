@@ -53,6 +53,7 @@
     <Compile Include="ModeloRepositorio.cs" />
     <Compile Include="TextoPuroRepositorio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VeiculoRepositorio.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Impacta.Dominio\Impacta.Dominio.csproj">

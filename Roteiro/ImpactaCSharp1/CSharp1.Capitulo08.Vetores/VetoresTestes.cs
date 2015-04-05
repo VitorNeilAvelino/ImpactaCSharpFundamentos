@@ -11,14 +11,18 @@ namespace CSharp1.Capitulo08.Vetores
         [TestMethod]
         public void InicializacaoTeste()
         {
-            var meuVetorDeStrings = new string[10];
-            var meuVetorDeInteiros = new int[5];
-            var decimais = new decimal[/*pode ser omitido*/] { 0.5m, 0.9m, 1.59m };
+            var strings = new string[10];
+            var inteiros = new int[5];
+            var decimais = new decimal[/*pode ser omitido - 2 e 4 quebram o build*/] { 0.5m, 0.9m, 1.59m };
+            
+            // Se informado, confere a quantidade informada
             //var decimais = new decimal[3] { 0.5m, 0.9m, 1.59m };
-            //decimal[] decimais = { 0.5m, 0.9m, 1.59m };
+            
+            // /*var não promove a inferência*/ decimal[] decimais = { 0.5m, 0.9m, 1.59m };
 
-            //meuVetorDeStrings[-1] = "Teset";
-            //meuVetorDeStrings[10] = "Teset9";
+            // Erro de execução
+            strings[-1] = "Teset";
+            strings[10] = "Teset9";
 
             foreach (var numeroDecimal in decimais)
             {
@@ -82,6 +86,9 @@ namespace CSharp1.Capitulo08.Vetores
         [TestMethod]
         public void TamanhoMaximoTeste()
         {
+            // sizeof: tamanho em bytes. 
+            // Console.WriteLine(sizeof(bool));           
+
             var vetorDeStrings = new string[0]; // bisonho, mas possível.
             //vetorDeStrings[0] = "teste"; // erro de execução.
 
