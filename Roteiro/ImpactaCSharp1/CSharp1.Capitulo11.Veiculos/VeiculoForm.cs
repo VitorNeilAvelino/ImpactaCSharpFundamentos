@@ -2,6 +2,7 @@
 using Impacta.Infra.Apoio;
 using Impacta.Infra.Repositorios.SistemaDeArquivos;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
@@ -31,7 +32,11 @@ namespace CSharp1.Capitulo11.Veiculos
             corComboBox.ValueMember = "Id";
             corComboBox.SelectedIndex = -1;
 
-            combustivelComboBox.DataSource = Enum.GetValues(typeof(Combustivel));
+            //combustivelComboBox.DataSource = Enum.GetValues(typeof(Combustivel));
+            //combustivelComboBox.DataSource = new Combustivel().ParaListaComDescricao();
+            combustivelComboBox.DataSource = new BindingSource(new Combustivel().ParaDicionarioComDescricao(), null);
+            combustivelComboBox.DisplayMember = "Value";
+            combustivelComboBox.ValueMember = "Key";
             combustivelComboBox.SelectedIndex = -1;
 
             cambioComboBox.DataSource = Enum.GetValues(typeof(Cambio));
@@ -96,7 +101,8 @@ namespace CSharp1.Capitulo11.Veiculos
             var veiculo = new Veiculo();
             veiculo.Ano = Convert.ToInt32(anoMaskedTextBox.Text);
             veiculo.Cambio = (Cambio)cambioComboBox.SelectedItem;
-            veiculo.Combustivel = (Combustivel)combustivelComboBox.SelectedItem;
+            //veiculo.Combustivel = ((Dictionary<Enum, string>)combustivelComboBox.SelectedItem).;
+            veiculo.Combustivel = (Combustivel)((KeyValuePair<Enum, string>)combustivelComboBox.SelectedItem).Key;
             veiculo.Cor = (Cor)corComboBox.SelectedItem;
             veiculo.Modelo = (Modelo)modeloComboBox.SelectedItem;
             veiculo.Observacao = observacaoTextBox.Text;
@@ -137,6 +143,7 @@ namespace CSharp1.Capitulo11.Veiculos
         private void limparButton_Click(object sender, EventArgs e)
         {
             Formulario.Limpar(this);
+            //this.Limpar();
             placaMaskedTextBox.Focus();
         }
     }

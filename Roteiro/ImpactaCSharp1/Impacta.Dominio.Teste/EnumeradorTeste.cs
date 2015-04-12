@@ -13,7 +13,7 @@ namespace Impacta.Dominio.Teste
             var veiculo = new Veiculo();
 
             Console.WriteLine(Cambio.Automatico.ObterDescricao());
-            Console.WriteLine(new Cambio().ObterDescricao());
+            //Console.WriteLine(new Cambio().ObterDescricao()); // É preciso um elemento para obter sua descrição.
 
             foreach (var item in new Cambio().ParaListaComDescricao())
             {
