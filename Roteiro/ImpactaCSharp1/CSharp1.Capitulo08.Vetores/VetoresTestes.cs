@@ -60,9 +60,10 @@ namespace CSharp1.Capitulo08.Vetores
 
             Console.WriteLine(CalcularMedia(decimais));
             //Console.WriteLine(CalcularMedia(1.5m, 0.9m, 1.59m)); // descomentar os params abaixo.
+            // Citar string.Format();
         }
 
-        public decimal CalcularMedia(/*params*/ decimal[] valores)
+        private decimal CalcularMedia(/*params*/ decimal[] valores)
         {
             return valores.Average();
         }
@@ -70,7 +71,7 @@ namespace CSharp1.Capitulo08.Vetores
         [TestMethod]
         public void MatrizTeste()
         {
-            var matriz = new int[3, 3];
+           /*int[,]*/ var matriz = new int[3, 3];
 
             for (int linha = 0; linha < matriz.GetLength(0); linha++)
             {
@@ -80,6 +81,27 @@ namespace CSharp1.Capitulo08.Vetores
                     Console.Write("| {0} ", matriz[linha, coluna]);
                 }
                 Console.WriteLine();
+            }
+        }
+
+        [TestMethod]
+        public void VetorDeVetoresTeste()
+        {
+            /*int[][]*/ var vetorDeVetores = new int[2][];
+
+            vetorDeVetores[0] = new int[5] { 1, 3, 5, 7, 9 };
+            vetorDeVetores[1] = new int[4] { 2, 4, 6, 8 };
+
+            for (int i = 0; i < vetorDeVetores.Length; i++)
+            {
+                System.Console.Write("Elemento({0}): ", i);
+
+                for (int j = 0; j < vetorDeVetores[i].Length; j++)
+                {
+                    System.Console.Write("{0} ", vetorDeVetores[i][j]);
+                }
+                
+                System.Console.WriteLine();
             }
         }
 

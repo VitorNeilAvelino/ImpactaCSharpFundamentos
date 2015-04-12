@@ -1,6 +1,6 @@
 ﻿namespace Impacta.Dominio
 {
-    public class Passeio : Veiculo
+    public class VeiculoPasseio : Veiculo
     {
         public Carroceria Carroceria { get; set; }
     }
