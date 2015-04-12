@@ -18,9 +18,8 @@ namespace Impacta.Infra.Repositorios.SistemaDeArquivos
                 cor.Id = Convert.ToInt32(linha.Substring(0, 5));
                 cor.Nome = linha.Substring(5);
                 
-                cores.Add(cor);
+                cores.Add(cor);                
             }
-
             return cores;
         }
     }

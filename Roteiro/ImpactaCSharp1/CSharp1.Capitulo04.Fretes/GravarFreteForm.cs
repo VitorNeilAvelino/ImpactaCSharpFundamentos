@@ -72,6 +72,7 @@ namespace CSharp1.Capitulo04.Fretes
             //}
             
             arquivoTexto.WriteLine(registro);
+            
             arquivoTexto.Close();
 
             //using (var arquivoTexto = new StreamWriter(caminho, true))
