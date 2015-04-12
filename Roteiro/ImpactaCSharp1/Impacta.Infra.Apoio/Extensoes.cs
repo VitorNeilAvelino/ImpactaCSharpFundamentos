@@ -104,7 +104,7 @@ namespace Impacta.Infra.Apoio
             {
                 return descricao;
             }
-            
+
             var atributos = informacoesCampo.GetCustomAttributes(typeof(DescriptionAttribute), false) as DescriptionAttribute[];
 
             if (atributos != null && atributos.Length > 0)
@@ -122,11 +122,15 @@ namespace Impacta.Infra.Apoio
 
         public static List<KeyValuePair<Enum, string>> ParaListaComDescricao(this Enum enumerador)
         {
-            var tipoEnum = enumerador.GetType();
-
-            return Enum.GetValues(tipoEnum).Cast<Enum>()
+            return Enum.GetValues(enumerador.GetType()).Cast<Enum>()
                 .Select(e => new KeyValuePair<Enum, string>(e, e.ObterDescricao()))
                 .ToList();
+        }
+
+        public static Dictionary<Enum, string> ParaDicionarioComDescricao(this Enum enumerador)
+        {
+            return Enum.GetValues(enumerador.GetType()).Cast<Enum>()
+                .ToDictionary(e => e, e => e.ObterDescricao());
         }
     }
 }

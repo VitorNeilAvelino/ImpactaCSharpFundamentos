@@ -87,19 +87,21 @@ namespace Impacta.Infra.Apoio
             return ValidarTipoDosDados((Form)formulario, formulario.ProvedorDeErro);
         }
 
-        public static void Limpar(Form formulario)
+        public static void Limpar(this Form formulario)
         {
-            foreach (Control controle in formulario.Controls)
-            {
-                if (controle is TextBox || controle is MaskedTextBox)
-                {
-                    controle.Text = string.Empty;
-                }
-                else if (controle is ComboBox)
-                {
-                    ((ComboBox)controle).SelectedIndex = -1;
-                }
-            }
+            Limpar((Control)formulario);
+
+            //foreach (Control controle in formulario.Controls)
+            //{
+            //    if (controle is TextBox || controle is MaskedTextBox)
+            //    {
+            //        controle.Text = string.Empty;
+            //    }
+            //    else if (controle is ComboBox)
+            //    {
+            //        ((ComboBox)controle).SelectedIndex = -1;
+            //    }
+            //}
         }
 
         public static void Limpar(Control controle)
