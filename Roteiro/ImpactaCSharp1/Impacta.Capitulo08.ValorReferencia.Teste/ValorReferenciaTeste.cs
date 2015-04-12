@@ -1,24 +1,19 @@
 ﻿using Impacta.Dominio;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 
 namespace Impacta.Capitulo08.ValorReferencia.Teste
 {
-    /// <summary>
-    /// Summary description for UnitTest1
-    /// </summary>
     [TestClass]
     public class ValorReferenciaTeste
     {
-        /// <summary>
-        /// Testa a passagem de variáveis (structs) como parâmetros de métodos - passagem por valor
-        /// </summary>
         [TestMethod]
         public void TestarPassagemPorValor()
         {
             int x = 1;
             Transformar(x);
 
-            // O valor original não foi transformado
+            // O valor original não foi transformado.
             Assert.AreEqual(x, 1);
 
             int y = x;
@@ -26,9 +21,6 @@ namespace Impacta.Capitulo08.ValorReferencia.Teste
             Assert.AreEqual(y, 1);
         }
 
-        /// <summary>
-        /// Testa a passagem de classes como parâmetros de métodos - passagem por referência
-        /// </summary>
         [TestMethod]
         public void TestarPassagemPorReferencia()
         {
@@ -38,8 +30,8 @@ namespace Impacta.Capitulo08.ValorReferencia.Teste
 
             // Quando uma classe é passada como parâmetro de um método, seu conteúdo é passado por referência, ou seja,
             // é passado o endereço da classe na memória e não seu conteúdo propriamente.
-            // Assim, quando uma propriedade é modificada dentro do método (Transformar), o "objeto original" (trata-se do mesmo objeto)
-            // também é modificado
+            // Assim, quando uma propriedade é modificada dentro do método (Transformar), o "objeto original" 
+            // (trata-se do mesmo objeto) também é modificado.
             Assert.AreEqual(cliente.Nome, "HEJLSBERG");
 
             var cliente2 = cliente;
@@ -58,17 +50,55 @@ namespace Impacta.Capitulo08.ValorReferencia.Teste
         }
 
         [TestMethod]
-        public void TestarPassagemDeStructs()
+        public void TestarStructsVsClasses()
         {
-            //var aluno = new Aluno();
-            //aluno.Documentos.Add(new Documento{TipoDocumento = TipoDocumento.CPF, Numero = "123.456.789-00"});
-            //Transformar(aluno);
+            int x = 42;
+            Assert.IsTrue(x.GetType().IsValueType);
 
-            //Assert.AreEqual(aluno.Documentos[0].Numero, "000.000.000-00");
-            var documento = new Documento();
-            documento.Numero = "123.456.789-00";
-            Transformar(documento);
-            Assert.AreEqual(documento.Numero, "123.456.789-00");
+            var y = new Int32();
+            y = 5;
+            Assert.IsTrue(y.GetType().IsValueType);
+
+            var meuObjeto = new object();
+            Assert.IsTrue(meuObjeto.GetType().IsClass);
+
+            var minhaString = new string('a', 1);
+            Assert.IsTrue(minhaString.GetType().IsClass);
+
+            var estrutura = new Estrutura();
+            estrutura.Id = 1;
+
+            Transformar(estrutura);
+
+            Assert.IsTrue(estrutura.GetType().IsValueType);
+            Assert.AreEqual(1, estrutura.Id);
+        }
+
+        private void Transformar(Estrutura estrutura)
+        {
+            estrutura.Id = 2;
+        }
+
+        private struct Estrutura /* : estruturas não admitem herança*/ 
+        {
+            // Estruturas não permitem construtores explícitos sem parâmetros.
+            //public Estrutura()
+            //{
+                    
+            //}
+
+            // É preciso chamar o construtor padrão antes do construtor parametrizado.
+            //public Estrutura(Veiculo veiculo, int id) : this()
+            //{
+            //    Veiculo = veiculo;
+            //    Id = id;
+            //}
+            public int Id { get; set; }
+
+            public void Fazer()
+            {
+
+            }
         }
 
         public void Transformar(int x)
