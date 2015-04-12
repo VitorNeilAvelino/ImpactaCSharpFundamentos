@@ -81,19 +81,24 @@ namespace CSharp1.Capitulo09.Colecoes.Testes
             tabelaDeDispersao.Add(true, 1);
             //tabelaDeDispersao.Add(1, "Outro elemento"); //ArgumentException.
 
-            var dicionario = new Dictionary<int, string>() ;//{ { 1, "Teste" }, { 2, "Outro teste" } };
-            dicionario.Add(1, "Um");
-            dicionario.Add(2, "Registro com Id 2");
-            //dicionario.Add(2, "Registro com Id 3");
+            var dicionario = new Dictionary<string, Veiculo>();//{ { 1, "Teste" }, { 2, "Outro teste" } };
+            
+            var fusca = new Veiculo();
+            fusca.Chassi = "1";
+            var fiesta = new Veiculo();
+            fiesta.Chassi = "2";
 
-            Assert.IsTrue(dicionario.ContainsKey(1));
-            Assert.IsTrue(dicionario.ContainsValue("Um"));
+            dicionario.Add("ABC1111", fusca);
+            dicionario.Add("ABC2222", fiesta);
 
-            Console.WriteLine(dicionario[1]);
+            Assert.IsTrue(dicionario.ContainsKey("ABC1111")); // Case sensitive.
+            Assert.IsTrue(dicionario.ContainsValue(fusca));
+
+            Console.WriteLine(dicionario["ABC2222"].Chassi);
 
             foreach (var verbete in dicionario)
             {
-                Console.WriteLine("{0}: {1}", verbete.Key, verbete.Value);
+                Console.WriteLine("Placa {0}: Chassi {1}", verbete.Key, verbete.Value.Chassi);
             }
         }
 
@@ -119,7 +124,9 @@ namespace CSharp1.Capitulo09.Colecoes.Testes
             pilha.Push(3);
 
             Assert.AreEqual(pilha.Pop(), 3);
-            Assert.AreEqual(pilha.Peek(), 2);
+            Assert.AreEqual(pilha.Peek(), 2); // Peek: espiar.
+
+            Console.WriteLine("A pilha está vazia? {0}.", pilha.Count == 0);
         }
 
         [TestMethod]
