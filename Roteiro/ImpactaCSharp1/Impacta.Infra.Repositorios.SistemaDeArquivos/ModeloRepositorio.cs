@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.IO;
 using System.Xml.Linq;
 
 namespace Impacta.Infra.Repositorios.SistemaDeArquivos
@@ -11,7 +12,7 @@ namespace Impacta.Infra.Repositorios.SistemaDeArquivos
         public List<Modelo> SelecionarPorMarca(int marcaId)
         {
             var modelos = new List<Modelo>();
-            var arquivoXml = XDocument.Load(ConfigurationManager.AppSettings["caminhoArquivoModelo"]);
+            var arquivoXml = XDocument.Load(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, ConfigurationManager.AppSettings["caminhoArquivoModelo"]));
 
             foreach (var noh in arquivoXml.Descendants("modelo"))
             {
@@ -27,7 +28,7 @@ namespace Impacta.Infra.Repositorios.SistemaDeArquivos
 
                 modelos.Add(modelo);
             }
-
+            
             return modelos;
         }
 
