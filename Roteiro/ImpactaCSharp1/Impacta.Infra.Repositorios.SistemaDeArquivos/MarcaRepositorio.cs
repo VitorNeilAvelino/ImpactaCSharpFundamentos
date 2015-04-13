@@ -12,7 +12,7 @@ namespace Impacta.Infra.Repositorios.SistemaDeArquivos
         {
             var marcas = new List<Marca>();
 
-            foreach (var linha in File.ReadAllLines(ConfigurationManager.AppSettings["caminhoArquivoMarca"]))
+            foreach (var linha in File.ReadAllLines(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, ConfigurationManager.AppSettings["caminhoArquivoMarca"])))
             {
                 var vetorPropriedades = linha.Split('|');
                 

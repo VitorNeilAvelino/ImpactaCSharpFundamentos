@@ -81,7 +81,7 @@ namespace CSharp1.Capitulo11.Veiculos
                 }
                 catch (UnauthorizedAccessException)
                 {
-                    MessageBox.Show("O arquivo Fretes.txt não tem permissão de gravação.");
+                    MessageBox.Show("O arquivo Veiculos.xml não tem permissão de gravação.");
                     //File.SetAttributes("C:\\Fretes.txt", FileAttributes.Normal);
                 }
                 catch (Exception excecao)

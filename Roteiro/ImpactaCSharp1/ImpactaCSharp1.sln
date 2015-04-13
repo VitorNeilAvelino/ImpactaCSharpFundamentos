@@ -92,11 +92,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp1.Capitulo09.Colecoes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp1.Capitulo11.Veiculos", "CSharp1.Capitulo11.Veiculos\CSharp1.Capitulo11.Veiculos.csproj", "{B86F0AC7-4B7A-41B6-A687-8E39D206D38B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DescarteSeguro.Testes", "DescarteSeguroTestes\DescarteSeguro.Testes.csproj", "{BF32EBE7-0622-4C7F-99A8-063C798B55F0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp1.Capitulo13.DescarteSeguro.Testes", "DescarteSeguroTestes\CSharp1.Capitulo13.DescarteSeguro.Testes.csproj", "{BF32EBE7-0622-4C7F-99A8-063C798B55F0}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "CSharp1.Capitulo11.Veiculos.Setup", "CSharp1.Capitulo11.Veiculos.Setup\CSharp1.Capitulo11.Veiculos.Setup.vdproj", "{DD099679-F731-4F33-9CAA-1822ECE2CC1C}"
 EndProject
 Global
 	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 39
+		SccNumberOfProjects = 40
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs24
 		SccLocalPath0 = .
@@ -234,10 +236,14 @@ Global
 		SccProjectTopLevelParentUniqueName37 = ImpactaCSharp1.sln
 		SccProjectName37 = CSharp1.Capitulo11.Veiculos
 		SccLocalPath37 = CSharp1.Capitulo11.Veiculos
-		SccProjectUniqueName38 = DescarteSeguroTestes\\DescarteSeguro.Testes.csproj
+		SccProjectUniqueName38 = DescarteSeguroTestes\\CSharp1.Capitulo13.DescarteSeguro.Testes.csproj
 		SccProjectTopLevelParentUniqueName38 = ImpactaCSharp1.sln
 		SccProjectName38 = DescarteSeguroTestes
 		SccLocalPath38 = DescarteSeguroTestes
+		SccProjectUniqueName39 = CSharp1.Capitulo11.Veiculos.Setup\\CSharp1.Capitulo11.Veiculos.Setup.vdproj
+		SccProjectTopLevelParentUniqueName39 = ImpactaCSharp1.sln
+		SccProjectName39 = CSharp1.Capitulo11.Veiculos.Setup
+		SccLocalPath39 = CSharp1.Capitulo11.Veiculos.Setup
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -628,6 +634,12 @@ Global
 		{BF32EBE7-0622-4C7F-99A8-063C798B55F0}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{BF32EBE7-0622-4C7F-99A8-063C798B55F0}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{BF32EBE7-0622-4C7F-99A8-063C798B55F0}.Release|x86.ActiveCfg = Release|Any CPU
+		{DD099679-F731-4F33-9CAA-1822ECE2CC1C}.Debug|Any CPU.ActiveCfg = Debug
+		{DD099679-F731-4F33-9CAA-1822ECE2CC1C}.Debug|Mixed Platforms.ActiveCfg = Debug
+		{DD099679-F731-4F33-9CAA-1822ECE2CC1C}.Debug|x86.ActiveCfg = Debug
+		{DD099679-F731-4F33-9CAA-1822ECE2CC1C}.Release|Any CPU.ActiveCfg = Release
+		{DD099679-F731-4F33-9CAA-1822ECE2CC1C}.Release|Mixed Platforms.ActiveCfg = Release
+		{DD099679-F731-4F33-9CAA-1822ECE2CC1C}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -657,6 +669,7 @@ Global
 		{1F101D47-27D5-439B-887F-BA5AEC97994E} = {B52D37B3-6D4B-4F5A-9FF2-56BEC4CC6421}
 		{B86F0AC7-4B7A-41B6-A687-8E39D206D38B} = {58F5243B-3BDB-437B-AEE3-E80C83790294}
 		{BF32EBE7-0622-4C7F-99A8-063C798B55F0} = {B52D37B3-6D4B-4F5A-9FF2-56BEC4CC6421}
+		{DD099679-F731-4F33-9CAA-1822ECE2CC1C} = {58F5243B-3BDB-437B-AEE3-E80C83790294}
 	EndGlobalSection
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = ImpactaCSharp15.vsmdi

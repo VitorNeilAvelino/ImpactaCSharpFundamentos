@@ -12,7 +12,7 @@ namespace Impacta.Infra.Repositorios.SistemaDeArquivos
     {
         public void Inserir(Veiculo veiculo)
         {
-            var caminhoArquivoVeiculo = ConfigurationManager.AppSettings["caminhoArquivoVeiculo"];
+            var caminhoArquivoVeiculo = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, ConfigurationManager.AppSettings["caminhoArquivoVeiculo"]);
             
             var veiculos = XDocument.Load(caminhoArquivoVeiculo);
 

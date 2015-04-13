@@ -1,0 +1,17 @@
+﻿<modelos>
+  <modelo>
+    <id>1</id>
+    <marcaId>1</marcaId>
+    <descricao>Fox</descricao>
+  </modelo>
+  <modelo>
+    <id>2</id>
+    <marcaId>2</marcaId>
+    <descricao>Fiesta</descricao>
+  </modelo>
+  <modelo>
+    <id>3</id>
+    <marcaId>3</marcaId>
+    <descricao>Bravo</descricao>
+  </modelo>
+</modelos>
