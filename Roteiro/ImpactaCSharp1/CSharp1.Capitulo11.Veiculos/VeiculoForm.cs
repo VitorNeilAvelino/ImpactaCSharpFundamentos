@@ -146,5 +146,11 @@ namespace CSharp1.Capitulo11.Veiculos
             //this.Limpar();
             placaMaskedTextBox.Focus();
         }
+
+        protected override void salvarToolStripButton_Click(object sender, EventArgs e)
+        {
+            base.salvarToolStripButton_Click(sender, e);
+            gravarButton.PerformClick();
+        }
     }
 }
