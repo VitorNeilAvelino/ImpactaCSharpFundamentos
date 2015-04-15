@@ -89,6 +89,7 @@
     <Compile Include="Familia.cs" />
     <Compile Include="Fornecedor.cs" />
     <Compile Include="Frete.cs" />
+    <Compile Include="Frete_.cs" />
     <Compile Include="IClienteRepositorio.cs" />
     <Compile Include="IMarcaRepositorio.cs" />
     <Compile Include="IModeloRepositorio.cs" />
