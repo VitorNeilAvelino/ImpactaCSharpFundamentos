@@ -10,7 +10,7 @@ namespace Impacta.Dominio.Teste
         [TestMethod]
         public void ConverterEnumeradorParaLista()
         {
-            var veiculo = new Veiculo();
+            var veiculo = new VeiculoPasseio();
 
             Console.WriteLine(Cambio.Automatico.ObterDescricao());
             //Console.WriteLine(new Cambio().ObterDescricao()); // É preciso um elemento para obter sua descrição.

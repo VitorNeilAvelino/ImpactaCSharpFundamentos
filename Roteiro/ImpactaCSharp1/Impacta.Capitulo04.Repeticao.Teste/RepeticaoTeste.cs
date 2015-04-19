@@ -11,7 +11,7 @@ namespace Impacta.Capitulo04.Repeticao.Teste
     public class RepeticaoTeste
     {
         [TestMethod]
-        public void TestarForAninhado()
+        public void TestarForAninhado() // Tabuada.
         {
             for (int i = 1; i <= 10; i++)
             {
@@ -34,9 +34,20 @@ namespace Impacta.Capitulo04.Repeticao.Teste
             /*
             for(inicializacao; condição para a execução; pós-execução)
             {
-                  execucao;
+                  execução;
             }
              */
+        }
+
+        [TestMethod]
+        public void TestarForApenasComCondicao()
+        {
+            int i = 1;
+
+            for (; i <= 3; )
+            {
+                Console.WriteLine(i++);
+            }
         }
 
         [TestMethod]
@@ -68,24 +79,22 @@ namespace Impacta.Capitulo04.Repeticao.Teste
         }
 
         [TestMethod]
-        public void ExcluirDiretoriosVaziosTeste()
+        public void ListarDiretoriosVaziosTeste()
         {
-            ExcluirDiretoriosVazios(@"C:\Temp");
+            ListarDiretoriosVazios(@"C:\Projetos");
         }
 
-        private void ExcluirDiretoriosVazios(string caminhoDiretorio)
+        private void ListarDiretoriosVazios(string caminhoDiretorio)
         {
             foreach (var diretorio in Directory.GetDirectories(caminhoDiretorio))
             {
-                ExcluirDiretoriosVazios(diretorio);
-                
-                //Console.WriteLine(new DirectoryInfo(diretorio).FullName);
+                ListarDiretoriosVazios(diretorio);
 
                 if (Directory.GetFiles(diretorio).Length == 0 && Directory.GetDirectories(diretorio).Length == 0)
                 {
                     Console.WriteLine(new DirectoryInfo(diretorio).FullName);
                     //Directory.Delete(directory, false);
-                    Directory.Delete(diretorio);
+                    //Directory.Delete(diretorio);
                 }
             }
         }
@@ -94,7 +103,7 @@ namespace Impacta.Capitulo04.Repeticao.Teste
         public void LerTodasLinhas()
         {
             var linhas = Properties.Resources.testetxt
-                .Split(new[] {Environment.NewLine}, StringSplitOptions.None).ToList();
+                .Split(new[] { Environment.NewLine }, StringSplitOptions.None).ToList();
 
             const string separador = "============================== Pedido ==============================";
 
@@ -113,7 +122,7 @@ namespace Impacta.Capitulo04.Repeticao.Teste
                     {
                         pilha.Pop();
                         corpoPedido.Replace(pilha.Peek(), string.Empty);
-                        
+
                         dicionario.Add(linhaEmails, corpoPedido);
 
                         linhaEmails = pilha.Pop();
@@ -128,13 +137,13 @@ namespace Impacta.Capitulo04.Repeticao.Teste
                     }
                     else
                     {
-                        corpoPedido.AppendLine(linha); 
+                        corpoPedido.AppendLine(linha);
                     }
                 }
             }
 
             dicionario.Add(linhaEmails, corpoPedido);
-            
+
             foreach (var item in dicionario)
             {
                 Console.WriteLine(new string('-', 200));

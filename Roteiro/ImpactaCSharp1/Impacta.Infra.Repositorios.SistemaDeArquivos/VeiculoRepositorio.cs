@@ -17,7 +17,7 @@ namespace Impacta.Infra.Repositorios.SistemaDeArquivos
             var veiculos = XDocument.Load(caminhoArquivoVeiculo);
 
             var registro = new StringWriter();
-            new XmlSerializer(typeof(Veiculo)).Serialize(registro, veiculo);
+            new XmlSerializer(typeof(VeiculoPasseio)).Serialize(registro, veiculo);
 
             veiculos.Root.Add(XElement.Parse(registro.ToString()));
 
