@@ -1,6 +1,9 @@
-﻿namespace Impacta.Dominio
+﻿using System;
+using System.Collections.Generic;
+
+namespace Impacta.Dominio
 {
-    public /*abstract*/ class Veiculo
+    public abstract class Veiculo
     {
         //public Veiculo(string placa)
         //{
@@ -32,13 +35,25 @@
         #endregion
 
         #region Métodos
-        //public abstract void Validar();
+        protected List<string> ValidarBase()
+        {
+            List<string> erros = new List<string>();
 
-        // Quebra o polimorfismo.
-        //public void Validar()
-        //{
+            if (Ano <= 1800 || (Ano - DateTime.Now.Year >= 2))
+            {
+                erros.Add(string.Format("O ano informado ({0}) não é válido.", Ano));
+            }
 
-        //}
+            if (!Enum.IsDefined(typeof(Cambio), Cambio))
+            {
+                erros.Add(string.Format("O câmbio informado ({0}) não é válido.", Cambio));
+            }
+
+            return erros;
+        }
+
+        public abstract List<string> Validar();
+
         #endregion
     }
 }

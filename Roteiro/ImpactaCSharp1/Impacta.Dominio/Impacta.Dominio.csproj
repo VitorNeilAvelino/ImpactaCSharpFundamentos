@@ -97,7 +97,8 @@
     <Compile Include="IVeiculoRepositorio.cs" />
     <Compile Include="Marca.cs" />
     <Compile Include="Modelo.cs" />
-    <Compile Include="Moto.cs" />
+    <Compile Include="Motocicleta.cs" />
+    <Compile Include="TipoMotocicleta.cs" />
     <Compile Include="VeiculoPasseio.cs" />
     <Compile Include="Pessoa.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

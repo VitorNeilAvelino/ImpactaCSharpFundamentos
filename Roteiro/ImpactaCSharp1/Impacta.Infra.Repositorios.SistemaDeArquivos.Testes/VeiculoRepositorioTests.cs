@@ -12,7 +12,7 @@ namespace Impacta.Infra.Repositorios.SistemaDeArquivos.Tests
         {
             var veiculoRepositorio = new VeiculoRepositorio();
 
-            var veiculo = new Veiculo();
+            var veiculo = new VeiculoPasseio();
             veiculo.Ano = 2014;
             veiculo.Cambio = Cambio.Automatico;
             veiculo.Combustivel = Combustivel.Alcool;

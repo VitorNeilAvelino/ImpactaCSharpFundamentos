@@ -98,13 +98,14 @@ namespace CSharp1.Capitulo11.Veiculos
 
         private void GravarVeiculo()
         {
-            var veiculo = new Veiculo();
+            var veiculo = new VeiculoPasseio();
             veiculo.Ano = Convert.ToInt32(anoMaskedTextBox.Text);
             veiculo.Cambio = (Cambio)cambioComboBox.SelectedItem;
             //veiculo.Combustivel = ((Dictionary<Enum, string>)combustivelComboBox.SelectedItem).;
             veiculo.Combustivel = (Combustivel)((KeyValuePair<Enum, string>)combustivelComboBox.SelectedItem).Key;
             veiculo.Cor = (Cor)corComboBox.SelectedItem;
             veiculo.Modelo = (Modelo)modeloComboBox.SelectedItem;
+            veiculo.Carroceria = Carroceria.Hatch; // Deveria ter um combo no formulário.
             veiculo.Observacao = observacaoTextBox.Text;
             veiculo.Placa = placaMaskedTextBox.Text;
 
