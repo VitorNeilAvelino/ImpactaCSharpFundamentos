@@ -12,9 +12,14 @@ namespace Impacta.Capitulo03.Operadores
 
         private void aritmeticosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            int a=2, b=6, c=10, d = 13;
+            int a=2, b=6, c=10, d = 15;
 
             resultadoListBox.Items.Add("a = " + a);
+            resultadoListBox.Items.Add("d / a = " + d / a);
+            resultadoListBox.Items.Add("d / a = " + d / Convert.ToDecimal(a));
+            resultadoListBox.Items.Add("d / a = " + Math.Round(d / Convert.ToDecimal(a)));
+            resultadoListBox.Items.Add("c / b = " + c / Convert.ToDecimal(b));
+            resultadoListBox.Items.Add("c / b = " + Math.Round(c / Convert.ToDecimal(b), 2));
         }
 
         private void ternariosToolStripMenuItem_Click(object sender, EventArgs e)
