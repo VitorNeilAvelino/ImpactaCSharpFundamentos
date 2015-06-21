@@ -12,7 +12,12 @@ namespace CSharp1.Capitulo08.Vetores
         public void InicializacaoTeste()
         {
             var strings = new string[10];
+            
             var inteiros = new int[5];
+            inteiros[0] = 57;
+            inteiros[1] = 18;
+            Console.WriteLine("Posição 2: ", inteiros[2]); // null, sem representação textual.
+
             var decimais = new decimal[/*pode ser omitido - 2 e 4 quebram o build*/] { 0.5m, 0.9m, 1.59m };
             
             // Se informado, confere a quantidade informada
@@ -39,7 +44,7 @@ namespace CSharp1.Capitulo08.Vetores
 
             //ref: aula 12
             Array.Resize(ref decimais, 5);
-
+            
             decimais[4] = 4.4m;
         }
 
@@ -58,12 +63,13 @@ namespace CSharp1.Capitulo08.Vetores
         {
             var decimais = new decimal[] { 1.5m, 0.9m, 1.59m };
 
-            Console.WriteLine(CalcularMedia(decimais));
+            Console.WriteLine(Media(decimais));
             //Console.WriteLine(CalcularMedia(1.5m, 0.9m, 1.59m)); // descomentar os params abaixo.
             // Citar string.Format();
+            // Só pode haver um e na última posição.
         }
 
-        private decimal CalcularMedia(/*params*/ decimal[] valores)
+        private decimal Media(/*params*/ decimal[] valores)
         {
             return valores.Average();
         }
