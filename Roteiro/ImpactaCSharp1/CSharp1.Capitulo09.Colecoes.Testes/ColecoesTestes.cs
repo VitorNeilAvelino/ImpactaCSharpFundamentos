@@ -19,36 +19,23 @@ namespace CSharp1.Capitulo09.Colecoes.Testes
 
             var inteiros = new List<int>() { 1, 4, 0, 2, 2 }; // Começar comentado.
             inteiros.Add(9);
+            inteiros.Add(8);
+            inteiros.Add(4);
+
+            var maisInteiros = new List<int> {1, 8, 3,0 };
+            inteiros.AddRange(maisInteiros);
+
+            inteiros.Insert(0, 11); // ArgumentOutOfRangeException se o índice não for encontrado.
+            inteiros.Remove(2); // Primeiro "2" encontrado. Não causa erro se não encontrado.
+            inteiros.RemoveAt(3); // ArgumentOutOfRangeException se o índice não for encontrado.
+            inteiros.Sort();
+
+            foreach (var inteiro in inteiros)
+            {
+                Console.WriteLine("{0}: {1}", inteiros.IndexOf(inteiro), inteiro);
+            }
 
             Console.WriteLine("Tamanho da lista de inteiros: {0}", inteiros.Count);
-
-            foreach (var inteiro in inteiros)
-            {
-                Console.WriteLine("{0}: {1}", inteiros.IndexOf(inteiro), inteiro);
-            }
-            Console.WriteLine(new string('-', 50));
-
-            Assert.AreEqual(inteiros.IndexOf(1), 0);
-
-            inteiros.Insert(0, 11);
-            Assert.AreEqual(inteiros[0], 11);
-
-            inteiros.Remove(2); // Primeiro "2" encontrado. Não causa erro se não encontrado.
-            foreach (var inteiro in inteiros)
-            {
-                Console.WriteLine("{0}: {1}", inteiros.IndexOf(inteiro), inteiro);
-            }
-            Console.WriteLine(new string('-', 50));
-
-            //inteiros.RemoveAt(10); ArgumentOutOfRangeException.
-            inteiros.RemoveAt(3);
-
-            inteiros.Sort();
-            foreach (var inteiro in inteiros)
-            {
-                Console.WriteLine("{0}: {1}", inteiros.IndexOf(inteiro), inteiro);
-            }
-            Console.WriteLine(new string('-', 50));
         }
 
         [TestMethod]
@@ -81,25 +68,20 @@ namespace CSharp1.Capitulo09.Colecoes.Testes
             tabelaDeDispersao.Add(true, 1);
             //tabelaDeDispersao.Add(1, "Outro elemento"); //ArgumentException.
 
-            var dicionario = new Dictionary<string, Veiculo>();//{ { 1, "Teste" }, { 2, "Outro teste" } };
-            
-            var fusca = new Veiculo();
-            fusca.Chassi = "1";
-            var fiesta = new Veiculo();
-            fiesta.Chassi = "2";
+            var feriados = new Dictionary<DateTime, string>();//{ { 1, "Teste" }, { 2, "Outro teste" } };
 
-            dicionario.Add("ABC1111", fusca);
-            dicionario.Add("ABC2222", fiesta);
+            feriados.Add(new DateTime(2015, 12, 25), "Natal");
+            //dicionario.Add(Convert.ToDateTime("01/01/2016", new CultureInfo("pt-br")), "Ano novo");
+            feriados.Add(Convert.ToDateTime("01/01/2016"), "Ano novo");
+            feriados.Add(Convert.ToDateTime("25/01/2016"), "Aniversário de São Paulo");
 
-            Assert.IsTrue(dicionario.ContainsKey("ABC1111")); // Case sensitive.
-            Assert.IsTrue(dicionario.ContainsValue(fusca));
-
-            Console.WriteLine(dicionario["ABC2222"].Chassi);
-
-            foreach (var verbete in dicionario)
+            foreach (var feriado in feriados)
             {
-                Console.WriteLine("Placa {0}: Chassi {1}", verbete.Key, verbete.Value.Chassi);
+                Console.WriteLine("{0}: {1}", feriado.Key.ToString("dd/MM/yyyy"), feriado.Value);
             }
+
+            Console.WriteLine(feriados.ContainsKey(Convert.ToDateTime("25/12/2015")));
+            Console.WriteLine(feriados.ContainsValue("Aniversário de São Paulo"));
         }
 
         [TestMethod]
@@ -118,13 +100,13 @@ namespace CSharp1.Capitulo09.Colecoes.Testes
         [TestMethod]
         public void StackTeste()
         {
-            var pilha = new Stack/*<int>*/();
-            pilha.Push(1);
-            pilha.Push(2);
+            var pilha = new Stack<int>(); // Não obrigatoriamente genérica.
             pilha.Push(3);
+            pilha.Push(8);
+            pilha.Push(56);
 
-            Assert.AreEqual(pilha.Pop(), 3);
-            Assert.AreEqual(pilha.Peek(), 2); // Peek: espiar.
+            Assert.AreEqual(pilha.Pop(), 56);
+            Assert.AreEqual(pilha.Peek(), 8); // Peek: espiar.
 
             Console.WriteLine("A pilha está vazia? {0}.", pilha.Count == 0);
         }
@@ -132,13 +114,13 @@ namespace CSharp1.Capitulo09.Colecoes.Testes
         [TestMethod]
         public void QueueTeste()
         {
-            var fila = new Queue/*<int>*/();
-            fila.Enqueue(1);
-            fila.Enqueue(2);
+            var fila = new Queue<int>(); // Não obrigatoriamente genérica.
             fila.Enqueue(3);
+            fila.Enqueue(8);
+            fila.Enqueue(56);
 
-            Assert.AreEqual(fila.Dequeue(), 1);
-            Assert.AreEqual(fila.Peek(), 2);
+            Assert.AreEqual(fila.Dequeue(), 3);
+            Assert.AreEqual(fila.Peek(), 8);
         }
     }
 }
