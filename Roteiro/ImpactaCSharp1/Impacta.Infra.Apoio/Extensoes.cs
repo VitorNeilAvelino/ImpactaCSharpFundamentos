@@ -7,7 +7,7 @@ using System.Web;
 using System.Windows.Forms;
 using System.ComponentModel;
 
-namespace Impacta.Infra.Apoio
+namespace Impacta.Apoio
 {
     public static class Extensoes
     {

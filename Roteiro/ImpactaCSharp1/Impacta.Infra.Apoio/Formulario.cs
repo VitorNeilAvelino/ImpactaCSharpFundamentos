@@ -2,7 +2,7 @@
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
-namespace Impacta.Infra.Apoio
+namespace Impacta.Apoio
 {
     public static class Formulario
     {

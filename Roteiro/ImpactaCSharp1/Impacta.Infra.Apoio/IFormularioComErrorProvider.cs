@@ -1,5 +1,6 @@
 ﻿using System.Windows.Forms;
-namespace Impacta.Infra.Apoio
+
+namespace Impacta.Apoio
 {
     public interface IFormularioComErrorProvider
     {

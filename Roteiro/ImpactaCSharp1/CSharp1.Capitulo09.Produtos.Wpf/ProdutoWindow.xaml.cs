@@ -3,7 +3,7 @@ using System.Windows;
 using System.Windows.Input;
 using Impacta.Dominio;
 using System.IO;
-using Impacta.Infra.Apoio;
+using Impacta.Apoio;
 
 namespace CSharp1.Capitulo09.Produtos.Wpf
 {

@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
-using Impacta.Infra.Apoio;
+using Impacta.Apoio;
 using Impacta.Dominio;
 using Impacta.Infra.Repositorios.SistemaDeArquivos;
 using System.IO;

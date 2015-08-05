@@ -4,11 +4,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Impacta.Infra.Apoio")]
+[assembly: AssemblyTitle("Impacta.Apoio")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Impacta Tecnologia Eletronica")]
-[assembly: AssemblyProduct("Impacta.Infra.Apoio")]
+[assembly: AssemblyProduct("Impacta.Apoio")]
 [assembly: AssemblyCopyright("Copyright © Impacta Tecnologia Eletronica 2011")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

@@ -2,7 +2,7 @@
 using System.IO;
 using System.Windows.Forms;
 using Impacta.Dominio;
-using Impacta.Infra.Apoio;
+using Impacta.Apoio;
 
 namespace Impacta.Capitulo09.Produtos
 {

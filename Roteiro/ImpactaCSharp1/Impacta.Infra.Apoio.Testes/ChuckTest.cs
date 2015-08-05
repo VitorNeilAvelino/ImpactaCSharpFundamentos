@@ -1,8 +1,8 @@
-﻿using Impacta.Infra.Apoio;
+﻿using Impacta.Apoio;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
-namespace Impacta.Infra.Apoio.Testes
+namespace Impacta.Apoio.Testes
 {
     [TestClass]
     public class ChuckTest

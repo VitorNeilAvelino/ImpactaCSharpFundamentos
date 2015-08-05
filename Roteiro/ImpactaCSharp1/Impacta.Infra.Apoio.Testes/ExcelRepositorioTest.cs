@@ -3,7 +3,7 @@ using Impacta.Infra.Repositorios.MsOffice;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
-namespace Impacta.Infra.Apoio.Testes
+namespace Impacta.Apoio.Testes
 {
     [TestClass]
     public class ExcelRepositorioTest

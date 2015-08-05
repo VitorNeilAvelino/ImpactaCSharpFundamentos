@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
-using Impacta.Infra.Apoio;
+using Impacta.Apoio;
 using System.IO;
 using Impacta.Infra.Repositorios.SqlServer;
 using System.Linq;

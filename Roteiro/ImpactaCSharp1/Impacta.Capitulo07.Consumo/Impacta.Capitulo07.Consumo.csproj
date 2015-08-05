@@ -112,9 +112,9 @@
       <Project>{9FE1A2F5-E75F-402D-A3FA-1117E64D1A3C}</Project>
       <Name>Impacta.Dominio</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Impacta.Infra.Apoio\Impacta.Infra.Apoio.csproj">
+    <ProjectReference Include="..\Impacta.Infra.Apoio\Impacta.Apoio.csproj">
       <Project>{FD6F45C4-9958-4EDE-A068-BE52DBDC1DB8}</Project>
-      <Name>Impacta.Infra.Apoio</Name>
+      <Name>Impacta.Apoio</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -1,4 +1,4 @@
-﻿namespace Impacta.Infra.Apoio
+﻿namespace Impacta.Apoio
 {
     public static class Validar
     {
