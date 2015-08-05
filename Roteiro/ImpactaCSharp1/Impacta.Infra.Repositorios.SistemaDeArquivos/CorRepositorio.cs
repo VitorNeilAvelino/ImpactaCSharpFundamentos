@@ -8,12 +8,19 @@ namespace Impacta.Infra.Repositorios.SistemaDeArquivos
 {
     public class CorRepositorio
     {
-        public List<Cor> Selecionar()
+        string _caminho = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, ConfigurationManager.AppSettings["caminhoArquivoCor"]);
+
+        public List<Cor> Selecionar(string nome = null)
         {
             var cores = new List<Cor>();
 
-            foreach (var linha in File.ReadAllLines(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, ConfigurationManager.AppSettings["caminhoArquivoCor"])))
+            foreach (var linha in File.ReadAllLines(_caminho))
             {
+                if (nome != null && nome.ToUpper() != linha.Substring(5).ToUpper())
+                {
+                    continue;
+                }
+
                 var cor = new Cor();
                 cor.Id = Convert.ToInt32(linha.Substring(0, 5));
                 cor.Nome = linha.Substring(5);
