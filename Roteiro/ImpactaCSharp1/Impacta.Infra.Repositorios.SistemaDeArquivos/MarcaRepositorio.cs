@@ -53,7 +53,9 @@ namespace Impacta.Infra.Repositorios.SistemaDeArquivos
                 {
                     marca = new Marca();
                     marca.Id = Convert.ToInt32(vetorPropriedades[0]);
-                    marca.Nome = vetorPropriedades[1];                 
+                    marca.Nome = vetorPropriedades[1];
+
+                    break;
                 }
             }
 

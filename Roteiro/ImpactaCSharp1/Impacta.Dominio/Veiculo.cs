@@ -32,9 +32,11 @@ namespace Impacta.Dominio
         public Cambio Cambio { get; set; }
         public int Ano { get; set; }
         public string Observacao { get; set; }
+        
         #endregion
 
         #region Métodos
+
         protected List<string> ValidarBase()
         {
             List<string> erros = new List<string>();
