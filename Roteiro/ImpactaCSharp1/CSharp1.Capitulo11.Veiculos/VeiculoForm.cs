@@ -1,5 +1,5 @@
 ﻿using Impacta.Dominio;
-using Impacta.Infra.Apoio;
+using Impacta.Apoio;
 using Impacta.Infra.Repositorios.SistemaDeArquivos;
 using System;
 using System.Collections.Generic;

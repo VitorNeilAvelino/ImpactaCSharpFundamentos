@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 using System.IO;
 using System.Diagnostics;
-using Impacta.Infra.Apoio;
+using Impacta.Apoio;
 using System.Globalization;
 using System.Resources;
 

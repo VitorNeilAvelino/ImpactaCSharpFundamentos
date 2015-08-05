@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Impacta.Infra.Apoio
+namespace Impacta.Apoio
 {
     // static - não precisa ser instanciado (new)
     public static class Converter

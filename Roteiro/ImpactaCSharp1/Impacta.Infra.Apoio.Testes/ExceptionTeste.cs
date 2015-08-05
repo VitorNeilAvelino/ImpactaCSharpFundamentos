@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Impacta.Infra.Apoio.Testes
+namespace Impacta.Apoio.Testes
 {
     /// <summary>
     /// Summary description for Exception

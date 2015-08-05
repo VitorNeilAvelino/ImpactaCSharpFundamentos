@@ -8,8 +8,8 @@
     <ProjectGuid>{FD6F45C4-9958-4EDE-A068-BE52DBDC1DB8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Impacta.Infra.Apoio</RootNamespace>
-    <AssemblyName>Impacta.Infra.Apoio</AssemblyName>
+    <RootNamespace>Impacta.Apoio</RootNamespace>
+    <AssemblyName>Impacta.Apoio</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <FileUpgradeFlags>

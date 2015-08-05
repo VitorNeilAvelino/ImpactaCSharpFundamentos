@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
-namespace Impacta.Infra.Apoio.Testes
+namespace Impacta.Apoio.Testes
 {
     /// <summary>
     ///This is a test class for LogTest and is intended

@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
-using Impacta.Infra.Apoio;
+using Impacta.Apoio;
 
 namespace CSharp1.Capitulo09.InternetSpy.WindowsForms
 {

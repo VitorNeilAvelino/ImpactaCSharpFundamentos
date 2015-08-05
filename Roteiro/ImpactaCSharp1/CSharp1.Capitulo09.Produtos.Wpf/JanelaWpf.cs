@@ -1,7 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Media;
 
-namespace Impacta.Infra.Apoio
+namespace Impacta.Apoio
 {
     public static class JanelaWpf
     {

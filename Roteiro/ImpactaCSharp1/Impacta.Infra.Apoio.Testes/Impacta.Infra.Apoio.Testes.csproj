@@ -74,9 +74,9 @@
     <Compile Include="TransformarTest.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Impacta.Infra.Apoio\Impacta.Infra.Apoio.csproj">
+    <ProjectReference Include="..\Impacta.Infra.Apoio\Impacta.Apoio.csproj">
       <Project>{FD6F45C4-9958-4EDE-A068-BE52DBDC1DB8}</Project>
-      <Name>Impacta.Infra.Apoio</Name>
+      <Name>Impacta.Apoio</Name>
     </ProjectReference>
     <ProjectReference Include="..\Impacta.Infra.Repositorios.MsOffice\Impacta.Infra.Repositorios.MsOffice.csproj">
       <Project>{58AFC2D7-60F4-4747-A630-E869144A030A}</Project>

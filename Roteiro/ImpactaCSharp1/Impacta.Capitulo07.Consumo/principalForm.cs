@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
-using Impacta.Infra.Apoio;
+using Impacta.Apoio;
 
 namespace Impacta.Capitulo07.Consumo
 {

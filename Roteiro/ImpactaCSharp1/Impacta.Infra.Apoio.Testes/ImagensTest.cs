@@ -1,9 +1,9 @@
-﻿using Impacta.Infra.Apoio;
+﻿using Impacta.Apoio;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Drawing;
 
-namespace Impacta.Infra.Apoio.Testes
+namespace Impacta.Apoio.Testes
 {
     /// <summary>
     ///This is a test class for ImagensTest and is intended

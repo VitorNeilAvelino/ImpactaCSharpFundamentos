@@ -104,9 +104,9 @@
       <Project>{91F65C09-A73C-422E-9306-0359C66C5D82}</Project>
       <Name>Impacta.Dominio</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Impacta.Infra.Apoio\Impacta.Infra.Apoio.csproj">
-      <Project>{62F4D67F-2056-4BC9-A513-49016074FDE4}</Project>
-      <Name>Impacta.Infra.Apoio</Name>
+    <ProjectReference Include="..\Impacta.Infra.Apoio\Impacta.Apoio.csproj">
+      <Project>{FD6F45C4-9958-4EDE-A068-BE52DBDC1DB8}</Project>
+      <Name>Impacta.Apoio</Name>
     </ProjectReference>
     <ProjectReference Include="..\Impacta.Infra.Repositorios.SistemaDeArquivos\Impacta.Infra.Repositorios.SistemaDeArquivos.csproj">
       <Project>{F24C07D5-4E35-4A4F-A436-8414D8E40C8E}</Project>

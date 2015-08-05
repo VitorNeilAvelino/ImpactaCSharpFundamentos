@@ -1,6 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Impacta.Infra.Apoio;
+using Impacta.Apoio;
 
 namespace Impacta.Dominio.Teste
 {
