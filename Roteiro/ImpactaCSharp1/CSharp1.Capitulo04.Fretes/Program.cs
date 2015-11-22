@@ -19,7 +19,7 @@ namespace CSharp1.Capitulo04.Fretes
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GravarFreteForm());
+            Application.Run(new ListagemFretesForm());
         }
     }
 }
