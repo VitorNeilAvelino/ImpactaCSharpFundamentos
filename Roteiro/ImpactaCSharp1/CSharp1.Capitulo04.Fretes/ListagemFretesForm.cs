@@ -18,11 +18,11 @@ namespace CSharp1.Capitulo04.Fretes
             this.ActiveControl = nomeClienteToolStripTextBox.Control;
         }
 
-        private void PopularListBoxFretes(string nomeCliente = null)
+        private void PopularListBoxFretes()
         {
             try
             {
-                var fretes = Selecionar(nomeCliente);
+                var fretes = Selecionar(nomeClienteToolStripTextBox.Text);
 
                 var cabecalho = string.Concat("Cliente".PadRight(50),
                     "Estado".PadRight(10),
@@ -54,50 +54,58 @@ namespace CSharp1.Capitulo04.Fretes
             }
         }
 
-        private List<string> Selecionar(string nomeCliente = null){
+        private List<string> Selecionar(string nomeCliente = null)
+        {
             var fretes = new List<string>();
-            var caminhoArquivoFretes = ConfigurationManager.AppSettings["caminhoArquivoFretes"];
-            
-            using (var arquivoFretes = new StreamReader(caminhoArquivoFretes))
+            var caminho = ConfigurationManager.AppSettings["caminhoArquivoFretes"];
+            var arquivoFretes = new StreamReader(caminho);
+
+            //using (var arquivoFretes = new StreamReader(arquivoFretes))
+            //{
+            while (!arquivoFretes.EndOfStream)
             {
-                while(!arquivoFretes.EndOfStream)
-                {
-                    var vetorFrete = arquivoFretes.ReadLine().Split(';');
+                var registro = arquivoFretes.ReadLine();
+                
+                //var propriedades = registro.Split(';');
 
-                    if (!string.IsNullOrEmpty(nomeCliente))
-                    {
-                        if (!vetorFrete[0].ToUpper().Contains(nomeCliente.ToUpper()))
-                        {
-                            continue;
-                        }
-                    }
+                //if (!string.IsNullOrEmpty(nomeCliente))
+                //{
+                //    if (!registro[0].ToUpper().Contains(nomeCliente.ToUpper()))
+                //    {
+                //        continue;
+                //    }
+                //}
 
-                    var registro = string.Concat(
-                        vetorFrete[0].PadRight(50),/*Nome*/
-                        vetorFrete[1].PadRight(10),
-                        vetorFrete[2].PadLeft(20),
-                        vetorFrete[3].PadLeft(20),
-                        vetorFrete[4].PadLeft(20));
+                //var frete = string.Concat(
+                //    registro[0].PadRight(50),/*Nome*/
+                //    registro[1].PadRight(10),
+                //    registro[2].PadLeft(20),
+                //    registro[3].PadLeft(20),
+                //    registro[4].PadLeft(20));
 
-                    fretes.Add(registro);
-                }
+                //fretes.Add(frete);
+                
+                fretes.Add(registro);
             }
+            //}
+
+            arquivoFretes.Close();
 
             return fretes;
         }
 
         private void pesquisarToolStripButton_Click(object sender, System.EventArgs e)
         {
-            PopularListBoxFretes(nomeClienteToolStripTextBox.Text);
+            PopularListBoxFretes();
 
             // Se usar tab para focar o botão Pesquisar, nem o bloco abaixo não tem efeito.
             //ActiveControl = nomeClienteToolStripTextBox.Control;
             //nomeClienteToolStripTextBox.Focus();
         }
-                
+
         private void nomeClienteToolStripTextBox_KeyUp(object sender, KeyEventArgs e)
         {
-            PopularListBoxFretes(nomeClienteToolStripTextBox.Text);            
-        } 
+            PopularListBoxFretes();
+        }
     }
 }
