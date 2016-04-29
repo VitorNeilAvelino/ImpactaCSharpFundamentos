@@ -90,7 +90,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Roteiro\ImpactaCSharp1\Impacta.Dominio\Impacta.Dominio.csproj">
+    <ProjectReference Include="..\..\..\..\..\..\..\..\..\Projetos\ImpactaCSharp1\Roteiro\ImpactaCSharp1\Impacta.Dominio\Impacta.Dominio.csproj">
       <Project>{07592283-A1AC-4CDA-985C-1027BEFBDD7A}</Project>
       <Name>Impacta.Dominio</Name>
     </ProjectReference>
