@@ -32,9 +32,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Impacta.Dominio", "..\..\..
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Impacta.Plantao.WebApplication", "Impacta.Plantao.WebApplication\Impacta.Plantao.WebApplication.csproj", "{B4B0B863-17E5-40C3-8742-59EF847D78CA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Impacta.WcfClient", "Impacta.WcfCliente\Impacta.WcfClient.csproj", "{48BC4346-210F-4D24-A7E1-1293768D1A29}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Impacta.Database.WcfCall", "Impacta.Database.WcfCall\Impacta.Database.WcfCall.sqlproj", "{CED25AB5-E712-488B-B079-69A0785F5DF2}"
+EndProject
 Global
 	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 12
+		SccNumberOfProjects = 14
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs24
 		SccLocalPath0 = .
@@ -71,6 +75,12 @@ Global
 		SccProjectUniqueName11 = ImpactaCSharp1.Database.Wizard\\ImpactaCSharp1.Database.Wizard.sqlproj
 		SccProjectName11 = ImpactaCSharp1.Database.Wizard
 		SccLocalPath11 = ImpactaCSharp1.Database.Wizard
+		SccProjectUniqueName12 = Impacta.WcfCliente\\Impacta.WcfClient.csproj
+		SccProjectName12 = Impacta.WcfCliente
+		SccLocalPath12 = Impacta.WcfCliente
+		SccProjectUniqueName13 = Impacta.Database.WcfCall\\Impacta.Database.WcfCall.sqlproj
+		SccProjectName13 = Impacta.Database.WcfCall
+		SccLocalPath13 = Impacta.Database.WcfCall
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -193,6 +203,30 @@ Global
 		{B4B0B863-17E5-40C3-8742-59EF847D78CA}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{B4B0B863-17E5-40C3-8742-59EF847D78CA}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{B4B0B863-17E5-40C3-8742-59EF847D78CA}.Release|x86.ActiveCfg = Release|Any CPU
+		{48BC4346-210F-4D24-A7E1-1293768D1A29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48BC4346-210F-4D24-A7E1-1293768D1A29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48BC4346-210F-4D24-A7E1-1293768D1A29}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{48BC4346-210F-4D24-A7E1-1293768D1A29}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{48BC4346-210F-4D24-A7E1-1293768D1A29}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{48BC4346-210F-4D24-A7E1-1293768D1A29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48BC4346-210F-4D24-A7E1-1293768D1A29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48BC4346-210F-4D24-A7E1-1293768D1A29}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{48BC4346-210F-4D24-A7E1-1293768D1A29}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{48BC4346-210F-4D24-A7E1-1293768D1A29}.Release|x86.ActiveCfg = Release|Any CPU
+		{CED25AB5-E712-488B-B079-69A0785F5DF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CED25AB5-E712-488B-B079-69A0785F5DF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CED25AB5-E712-488B-B079-69A0785F5DF2}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{CED25AB5-E712-488B-B079-69A0785F5DF2}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{CED25AB5-E712-488B-B079-69A0785F5DF2}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{CED25AB5-E712-488B-B079-69A0785F5DF2}.Debug|Mixed Platforms.Deploy.0 = Debug|Any CPU
+		{CED25AB5-E712-488B-B079-69A0785F5DF2}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{CED25AB5-E712-488B-B079-69A0785F5DF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CED25AB5-E712-488B-B079-69A0785F5DF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CED25AB5-E712-488B-B079-69A0785F5DF2}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{CED25AB5-E712-488B-B079-69A0785F5DF2}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{CED25AB5-E712-488B-B079-69A0785F5DF2}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{CED25AB5-E712-488B-B079-69A0785F5DF2}.Release|Mixed Platforms.Deploy.0 = Release|Any CPU
+		{CED25AB5-E712-488B-B079-69A0785F5DF2}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
