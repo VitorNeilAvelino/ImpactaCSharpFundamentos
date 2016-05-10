@@ -21,14 +21,18 @@ namespace CSharp1.Capitulo09.Colecoes.Testes
             inteiros.Add(9);
             inteiros.Add(8);
             inteiros.Add(4);
+            inteiros[6] = 15; // nesse caso, o índice 6 tem que existir.
 
-            var maisInteiros = new List<int> {1, 8, 3,0 };
+            var maisInteiros = new List<int> { 1, 8, 3, 0 };
             inteiros.AddRange(maisInteiros);
 
-            inteiros.Insert(0, 11); // ArgumentOutOfRangeException se o índice não for encontrado.
+            inteiros.Insert(0, 11); // Não substitui, empurra. ArgumentOutOfRangeException se o índice não for encontrado.
             inteiros.Remove(2); // Primeiro "2" encontrado. Não causa erro se não encontrado.
             inteiros.RemoveAt(3); // ArgumentOutOfRangeException se o índice não for encontrado.
             inteiros.Sort();
+
+            var primeiro = inteiros[0];
+            var ultimo = inteiros[inteiros.Count - 1];
 
             foreach (var inteiro in inteiros)
             {
@@ -75,13 +79,17 @@ namespace CSharp1.Capitulo09.Colecoes.Testes
             feriados.Add(Convert.ToDateTime("01/01/2016"), "Ano novo");
             feriados.Add(Convert.ToDateTime("25/01/2016"), "Aniversário de São Paulo");
 
+            var nomeFeriado = feriados[new DateTime(2015, 12, 25)];
+
+            feriados.Add(new DateTime(2015, 12, 25), "Natal"); // quebra a execução - a chave deve ser única.
+
             foreach (var feriado in feriados)
             {
                 Console.WriteLine("{0}: {1}", feriado.Key.ToString("dd/MM/yyyy"), feriado.Value);
             }
 
             Console.WriteLine(feriados.ContainsKey(Convert.ToDateTime("25/12/2015")));
-            Console.WriteLine(feriados.ContainsValue("Aniversário de São Paulo"));
+            Console.WriteLine(feriados.ContainsValue("Ano Novo"));
         }
 
         [TestMethod]
@@ -93,7 +101,7 @@ namespace CSharp1.Capitulo09.Colecoes.Testes
             conjuntoDeDispersao.Add("Quinze");
             conjuntoDeDispersao.Add("Quinze"); //Não quebra a execução.
 
-            //Console.WriteLine(conjuntoDeDispersao[0]);
+            //Console.WriteLine(conjuntoDeDispersao[0]); // Não é indexado, quebra o build.
             Assert.IsTrue(conjuntoDeDispersao.Contains("Um"));
         }
 
