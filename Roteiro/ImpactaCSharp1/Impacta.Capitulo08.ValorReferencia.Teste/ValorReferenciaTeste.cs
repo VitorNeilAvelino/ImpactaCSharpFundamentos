@@ -1,6 +1,7 @@
 ﻿using Impacta.Dominio;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using System.Text;
 
 namespace Impacta.Capitulo08.ValorReferencia.Teste
 {
@@ -55,14 +56,14 @@ namespace Impacta.Capitulo08.ValorReferencia.Teste
             int x = 42;
             Assert.IsTrue(x.GetType().IsValueType);
 
-            var y = new Int32();
+            var y = new int();// new Int32();
             y = 5;
             Assert.IsTrue(y.GetType().IsValueType);
 
             var meuObjeto = new object();
             Assert.IsTrue(meuObjeto.GetType().IsClass);
 
-            var minhaString = new string('a', 1);
+            var minhaString = "a";
             Assert.IsTrue(minhaString.GetType().IsClass);
 
             var estrutura = new Estrutura();
@@ -73,6 +74,26 @@ namespace Impacta.Capitulo08.ValorReferencia.Teste
             Assert.IsTrue(estrutura.GetType().IsValueType);
             Assert.AreEqual(1, estrutura.Id);
         }
+
+        [TestMethod]
+        public void StringsSaoImutaveisTeste()
+        {
+            var texto = "aaa";
+            string.Concat(texto, "a");
+            texto.Replace("a", "b");
+            Assert.AreEqual(texto, "aaa");
+
+            texto = string.Concat(texto, "a");
+            texto = texto.Replace("a", "b");
+            
+            Assert.AreEqual(texto, "bbbb");
+
+            var mutavel = new StringBuilder("aaa");
+            mutavel.Append("a");
+            mutavel.Replace("a", "b");
+            Assert.AreEqual(mutavel.ToString(), "bbbb");
+        }
+
 
         private void Transformar(Estrutura estrutura)
         {
