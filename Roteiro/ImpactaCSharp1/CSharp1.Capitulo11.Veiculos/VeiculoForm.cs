@@ -52,6 +52,7 @@ namespace CSharp1.Capitulo11.Veiculos
             }
 
             var marca = (Marca)marcaComboBox.SelectedItem;
+            //var marca = (Marca)marcaComboBox.SelectedValue; // SelectedValue? Não, ainda é int.
 
             modeloComboBox.DataSource = new ModeloRepositorio().SelecionarPorMarca(marca.Id);
             modeloComboBox.DisplayMember = "Descricao";
@@ -61,12 +62,12 @@ namespace CSharp1.Capitulo11.Veiculos
 
         private void observacaoTextBox_TextChanged(object sender, EventArgs e)
         {
-            observacaoGroupBox.Text = string.Format("Observação ({0})", 300 - observacaoTextBox.Text.Length);
+            observacaoGroupBox.Text = string.Format("Observação ({0})", observacaoTextBox.MaxLength - observacaoTextBox.Text.Length);
         }
 
         private void gravarButton_Click(object sender, EventArgs e)
         {
-            if(ValidarFormulario())
+            if (Formulario.Validar(this, veiculosErrorProvider))
             {
                 try
                 {
