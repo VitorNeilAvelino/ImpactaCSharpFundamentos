@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
@@ -6,6 +7,54 @@ namespace Impacta.Apoio
 {
     public static class Formulario
     {
+        public static bool Validar(Form formulario, ErrorProvider provedorDeErro)
+        {
+            foreach (Control controle in formulario.Controls)
+            {
+                if (controle.Tag == null)
+                {
+                    continue;
+                }
+                
+                provedorDeErro.SetError(controle, string.Empty);
+
+                if (controle.Tag.ToString().Contains("*") && controle.Text.Trim() == string.Empty /*|| controle.ObterTextoSemMascara() == string.Empty*/)
+                {
+                    DefinirErro(provedorDeErro, controle, "Campo obrigatório.");
+
+                    //Começar assim e depois refatorar.
+                    //provedorDeErro.SetError(controle, "Campo obrigatório.");
+                    //controle.Focus();
+                }
+                else
+                {
+                    ValidarTipoDado(controle, provedorDeErro);                    
+                }                
+            }
+
+            return FormularioEstaSemErros(formulario, provedorDeErro);
+        }
+
+        private static void ValidarTipoDado(Control controle, ErrorProvider provedorDeErro)
+        {
+            var controleTag = controle.Tag.ToString().ToUpper();
+
+            if (controleTag.Contains("PLACA"))
+            {
+                if (!Regex.IsMatch(controle.Text, @"^[A-Z]{3}[0-9]{4}$"))
+                {
+                    DefinirErro(provedorDeErro, controle, "Digite a placa no formato AAA-0000.");
+                }
+            }
+            else if (controleTag.Contains("ANO"))
+            {
+                if (!Regex.IsMatch(controle.Text, @"^[0-9]{4}$"))
+                {                    
+                    DefinirErro(provedorDeErro, controle, "Digite o ano no formato AAAA.");
+                }
+            }
+        }
+
         public static bool ValidarCamposObrigatorios(Form formulario, ErrorProvider provedorDeErro)
         {
             bool validacao = true;
@@ -22,10 +71,67 @@ namespace Impacta.Apoio
                         provedorDeErro.SetError(controle, "Campo obrigatório.");
                         controle.Focus();
                     }
+                    else
+                    {
+
+                    }
                 }
             }
 
             return validacao;
+        }
+
+        public static bool ValidarTipoDados(Form formulario, ErrorProvider provedorDeErro)
+        {
+            bool validacao = true;
+
+            foreach (Control controle in formulario.Controls)
+            {
+                provedorDeErro.SetError(controle, "");
+
+                if (controle.Tag == null)
+                {
+                    continue;
+                }
+
+                var controleTag = controle.Tag.ToString().ToUpper();
+
+                if (controleTag.Contains("PLACA"))
+                {
+                    if (!Regex.IsMatch(controle.Text, @"^[A-Z]{3}[0-9]{4}$"))
+                    {
+                        DefinirErro(provedorDeErro, controle, "Digite o ano no formato AAAA.");
+                    }
+                }
+                else if (controleTag.Contains("ANO"))
+                {
+                    if (!Regex.IsMatch(controle.Text, @"^[0-9]{4}$"))
+                    {
+                        DefinirErro(provedorDeErro, controle, "Digite o ano no formato AAAA.");
+                    }
+                }
+            }
+
+            return validacao;
+        }
+
+        private static void DefinirErro(ErrorProvider provedorDeErro, Control controle, string mensagem)
+        {
+            provedorDeErro.SetError(controle, mensagem);
+            controle.Focus();
+        }
+
+        private static bool FormularioEstaSemErros(Form formulario, ErrorProvider provedorDeErro)
+        {
+            foreach (Control controle in formulario.Controls)
+            {
+                if (provedorDeErro.GetError(controle) != string.Empty)
+                {
+                    return false;
+                }
+            }
+
+            return true;
         }
 
         public static bool ValidarTipoDosDados(Form formulario, ErrorProvider provedorDeErro)
@@ -58,7 +164,7 @@ namespace Impacta.Apoio
                     }
                     else if (controle.Tag.ToString().ToUpper().Contains("CPF"))
                     {
-                        if (!Validar.Cpf(controle.Text))
+                        if (!Impacta.Apoio.Validar.Cpf(controle.Text))
                         {
                             throw new FormatException("CPF");
                         }

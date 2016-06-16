@@ -190,4 +190,104 @@
     <Ano>2014</Ano>
     <Observacao>Observação</Observacao>
   </Veiculo>
+  <VeiculoPasseio xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Placa>ABC4655</Placa>
+    <Modelo>
+      <Id>3</Id>
+      <Marca>
+        <Id>3</Id>
+        <Nome>Fiat</Nome>
+      </Marca>
+      <Descricao>Bravo</Descricao>
+    </Modelo>
+    <Combustivel>Flex</Combustivel>
+    <Cor>
+      <Id>2</Id>
+      <Nome>Preto</Nome>
+    </Cor>
+    <Cambio>Manual</Cambio>
+    <Ano>1235</Ano>
+    <Observacao />
+    <Carroceria>Hatch</Carroceria>
+  </VeiculoPasseio>
+  <VeiculoPasseio xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Placa>AD   21</Placa>
+    <Modelo>
+      <Id>1</Id>
+      <Marca>
+        <Id>1</Id>
+        <Nome>Volkswagen</Nome>
+      </Marca>
+      <Descricao>Fox</Descricao>
+    </Modelo>
+    <Combustivel>Flex</Combustivel>
+    <Cor>
+      <Id>2</Id>
+      <Nome>Preto</Nome>
+    </Cor>
+    <Cambio>Manual</Cambio>
+    <Ano>56</Ano>
+    <Observacao />
+    <Carroceria>Hatch</Carroceria>
+  </VeiculoPasseio>
+  <VeiculoPasseio xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Placa>ABC5663</Placa>
+    <Modelo>
+      <Id>3</Id>
+      <Marca>
+        <Id>3</Id>
+        <Nome>Fiat</Nome>
+      </Marca>
+      <Descricao>Bravo</Descricao>
+    </Modelo>
+    <Combustivel>Gasolina</Combustivel>
+    <Cor>
+      <Id>2</Id>
+      <Nome>Preto</Nome>
+    </Cor>
+    <Cambio>Manual</Cambio>
+    <Ano>2016</Ano>
+    <Observacao />
+    <Carroceria>Hatch</Carroceria>
+  </VeiculoPasseio>
+  <VeiculoPasseio xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Placa>ASD</Placa>
+    <Modelo>
+      <Id>1</Id>
+      <Marca>
+        <Id>1</Id>
+        <Nome>Volkswagen</Nome>
+      </Marca>
+      <Descricao>Fox</Descricao>
+    </Modelo>
+    <Combustivel>Gasolina</Combustivel>
+    <Cor>
+      <Id>1</Id>
+      <Nome>Azul</Nome>
+    </Cor>
+    <Cambio>Automatico</Cambio>
+    <Ano>35</Ano>
+    <Observacao />
+    <Carroceria>Hatch</Carroceria>
+  </VeiculoPasseio>
+  <VeiculoPasseio xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Placa>SDA2342</Placa>
+    <Modelo>
+      <Id>3</Id>
+      <Marca>
+        <Id>3</Id>
+        <Nome>Fiat</Nome>
+      </Marca>
+      <Descricao>Bravo</Descricao>
+    </Modelo>
+    <Combustivel>Gasolina</Combustivel>
+    <Cor>
+      <Id>1</Id>
+      <Nome>Azul</Nome>
+    </Cor>
+    <Cambio>Automatico</Cambio>
+    <Ano>2016</Ano>
+    <Observacao />
+    <Carroceria>Hatch</Carroceria>
+  </VeiculoPasseio>
 </Veiculos>
