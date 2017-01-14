@@ -100,7 +100,7 @@ namespace CSharp1.Capitulo08.Vetores
 
             for (int i = 0; i < vetorDeVetores.Length; i++)
             {
-                System.Console.Write("Elemento({0}): ", i);
+                Console.Write("Elemento({0}): ", i);
 
                 for (int j = 0; j < vetorDeVetores[i].Length; j++)
                 {
@@ -108,6 +108,21 @@ namespace CSharp1.Capitulo08.Vetores
                 }
                 
                 System.Console.WriteLine();
+            }
+        }
+
+        [TestMethod]
+        public void TodaStringEhUmVetorTeste()
+        {
+            const string nome = "Hejlsberg";
+
+            Assert.AreEqual(nome[0], 'H');
+
+            //nome[2] = 'l'; // Erro
+
+            foreach (var @char in nome)
+            {
+                Console.Write(@char);
             }
         }
 
