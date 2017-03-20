@@ -290,4 +290,44 @@
     <Observacao />
     <Carroceria>Hatch</Carroceria>
   </VeiculoPasseio>
+  <VeiculoPasseio xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Placa>ASD5468</Placa>
+    <Modelo>
+      <Id>2</Id>
+      <Marca>
+        <Id>2</Id>
+        <Nome>Ford</Nome>
+      </Marca>
+      <Descricao>Fiesta</Descricao>
+    </Modelo>
+    <Combustivel>Alcool</Combustivel>
+    <Cor>
+      <Id>1</Id>
+      <Nome>Azul</Nome>
+    </Cor>
+    <Cambio>Automatico</Cambio>
+    <Ano>2017</Ano>
+    <Observacao>Obs</Observacao>
+    <Carroceria>Hatch</Carroceria>
+  </VeiculoPasseio>
+  <VeiculoPasseio xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Placa>ASD6656</Placa>
+    <Modelo>
+      <Id>3</Id>
+      <Marca>
+        <Id>3</Id>
+        <Nome>Fiat</Nome>
+      </Marca>
+      <Descricao>Bravo</Descricao>
+    </Modelo>
+    <Combustivel>Flex</Combustivel>
+    <Cor>
+      <Id>2</Id>
+      <Nome>Preto</Nome>
+    </Cor>
+    <Cambio>Manual</Cambio>
+    <Ano>2017</Ano>
+    <Observacao />
+    <Carroceria>Hatch</Carroceria>
+  </VeiculoPasseio>
 </Veiculos>
