@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
@@ -9,8 +8,6 @@ namespace Impacta.Apoio
     {
         public static bool Validar(Form formulario, ErrorProvider provedorDeErro)
         {
-            var resultadoValidacao = true;
-
             foreach (Control controle in formulario.Controls)
             {
                 if (controle.Tag == null)
@@ -25,7 +22,6 @@ namespace Impacta.Apoio
                     DefinirErro(provedorDeErro, controle, "Campo obrigatório.");
 
                     //Começar assim e depois refatorar.
-                    //resultadoValidacao = false;
                     //provedorDeErro.SetError(controle, "Campo obrigatório.");
                     //controle.Focus();
                 }
@@ -35,9 +31,22 @@ namespace Impacta.Apoio
                 }                
             }
 
-            //return FormularioEstaSemErros(formulario, provedorDeErro);
+            return provedorDeErro.ContarErros() == 0;
+        }
 
-            return resultadoValidacao;
+        private static int ContarErros(this ErrorProvider provedorDeErro)
+        {
+            var quantidadeErros = 0;
+
+            foreach (Control controle in provedorDeErro.ContainerControl.Controls)
+            {
+                if (provedorDeErro.GetError(controle) != string.Empty)
+                {
+                    quantidadeErros++;
+                }
+            }
+
+            return quantidadeErros;
         }
 
         private static void ValidarTipoDado(Control controle, ErrorProvider provedorDeErro)
