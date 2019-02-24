@@ -1,0 +1,5 @@
+C:\Users\vitor_000\Source\Repos\VitorNeilAvelino\ImpactaCSharpFundamentos\Roteiro\ImpactaCSharp1\Impacta.Infra.Apoio\bin\Debug\Impacta.Apoio.dll
+C:\Users\vitor_000\Source\Repos\VitorNeilAvelino\ImpactaCSharpFundamentos\Roteiro\ImpactaCSharp1\Impacta.Infra.Apoio\bin\Debug\Impacta.Apoio.pdb
+C:\Users\vitor_000\Source\Repos\VitorNeilAvelino\ImpactaCSharpFundamentos\Roteiro\ImpactaCSharp1\Impacta.Infra.Apoio\obj\Debug\Impacta.Apoio.csprojResolveAssemblyReference.cache
+C:\Users\vitor_000\Source\Repos\VitorNeilAvelino\ImpactaCSharpFundamentos\Roteiro\ImpactaCSharp1\Impacta.Infra.Apoio\obj\Debug\Impacta.Apoio.dll
+C:\Users\vitor_000\Source\Repos\VitorNeilAvelino\ImpactaCSharpFundamentos\Roteiro\ImpactaCSharp1\Impacta.Infra.Apoio\obj\Debug\Impacta.Apoio.pdb

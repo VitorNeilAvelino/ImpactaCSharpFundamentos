@@ -14,7 +14,7 @@ namespace Impacta.Apoio
                 {
                     continue;
                 }
-                
+
                 provedorDeErro.SetError(controle, string.Empty);
 
                 if (controle.Tag.ToString().Contains("*") && controle.Text.Trim() == string.Empty /*|| controle.ObterTextoSemMascara() == string.Empty*/)
@@ -27,11 +27,11 @@ namespace Impacta.Apoio
                 }
                 else
                 {
-                    ValidarTipoDado(controle, provedorDeErro);                    
-                }                
+                    ValidarTipoDado(controle, provedorDeErro);
+                }
             }
 
-            return provedorDeErro.ContarErros() == 0;
+            return !provedorDeErro.PossuiErros(formulario);
         }
 
         private static int ContarErros(this ErrorProvider provedorDeErro)
@@ -63,7 +63,7 @@ namespace Impacta.Apoio
             else if (controleTag.Contains("ANO"))
             {
                 if (!Regex.IsMatch(controle.Text, @"^[0-9]{4}$"))
-                {                    
+                {
                     DefinirErro(provedorDeErro, controle, "Digite o ano no formato AAAA.");
                 }
             }
@@ -135,7 +135,7 @@ namespace Impacta.Apoio
             controle.Focus();
         }
 
-        private static bool FormularioEstaSemErros(Form formulario, ErrorProvider provedorDeErro)
+        private static bool PossuiErros(this ErrorProvider provedorDeErro, Form formulario)
         {
             foreach (Control controle in formulario.Controls)
             {
@@ -228,14 +228,16 @@ namespace Impacta.Apoio
         {
             foreach (Control controleFor in controle.Controls)
             {
-                if (controleFor is TextBox || controleFor is MaskedTextBox)
-                {
-                    controleFor.Text = string.Empty;
-                }
-                else if (controleFor is ComboBox)
-                {
-                    ((ComboBox)controleFor).SelectedIndex = -1;
-                }
+                if (controleFor is TextBox || controleFor is MaskedTextBox || controleFor is ComboBox)
+                    controleFor.ResetText();
+
+                //{
+                //    controleFor.Text = string.Empty;
+                //}
+                //else if (controleFor is ComboBox)
+                //{
+                //    ((ComboBox)controleFor).SelectedIndex = -1;
+                //}
                 Limpar(controleFor);
             }
         }

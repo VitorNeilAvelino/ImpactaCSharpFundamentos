@@ -1,0 +1,17 @@
+C:\Users\vitor_000\Source\Repos\VitorNeilAvelino\ImpactaCSharpFundamentos\Roteiro\ImpactaCSharp1\CSharp1.Capitulo11.Veiculos\bin\Debug\CSharp1.Capitulo11.Veiculos.exe.config
+C:\Users\vitor_000\Source\Repos\VitorNeilAvelino\ImpactaCSharpFundamentos\Roteiro\ImpactaCSharp1\CSharp1.Capitulo11.Veiculos\bin\Debug\CSharp1.Capitulo11.Veiculos.exe
+C:\Users\vitor_000\Source\Repos\VitorNeilAvelino\ImpactaCSharpFundamentos\Roteiro\ImpactaCSharp1\CSharp1.Capitulo11.Veiculos\bin\Debug\CSharp1.Capitulo11.Veiculos.pdb
+C:\Users\vitor_000\Source\Repos\VitorNeilAvelino\ImpactaCSharpFundamentos\Roteiro\ImpactaCSharp1\CSharp1.Capitulo11.Veiculos\bin\Debug\Impacta.Apoio.dll
+C:\Users\vitor_000\Source\Repos\VitorNeilAvelino\ImpactaCSharpFundamentos\Roteiro\ImpactaCSharp1\CSharp1.Capitulo11.Veiculos\bin\Debug\Impacta.Dominio.dll
+C:\Users\vitor_000\Source\Repos\VitorNeilAvelino\ImpactaCSharpFundamentos\Roteiro\ImpactaCSharp1\CSharp1.Capitulo11.Veiculos\bin\Debug\Impacta.Infra.Repositorios.SistemaDeArquivos.dll
+C:\Users\vitor_000\Source\Repos\VitorNeilAvelino\ImpactaCSharpFundamentos\Roteiro\ImpactaCSharp1\CSharp1.Capitulo11.Veiculos\bin\Debug\Impacta.Dominio.pdb
+C:\Users\vitor_000\Source\Repos\VitorNeilAvelino\ImpactaCSharpFundamentos\Roteiro\ImpactaCSharp1\CSharp1.Capitulo11.Veiculos\bin\Debug\Impacta.Apoio.pdb
+C:\Users\vitor_000\Source\Repos\VitorNeilAvelino\ImpactaCSharpFundamentos\Roteiro\ImpactaCSharp1\CSharp1.Capitulo11.Veiculos\bin\Debug\Impacta.Infra.Repositorios.SistemaDeArquivos.pdb
+C:\Users\vitor_000\Source\Repos\VitorNeilAvelino\ImpactaCSharpFundamentos\Roteiro\ImpactaCSharp1\CSharp1.Capitulo11.Veiculos\obj\Debug\CSharp1.Capitulo11.Veiculos.csprojResolveAssemblyReference.cache
+C:\Users\vitor_000\Source\Repos\VitorNeilAvelino\ImpactaCSharpFundamentos\Roteiro\ImpactaCSharp1\CSharp1.Capitulo11.Veiculos\obj\Debug\CSharp1.Capitulo11.Veiculos.BaseForm.resources
+C:\Users\vitor_000\Source\Repos\VitorNeilAvelino\ImpactaCSharpFundamentos\Roteiro\ImpactaCSharp1\CSharp1.Capitulo11.Veiculos\obj\Debug\CSharp1.Capitulo11.Veiculos.PrincipalForm.resources
+C:\Users\vitor_000\Source\Repos\VitorNeilAvelino\ImpactaCSharpFundamentos\Roteiro\ImpactaCSharp1\CSharp1.Capitulo11.Veiculos\obj\Debug\CSharp1.Capitulo11.Veiculos.VeiculoForm.resources
+C:\Users\vitor_000\Source\Repos\VitorNeilAvelino\ImpactaCSharpFundamentos\Roteiro\ImpactaCSharp1\CSharp1.Capitulo11.Veiculos\obj\Debug\CSharp1.Capitulo11.Veiculos.Properties.Resources.resources
+C:\Users\vitor_000\Source\Repos\VitorNeilAvelino\ImpactaCSharpFundamentos\Roteiro\ImpactaCSharp1\CSharp1.Capitulo11.Veiculos\obj\Debug\CSharp1.Capitulo11.Veiculos.csproj.GenerateResource.Cache
+C:\Users\vitor_000\Source\Repos\VitorNeilAvelino\ImpactaCSharpFundamentos\Roteiro\ImpactaCSharp1\CSharp1.Capitulo11.Veiculos\obj\Debug\CSharp1.Capitulo11.Veiculos.exe
+C:\Users\vitor_000\Source\Repos\VitorNeilAvelino\ImpactaCSharpFundamentos\Roteiro\ImpactaCSharp1\CSharp1.Capitulo11.Veiculos\obj\Debug\CSharp1.Capitulo11.Veiculos.pdb
